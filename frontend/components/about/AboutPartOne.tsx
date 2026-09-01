@@ -2,19 +2,22 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import {
   FaArrowRight,
   FaFutbol,
   FaHeart,
   FaPeopleArrows,
-} from "react-icons/fa";
+} 
+from "react-icons/fa";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: {
     opacity: 0,
     y: 35,
   },
+
   visible: {
     opacity: 1,
     y: 0,
@@ -25,10 +28,11 @@ const fadeUp = {
   },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {
     opacity: 0,
   },
+
   visible: {
     opacity: 1,
     transition: {
@@ -36,7 +40,6 @@ const stagger = {
     },
   },
 };
-
 export default function AboutPartOne() {
   return (
     <>
