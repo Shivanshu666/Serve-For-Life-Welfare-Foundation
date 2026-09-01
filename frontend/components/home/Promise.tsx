@@ -53,7 +53,7 @@ const impactStats = [
 
 export default function Promise() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FCFCFC] to-[#F7FBF7] py-24 px-6 sm:px-8 lg:px-12">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#FCFCFC] to-[#F7FBF7] py-12 px-6 sm:px-8 lg:px-12">
 
       {/* Background Glow */}
 
@@ -72,9 +72,9 @@ export default function Promise() {
           variants={fadeUp}
           className="mx-auto max-w-4xl text-center"
         >
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-lime-100 to-emerald-100 text-4xl text-lime-600 shadow-lg">
+          {/* <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-lime-100 to-emerald-100 text-4xl text-lime-600 shadow-lg">
             <FaHeart />
-          </div>
+          </div> */}
 
           <span className="mt-8 inline-flex rounded-full border border-lime-200 bg-lime-100 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-lime-700">
             Our Promise
@@ -88,10 +88,9 @@ export default function Promise() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            At Serve For Life Welfare Foundation, we do far more than
-            teach children how to play a sport. We help them build
-            confidence, develop leadership, strengthen character,
-            discover opportunity, and create a future filled with hope.
+            
+At Serve For Life Welfare Foundation, we do more than teach children how to play a sport - we help them build character, develop confidence, discover opportunity and create a future filled with possibility.
+
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -108,15 +107,11 @@ export default function Promise() {
             </span>
           </div>
 
-          <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-lime-200 bg-white p-8 shadow-xl shadow-lime-100/40">
-            <p className="text-xl font-semibold text-slate-900 leading-relaxed">
-              Changing Lives Through Tennis.
-              <br />
-              <span className="bg-gradient-to-r from-lime-500 to-emerald-500 bg-clip-text text-transparent">
-                Building Futures Through Sport.
-              </span>
-            </p>
-          </div>
+<div className="mx-auto mt-10 max-w-4xl rounded-3xl p-8 text-center shadow-xl shadow-slate-100/60">
+  <p className="bg-gradient-to-r text-5xl from-red-500 via-blue-500 via-green-500 to-yellow-500 bg-[length:300%_auto] bg-clip-text font-bold leading-relaxed text-transparent animate-[gradientMove_4s_ease_infinite]">
+    Changing Lives Through Tennis.
+  </p>
+</div>
         </motion.div>
 
         {/* Community Impact Cards */}

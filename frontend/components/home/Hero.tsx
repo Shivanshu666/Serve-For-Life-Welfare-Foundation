@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaArrowRight, FaFutbol } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 const fadeUp = {
   hidden: {
@@ -46,7 +47,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-sm font-semibold tracking-wider uppercase mb-5"
           >
-            Tennis For ALL
+            Sport For ALL
           </motion.span>
 
           {/* Heading */}
@@ -56,7 +57,7 @@ export default function Hero() {
             </span>
             <br />
             <span className="bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-500 bg-clip-text text-transparent">
-              Through Tennis
+              Through Sport
             </span>
           </h1>
 
@@ -128,9 +129,24 @@ export default function Hero() {
             {/* Decorative Ring */}
             <div className="absolute inset-3 rounded-full border border-emerald-200" />
 
-            {/* Main Circle */}
-            <div className="relative z-10 w-full h-full rounded-full bg-gradient-to-br from-emerald-500 via-green-500 to-emerald-600 shadow-[0_25px_70px_rgba(16,185,129,0.25)] flex items-center justify-center">
-              <FaFutbol className="text-[120px] sm:text-[150px] text-white/30" />
+            {/* Main Circle — now holding the tennis photo */}
+            <div className="relative z-10 w-full h-full rounded-full overflow-hidden shadow-[0_25px_70px_rgba(16,185,129,0.25)] ring-4 ring-white">
+
+              {/* Photo */}
+              <Image
+                src="/images/tennis-hero.jpg"
+                alt="Young athlete playing tennis with Apex Tennis Foundation"
+                fill
+                priority
+                sizes="(min-width: 1024px) 450px, (min-width: 640px) 384px, 288px"
+                className="object-cover"
+              />
+
+              {/* Emerald tint overlay — keeps it on-brand instead of a raw photo */}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/30 via-green-500/10 to-emerald-900/40 mix-blend-multiply" />
+
+              {/* Soft inner ring for polish */}
+              <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/40" />
             </div>
 
             {/* Floating Bubble 1 */}
