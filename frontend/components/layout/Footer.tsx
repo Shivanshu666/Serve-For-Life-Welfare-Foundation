@@ -179,16 +179,7 @@ transition duration-500
               />
             </Link>
 
-            <h2
-              className="
-mt-5
-text-3xl
-font-bold
-text-slate-900
-"
-            >
-              Serve For Life
-            </h2>
+           
 
             <p
               className="

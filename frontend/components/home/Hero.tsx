@@ -63,7 +63,7 @@ export default function Hero() {
 
           {/* Description */}
           <p className="mt-6 text-slate-600 text-lg sm:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
-            Empowering underserved youth in Durg/Bhilai through free coaching,
+            Empowering under resoured children an Chattishgarh Durg/Bhilai through free coaching,
             mentorship, and equipment — on and off the court.
           </p>
 

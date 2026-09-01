@@ -2,22 +2,25 @@
 "use client";
 
 import Link from "next/link";
-// import { motion } from "framer-motion";
 import { motion, type Variants } from "framer-motion";
 import {
   FaArrowRight,
   FaFutbol,
   FaHeart,
   FaPeopleArrows,
-} 
-from "react-icons/fa";
+  FaSchool,
+  FaRunning,
+} from "react-icons/fa";
+
+/* =========================================================
+   ANIMATION
+========================================================= */
 
 const fadeUp: Variants = {
   hidden: {
     opacity: 0,
     y: 35,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -32,7 +35,6 @@ const stagger: Variants = {
   hidden: {
     opacity: 0,
   },
-
   visible: {
     opacity: 1,
     transition: {
@@ -40,218 +42,355 @@ const stagger: Variants = {
     },
   },
 };
+
+/* =========================================================
+   MAIN COMPONENT
+========================================================= */
+
 export default function AboutPartOne() {
+  const qualities = [
+    "Discipline",
+    "Resilience",
+    "Confidence",
+    "Teamwork",
+    "Leadership",
+    "Healthy Lifestyles",
+  ];
+
+  const transformations = [
+    {
+      from: "Screen Time",
+      to: "Play Time",
+    },
+    {
+      from: "Idle Energy",
+      to: "Purposeful Play",
+    },
+    {
+      from: "Restlessness",
+      to: "Resilience",
+    },
+    {
+      from: "Negative Energy",
+      to: "A Sense of Purpose",
+    },
+  ];
+
   return (
-    <>
-      {/* ================= OUR STORY ================= */}
+    <main className="bg-[#F1F4EC] text-[#1E231C]">
 
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#F8FBF8] via-white to-[#FCFCFC] px-6 py-24 sm:px-8 lg:px-12 lg:py-32">
-        {/* Background Glow */}
-        <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-emerald-200/30 blur-[150px]" />
+      {/* =====================================================
+          HERO
+      ===================================================== */}
 
-        <div className="pointer-events-none absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-lime-200/30 blur-[150px]" />
+      <section className="relative overflow-hidden bg-[#F1F4EC] px-6 pb-24 pt-16 mt-10 text-[#182D22] sm:px-8 lg:pb-28 lg:pt-20">
 
-        {/* Decorative Circle */}
-        <div className="pointer-events-none absolute right-[8%] top-[18%] hidden h-32 w-32 rounded-full border border-emerald-100 lg:block" />
+  <div className="relative z-10 mx-auto max-w-6xl">
+    {/* Hero Content */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeUp}
+      className="max-w-4xl"
+    >
 
-        <div className="relative z-10 mx-auto max-w-7xl">
-          {/* Section Heading */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeUp}
-            className="mx-auto mb-16 max-w-3xl text-center"
-          >
-            <div className="mb-5 flex items-center justify-center gap-3">
-              <span className="h-px w-10 bg-emerald-400" />
+      {/* <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-[#2F5D3A]">
+        <span className="h-px w-6 bg-[#2F5D3A]" />
+        Our Story
+      </div> */}
 
-              <span className="text-sm font-bold uppercase tracking-[0.25em] text-emerald-600">
-                Our Story
-              </span>
+      <h1 className="mt-6 max-w-4xl font-serif text-3xl font-bold leading-[1.05] tracking-tight text-[#182D22] sm:text-6xl lg:text-7xl">
+        Every child has{" "} <br />
+       <span className="text-4xl text-[#2F5D3A]">
+          'Right to Play'.
+        
+        </span> 
+      </h1>
 
-              <span className="h-px w-10 bg-emerald-400" />
-            </div>
+      <p className="mt-8 max-w-2xl text-base leading-8 text-[#182D22]/75 sm:text-lg">
+        Serve For Life Welfare Foundation is a purpose-driven
+        non-profit organization established with a simple yet
+        powerful vision — to give back to sport and to society
+        by creating opportunities for every child to experience
+        the transformative power of play.
+      </p>
 
-           <h1 className="text-slate-700">
-  <span className="block text-3xl font-bold leading-tight sm:text-4xl">
-    Every Child Has the
-  </span>
+    </motion.div>
 
-  <span className="mt-3 block bg-gradient-to-r from-emerald-500 to-lime-500 bg-clip-text text-5xl font-semibold leading-tight text-transparent sm:text-6xl lg:text-7xl">
-    Right to Play
-  </span>
-</h1>
-{/* 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-              Creating opportunities for children to discover the power of
-              sport, purpose and play.
-            </p> */}
-          </motion.div>
+  </div>
+</section>
 
-          {/* Main Story Layout */}
-          <div className="grid items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-            {/* LEFT — RIGHT TO PLAY CARD */}
 
+      {/* =====================================================
+          BELIEF
+      ===================================================== */}
+
+      <section className="border-b border-[#182D22]/10 bg-[#F1F4EC] px-6 py-24 sm:px-8 lg:py-28">
+
+        <div className="mx-auto max-w-6xl">
+
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.3fr] lg:gap-24">
+
+            {/* Heading */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeUp}
-              className="relative"
             >
-              <div className="relative overflow-hidden rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-lime-50 p-8 shadow-xl shadow-emerald-100/40 sm:p-10">
-                {/* Decorative Blur */}
-                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-emerald-200/30 blur-3xl" />
 
-                {/* Icon */}
-                <div className="relative mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-lime-500 text-2xl text-white shadow-lg shadow-emerald-200">
-                  <FaFutbol />
-                </div>
-
-                <p className="relative text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
-                  Our Belief
-                </p>
-
-                <h2 className="relative mt-3 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
-                  The Right
-                  <br />
-                  <span className="bg-gradient-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent">
-                    to Play.
-                  </span>
-                </h2>
-
-                <p className="relative mt-5 leading-relaxed text-slate-600">
-              Every child has a Right to Play. At Serve For Life Welfare Foundation, we believe sport isn't just recreation — it's a way to channel restless, negative energy into something purposeful and to help every child discover a sense of direction and purpose for themselves.
-                </p>
-
-                {/* RP Highlight */}
-                <div className="relative mt-8 flex items-center gap-4 border-t border-emerald-100 pt-7">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-lg font-extrabold text-emerald-600">
-                    R
-                  </div>
-
-                  <div className="h-px flex-1 bg-gradient-to-r from-emerald-300 to-transparent" />
-
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-lime-100 text-lg font-extrabold text-lime-600">
-                    P
-                  </div>
-                </div>
-
-                <div className="relative mt-4 flex justify-between text-xs font-semibold uppercase tracking-wider text-slate-400">
-                  <span>Right</span>
-                  <span>Play</span>
-                </div>
+              <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.16em] text-[#2F5D3A]">
+                <span className="h-px w-6 bg-[#2F5D3A]" />
+                What We Believe
               </div>
+
+              <h2 className="mt-5 max-w-md font-serif text-4xl font-semibold leading-tight text-[#182D22] sm:text-5xl">
+                Play is development,
+                <br />
+                not a break from it.
+              </h2>
+
             </motion.div>
 
-            {/* RIGHT — STORY CONTENT */}
 
+            {/* Content */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={stagger}
-              className="space-y-7"
             >
-              <motion.div variants={fadeUp}>
-                <p className="text-lg leading-8 text-slate-600">
-                  <span className="font-bold text-slate-900">
-                    Serve For Life Welfare Foundation
-                  </span>{" "}
-                  is a purpose-driven, non-profit organization established with
-                  a simple yet powerful vision — to give back to sport and to
-                  society by creating opportunities for every child to
-                  experience the transformative power of play.
-                </p>
-              </motion.div>
+
+              <motion.p
+                variants={fadeUp}
+                className="max-w-2xl text-base leading-8 text-[#3c4237] sm:text-lg"
+              >
+                Every child has a Right to Play. At Serve For Life
+                Welfare Foundation, we believe sport isn't just
+                recreation — it's a way to channel restless,
+                negative energy into something purposeful and to
+                help every child discover a sense of direction and
+                purpose for themselves.
+              </motion.p>
+
+              <motion.p
+                variants={fadeUp}
+                className="mt-6 max-w-2xl text-base leading-8 text-[#3c4237] sm:text-lg"
+              >
+                Sport shapes how children grow physically,
+                emotionally and socially — building along the way;
+              </motion.p>
 
 
-              <motion.div variants={fadeUp}>
-                <p className="leading-8 text-slate-600">
-              In a world of screens and couches, we want children to look up, step outside, and simply come out and play. Because sport shapes how children grow physically, emotionally and socially — building discipline, resilience, confidence and leadership along the way.
-                </p>
-              </motion.div>
-
+              {/* Qualities */}
               <motion.div
                 variants={fadeUp}
-                className="grid gap-4 pt-2 sm:grid-cols-2"
+                className="mt-8 flex flex-wrap gap-2"
               >
-                {/* Card 1 */}
-                <div className="group rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-500 transition group-hover:bg-emerald-500 group-hover:text-white">
-                    <FaHeart />
-                  </div>
-
-                  <h3 className="font-bold text-slate-900">
-                    Beyond Recreation
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-slate-500">
-                    Building confidence, resilience and a sense of purpose.
-                  </p>
-                </div>
-
-                {/* Card 2 */}
-                <div className="group rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-lime-50 text-lime-600 transition group-hover:bg-lime-500 group-hover:text-white">
-                    <FaPeopleArrows />
-                  </div>
-
-                  <h3 className="font-bold text-slate-900">
-                    Stronger Communities
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-slate-500">
-                    Helping children grow together through teamwork and play.
-                  </p>
-                </div>
+                {qualities.map((quality) => (
+                  <span
+                    key={quality}
+                    className="border border-[#182D22]/15 bg-white px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-[#2F5D3A]"
+                  >
+                    {quality}
+                  </span>
+                ))}
               </motion.div>
+
             </motion.div>
+
           </div>
-
-          {/* VISION STRIP */}
-<motion.div
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.2 }}
-  variants={fadeUp}
-  className="relative mt-16 rounded-2xl border border-emerald-100/70 bg-emerald-50/40 px-6 py-8 text-center sm:px-8 sm:py-10"
->
-  {/* Our Vision — big with red bottom line */}
-  <div className="relative inline-block">
-    <p className="text-2xl font-bold uppercase tracking-[0.15em] text-slate-800 sm:text-3xl">
-      Our Vision
-    </p>
-    <span className="absolute -bottom-2 left-1/2 h-1 w-16 -translate-x-1/2 rounded-full bg-red-400" />
-  </div>
-
-  <h2 className="mx-auto mt-9 max-w-4xl text-base font-medium leading-relaxed text-slate-700 sm:text-lg lg:text-xl">
-    We envision a future where{" "}
-    <span className="font-bold bg-gradient-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent">
-      play
-    </span>{" "}
-    is as much a part of a{" "}
-    <span className="font-bold text-emerald-500">child's education</span>{" "}
-    as academics, regardless of a school's economic circumstances.{" "}
-    We're not just building{" "}
-    <span className="font-bold text-slate-900">athletes</span> — we're building{" "}
-    <span className="font-bold bg-gradient-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent">
-      healthier children, stronger communities, and brighter futures
-    </span>
-    , one child at a time.
-  </h2>
-
-  <Link
-    href="/get-involved"
-    className="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:scale-105 hover:shadow-md"
-  >
-    Be Part of the Journey
-    <FaArrowRight className="text-xs" />
-  </Link>
-</motion.div>
         </div>
       </section>
-    </>
+
+
+      {/* =====================================================
+          RIGHT TO PLAY
+      ===================================================== */}
+
+
+
+      {/* =====================================================
+          OFF THE COUCH
+      ===================================================== */}
+
+      <section className="border-b border-[#182D22]/10 bg-[#EAEEE2] px-6 py-24 sm:px-8 lg:py-28">
+
+        <div className="mx-auto max-w-6xl">
+
+          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-24">
+
+            {/* Text */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeUp}
+            >
+
+              <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.16em] text-[#2F5D3A]">
+                <span className="h-px w-6 bg-[#2F5D3A]" />
+                From Restless to Purposeful
+              </div>
+
+              <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight text-[#182D22] sm:text-5xl">
+                Screens down,
+                <br />
+                Shoes on.
+              </h2>
+
+              <p className="mt-6 max-w-xl text-base leading-8 text-[#3c4237] sm:text-lg">
+                In a world of screens and couches, we want children
+                to look up, step outside, and simply come out and
+                play. We give that energy somewhere to go — onto
+                the court, into a game, toward a goal — and help
+                every child channel it into a sense of purpose for
+                themselves.
+              </p>
+
+            </motion.div>
+
+
+            {/* Transformations */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={stagger}
+              className="flex flex-col gap-3"
+            >
+
+              {transformations.map((item) => (
+                <motion.div
+                  key={item.from}
+                  variants={fadeUp}
+                  className="flex items-center gap-3 border border-[#182D22]/10 bg-white px-5 py-4 font-mono text-xs sm:text-sm"
+                >
+
+                  <span className="text-[#8a8f80] line-through decoration-[#A9461E]">
+                    {item.from}
+                  </span>
+
+                  <span className="text-[#A9461E]">
+                    →
+                  </span>
+
+                  <span className="font-bold text-[#2F5D3A]">
+                    {item.to}
+                  </span>
+
+                </motion.div>
+              ))}
+
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          VISION
+      ===================================================== */}
+
+
+      {/* =====================================================
+          VISION STATEMENT
+      ===================================================== */}
+
+      <section className="bg-[#F1F4EC] px-6 py-20 sm:px-8">
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeUp}
+          className="mx-auto max-w-5xl border-l-4 border-[#CBDB4E] pl-6 sm:pl-10"
+        >
+
+          <div className="font-mono text-xs uppercase tracking-[0.16em] text-[#2F5D3A]">
+            Our Future
+          </div>
+
+          <p className="mt-5 font-serif text-2xl font-medium leading-relaxed text-[#182D22] sm:text-3xl">
+
+            We envision a future where{" "}
+            <span className="text-[#2F5D3A]">
+              play
+            </span>{" "}
+            is as much a part of a{" "}
+            <span className="text-[#2F5D3A]">
+              child's education
+            </span>{" "}
+            as academics, regardless of a child's economic
+            background.
+
+          </p>
+
+          <p className="mt-5 max-w-4xl text-center text-base leading-8 text-[#4a5045]">
+            We're not just building{" "}
+            <strong className="text-[#182D22]">
+              athletes
+            </strong>{" "}
+            — we're building{" "}
+            <strong className="text-[#2F5D3A]">
+              healthier children, stronger communities with 
+              brighter futures.
+            </strong>
+            
+          </p>
+
+        </motion.div>
+
+      </section>
+
+
+
+
+      {/* =====================================================
+          FINAL CTA
+      ===================================================== */}
+
+      {/* <section className="bg-[#F1F4EC] px-6 py-20 text-center sm:px-8">
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeUp}
+          className="mx-auto max-w-3xl"
+        >
+
+          <div className="mx-auto flex h-14 w-14 items-center justify-center bg-[#2F5D3A] text-xl text-[#CBDB4E]">
+            <FaRunning />
+          </div>
+
+          <h2 className="mt-7 font-serif text-3xl font-semibold text-[#182D22] sm:text-4xl">
+            Be Part of the Journey
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[#4a5045] sm:text-base">
+            Together, we can create more opportunities for
+            children to play, learn, grow and discover their
+            purpose.
+          </p>
+
+          <Link
+            href="/get-involved"
+            className="mt-7 inline-flex items-center gap-3 bg-[#2F5D3A] px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-[#F1F4EC] transition hover:bg-[#A9461E]"
+          >
+            Be Part of the Journey
+            <FaArrowRight />
+          </Link>
+
+        </motion.div>
+
+      </section> */}
+
+
+
+    </main>
   );
 }
+
