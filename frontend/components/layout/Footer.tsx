@@ -21,20 +21,13 @@ export default function Footer() {
   const quickLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Programs", path: "/programs" },
+    { name: "Our Work", path: "/work" },
     { name: "Gallery", path: "/gallery" },
-    { name: "Volunteer", path: "/volunteer" },
+    // { name: "Volunteer", path: "/volunteer" },
     { name: "Contact", path: "/contact" },
   ];
 
-  const programs = [
-    "Tennis Coaching",
-    "Junior Development",
-    "Fitness & Wellness",
-    "Leadership Training",
-    "Community Outreach",
-    "Education Support",
-  ];
+
 
   const socialLinks = [
     {
@@ -179,21 +172,6 @@ transition duration-500
               />
             </Link>
 
-           
-
-            <p
-              className="
-mt-3
-text-slate-600
-leading-relaxed
-text-sm
-"
-            >
-              Empowering youth through Tennis, Education, Leadership and
-              Community Development while creating opportunities for a brighter
-              future.
-            </p>
-
             <div
               className="
 flex gap-3 mt-6
@@ -295,50 +273,7 @@ transition
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <h3
-              className="
-text-lg
-font-bold
-uppercase
-tracking-wide
-text-lime-600
-mb-5
-"
-            >
-              Our Programs
-            </h3>
-
-            <ul className="space-y-3">
-              {programs.map((program, index) => (
-                <li
-                  key={index}
-                  className="
-flex items-center gap-3
-text-slate-600
-text-sm
-group
-"
-                >
-                  <span
-                    className="
-text-lime-500
-"
-                  >
-                    🎾
-                  </span>
-
-                  <span
-                    className="
-group-hover:text-lime-600
-group-hover:translate-x-1
-transition
-"
-                  >
-                    {program}
-                  </span>
-                </li>
-              ))}
-            </ul>
+      
           </motion.div>
 
           {/* CONTACT */}
@@ -382,7 +317,7 @@ text-sm
 leading-relaxed
 "
                 >
-                  Bhopal, Madhya Pradesh, India
+                  #95 B, Satish Kunj, SBI Colony, Junwani, Bhilai, Chhattishgarh
                 </p>
               </div>
 
@@ -403,7 +338,7 @@ text-slate-600
 text-sm
 "
                 >
-                  +91 XXXXX XXXXX
+                  +91 9303537600
                 </p>
               </div>
 
@@ -465,7 +400,7 @@ font-semibold
 text-lime-600
 "
               >
-                Serve For Life Foundation
+                Serve For Life Welfare Foundation
               </span>
               . All Rights Reserved.
             </p>

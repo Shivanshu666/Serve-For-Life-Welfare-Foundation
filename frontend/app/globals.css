@@ -38,3 +38,28 @@ body {
     background-position: 0% 50%;
   }
 }
+
+/* globals.css - add these animations */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(8deg);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Optional: add a subtle glow effect to the tagline */
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}

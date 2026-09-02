@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,23 +9,76 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 import NaviLogo from "@/assets/sflwflogo.jpeg";
 
-const links = [
-  { name: "Home", href: "/" },
-  { name: "Events", href: "/events" },
-  { name: "About Us", href: "/about" },
-  { name: "Get Involved", href: "/getInvolved" },
+/* =========================================================
+   NAVIGATION DATA
+========================================================= */
+
+type DropdownItem = {
+  name: string;
+  href: string;
+};
+
+type NavLink = {
+  name: string;
+  href: string;
+  dropdown?: DropdownItem[];
+};
+
+const links: NavLink[] = [
+  {
+    name: "Home",
+    href: "/",
+  },
+
+  {
+    name: "About Us",
+    href: "/about",
+    dropdown: [
+      {
+        name: "Our Story",
+        href: "/about",
+      },
+      {
+        name: "Our Team",
+        href: "/about/team",
+      },
+    ],
+  },
+
   {
     name: "Our Work",
     href: "/work",
     dropdown: [
-      { name: "Our Programs", href: "/work" },
-      // { name: "Our Programs", href: "/work/programs" },
-      // { name: "Our Impact", href: "/work/impact" },
-      { name: "Success Stories", href: "/work/stories" },
+      {
+        name: "Our Programs",
+        href: "/work",
+      },
+      {
+        name: "Success Stories",
+        href: "/work/stories",
+      },
     ],
   },
-  { name: "Contact", href: "/contact" },
+
+  {
+    name: "Events",
+    href: "/events",
+  },
+
+  {
+    name: "Get Involved",
+    href: "/involved",
+  },
+
+  {
+    name: "Contact",
+    href: "/contact",
+  },
 ];
+
+/* =========================================================
+   MOBILE MENU ANIMATION
+========================================================= */
 
 const menuVariants = {
   closed: {
@@ -45,13 +97,29 @@ const menuVariants = {
   }),
 };
 
+/* =========================================================
+   NAVBAR
+========================================================= */
+
 export default function Navbar() {
+  /* Mobile menu */
   const [isOpen, setIsOpen] = useState(false);
-  const [workOpen, setWorkOpen] = useState(false);
-  const [mobileWorkOpen, setMobileWorkOpen] = useState(false);
+
+  /* Desktop dropdown */
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+
+  /* Mobile dropdown */
+  const [mobileDropdownOpen, setMobileDropdownOpen] =
+    useState<string | null>(null);
+
+  /* Scroll state */
   const [scrolled, setScrolled] = useState(false);
 
   const pathname = usePathname();
+
+  /* =======================================================
+     HANDLE SCROLL
+  ======================================================= */
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,8 +128,14 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  /* =======================================================
+     PREVENT BODY SCROLL WHEN MOBILE MENU OPEN
+  ======================================================= */
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
@@ -71,9 +145,44 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  /* =======================================================
+     CLOSE MOBILE MENU ON ROUTE CHANGE
+  ======================================================= */
+
+  useEffect(() => {
+    setIsOpen(false);
+    setMobileDropdownOpen(null);
+    setDropdownOpen(null);
+  }, [pathname]);
+
+  /* =======================================================
+     CHECK ACTIVE ROUTE
+  ======================================================= */
+
+  const isLinkActive = (link: NavLink) => {
+    if (link.name === "Home") {
+      return pathname === "/";
+    }
+
+    if (link.dropdown) {
+      return (
+        pathname === link.href ||
+        pathname.startsWith(`${link.href}/`)
+      );
+    }
+
+    return pathname === link.href;
+  };
+
+  /* =======================================================
+     RENDER
+  ======================================================= */
+
   return (
     <>
-      {/* ================= NAVBAR ================= */}
+      {/* =====================================================
+          NAVBAR
+      ===================================================== */}
 
       <nav
         className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ${
@@ -83,14 +192,19 @@ export default function Navbar() {
         }`}
       >
         {/* Background Glow */}
-        <div className="absolute left-6 top-1/2 h-16 w-16 -translate-y-1/2 rounded-full bg-emerald-300/30 blur-2xl" />
+
+        <div className="pointer-events-none absolute left-6 top-1/2 h-16 w-16 -translate-y-1/2 rounded-full bg-emerald-300/30 blur-2xl" />
 
         <div
           className={`relative mx-auto flex max-w-7xl items-center justify-between ${
-            scrolled ? "px-5" : "px-6 sm:px-8 lg:px-12"
+            scrolled
+              ? "px-5"
+              : "px-6 sm:px-8 lg:px-12"
           }`}
         >
-          {/* ================= LOGO ================= */}
+          {/* =================================================
+              LOGO
+          ================================================= */}
 
           <Link
             href="/"
@@ -110,32 +224,40 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* ================= DESKTOP MENU ================= */}
+          {/* =================================================
+              DESKTOP MENU
+          ================================================= */}
 
           <ul className="hidden items-center gap-2 md:flex">
             {links.map((link) => {
               const hasDropdown =
-                "dropdown" in link && link.dropdown;
-
-              const isWorkActive =
-                link.name === "Our Work" &&
-                (pathname === "/work" ||
-                  pathname.startsWith("/work/"));
+                Boolean(link.dropdown);
 
               const isActive =
-                pathname === link.href || isWorkActive;
+                isLinkActive(link);
+
+              const isDropdownOpen =
+                dropdownOpen === link.name;
 
               return (
                 <li
                   key={link.name}
                   className="relative"
-                  onMouseEnter={() =>
-                    hasDropdown && setWorkOpen(true)
-                  }
-                  onMouseLeave={() =>
-                    hasDropdown && setWorkOpen(false)
-                  }
+                  onMouseEnter={() => {
+                    if (hasDropdown) {
+                      setDropdownOpen(link.name);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (hasDropdown) {
+                      setDropdownOpen(null);
+                    }
+                  }}
                 >
+                  {/* ================================
+                      MAIN NAV LINK
+                  ================================= */}
+
                   <Link
                     href={link.href}
                     className={`relative flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ${
@@ -146,14 +268,20 @@ export default function Navbar() {
                   >
                     {link.name}
 
+                    {/* Dropdown Arrow */}
+
                     {hasDropdown && (
                       <ChevronDown
                         size={16}
                         className={`transition-transform duration-300 ${
-                          workOpen ? "rotate-180" : ""
+                          isDropdownOpen
+                            ? "rotate-180"
+                            : ""
                         }`}
                       />
                     )}
+
+                    {/* Active underline */}
 
                     {isActive && (
                       <motion.div
@@ -163,56 +291,72 @@ export default function Navbar() {
                     )}
                   </Link>
 
-                  {/* ================= DROPDOWN ================= */}
+                  {/* =================================================
+                      DESKTOP DROPDOWN
+                  ================================================= */}
 
-                  {hasDropdown && workOpen && (
-                    <motion.div
-                      initial={{
-                        opacity: 0,
-                        y: 10,
-                        scale: 0.96,
-                      }}
-                      animate={{
-                        opacity: 1,
-                        y: 0,
-                        scale: 1,
-                      }}
-                      transition={{
-                        duration: 0.2,
-                      }}
-                      className="absolute left-1/2 top-full z-50 w-60 -translate-x-1/2 pt-3"
-                    >
-                      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl shadow-slate-200/60">
-                        {hasDropdown &&
-                          link.dropdown.map((item) => {
-                            const active =
-                              pathname === item.href;
+                  <AnimatePresence>
+                    {hasDropdown &&
+                      isDropdownOpen && (
+                        <motion.div
+                          initial={{
+                            opacity: 0,
+                            y: 10,
+                            scale: 0.96,
+                          }}
+                          animate={{
+                            opacity: 1,
+                            y: 0,
+                            scale: 1,
+                          }}
+                          exit={{
+                            opacity: 0,
+                            y: 10,
+                            scale: 0.96,
+                          }}
+                          transition={{
+                            duration: 0.2,
+                          }}
+                          className="absolute left-1/2 top-full z-50 w-60 -translate-x-1/2 pt-3"
+                        >
+                          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl shadow-slate-200/60">
+                            {link.dropdown?.map(
+                              (item) => {
+                                const active =
+                                  pathname ===
+                                  item.href;
 
-                            return (
-                              <Link
-                                key={item.name}
-                                href={item.href}
-                                className={`block rounded-xl px-4 py-3 text-sm font-medium transition ${
-                                  active
-                                    ? "bg-emerald-50 text-emerald-600"
-                                    : "text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"
-                                }`}
-                              >
-                                {item.name}
-                              </Link>
-                            );
-                          })}
-                      </div>
-                    </motion.div>
-                  )}
+                                return (
+                                  <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className={`block rounded-xl px-4 py-3 text-sm font-medium transition ${
+                                      active
+                                        ? "bg-emerald-50 text-emerald-600"
+                                        : "text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"
+                                    }`}
+                                  >
+                                    {item.name}
+                                  </Link>
+                                );
+                              }
+                            )}
+                          </div>
+                        </motion.div>
+                      )}
+                  </AnimatePresence>
                 </li>
               );
             })}
           </ul>
 
-          {/* ================= CTA + MOBILE ================= */}
+          {/* =================================================
+              CTA + MOBILE BUTTON
+          ================================================= */}
 
           <div className="flex items-center gap-4">
+            {/* Desktop Donate */}
+
             <Link
               href="/donate"
               className="hidden rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:scale-105 md:block"
@@ -220,152 +364,245 @@ export default function Navbar() {
               Donate Now
             </Link>
 
+            {/* Mobile Menu Button */}
+
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              type="button"
+              aria-label={
+                isOpen
+                  ? "Close menu"
+                  : "Open menu"
+              }
+              onClick={() => {
+                setIsOpen(!isOpen);
+
+                if (isOpen) {
+                  setMobileDropdownOpen(null);
+                }
+              }}
               className="text-slate-800 transition hover:text-emerald-600 md:hidden"
             >
-              {isOpen ? <X size={30} /> : <Menu size={30} />}
+              {isOpen ? (
+                <X size={30} />
+              ) : (
+                <Menu size={30} />
+              )}
             </button>
           </div>
         </div>
       </nav>
 
-      {/* ================= MOBILE MENU ================= */}
+      {/* =====================================================
+          MOBILE MENU
+      ===================================================== */}
 
       <AnimatePresence>
         {isOpen && (
           <>
+            {/* Background Overlay */}
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-40 bg-slate-900/20 backdrop-blur-xl"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                setMobileDropdownOpen(null);
+              }}
             />
 
+            {/* Mobile Menu */}
+
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-8"
+              initial={{
+                opacity: 0,
+                scale: 0.95,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              exit={{
+                opacity: 0,
+                scale: 0.95,
+              }}
+              className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto p-5 sm:p-8"
             >
-              <div className="w-full max-w-sm rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-2xl backdrop-blur-xl">
-                <ul className="space-y-3">
-                  {links.map((link, index) => {
-                    const hasDropdown =
-                      "dropdown" in link && link.dropdown;
+              <div className="my-auto w-full max-w-sm rounded-3xl border border-slate-200 bg-white/95 p-5 shadow-2xl backdrop-blur-xl sm:p-6">
+                <ul className="space-y-2 sm:space-y-3">
+                  {links.map(
+                    (link, index) => {
+                      const hasDropdown =
+                        Boolean(link.dropdown);
 
-                    const active =
-                      pathname === link.href ||
-                      (link.name === "Our Work" &&
-                        pathname.startsWith("/work"));
+                      const active =
+                        isLinkActive(link);
 
-                    return (
-                      <motion.li
-                        key={link.name}
-                        custom={index}
-                        initial="closed"
-                        animate="open"
-                        variants={menuVariants}
-                      >
-                        {hasDropdown ? (
-                          <>
-                            <button
-                              onClick={() =>
-                                setMobileWorkOpen(
-                                  !mobileWorkOpen
-                                )
-                              }
-                              className={`flex w-full items-center justify-center gap-2 rounded-2xl py-4 text-3xl font-bold transition ${
+                      const isMobileDropdownOpen =
+                        mobileDropdownOpen ===
+                        link.name;
+
+                      return (
+                        <motion.li
+                          key={link.name}
+                          custom={index}
+                          initial="closed"
+                          animate="open"
+                          variants={menuVariants}
+                        >
+                          {/* =================================================
+                              LINK WITH DROPDOWN
+                          ================================================= */}
+
+                          {hasDropdown ? (
+                            <>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  setMobileDropdownOpen(
+                                    isMobileDropdownOpen
+                                      ? null
+                                      : link.name
+                                  );
+                                }}
+                                className={`flex w-full items-center justify-center gap-2 rounded-2xl py-3 text-2xl font-bold transition sm:py-4 sm:text-3xl ${
+                                  active
+                                    ? "bg-emerald-50 text-emerald-600"
+                                    : "text-slate-800 hover:bg-emerald-50 hover:text-emerald-600"
+                                }`}
+                              >
+                                {link.name}
+
+                                <ChevronDown
+                                  size={24}
+                                  className={`transition-transform duration-300 ${
+                                    isMobileDropdownOpen
+                                      ? "rotate-180"
+                                      : ""
+                                  }`}
+                                />
+                              </button>
+
+                              {/* =================================================
+                                  MOBILE SUBMENU
+                              ================================================= */}
+
+                              <AnimatePresence>
+                                {isMobileDropdownOpen && (
+                                  <motion.div
+                                    initial={{
+                                      height: 0,
+                                      opacity: 0,
+                                    }}
+                                    animate={{
+                                      height: "auto",
+                                      opacity: 1,
+                                    }}
+                                    exit={{
+                                      height: 0,
+                                      opacity: 0,
+                                    }}
+                                    transition={{
+                                      duration: 0.25,
+                                    }}
+                                    className="overflow-hidden"
+                                  >
+                                    <div className="mt-2 space-y-2 rounded-2xl bg-slate-50 p-2.5 sm:p-3">
+                                      {link.dropdown?.map(
+                                        (item) => {
+                                          const itemActive =
+                                            pathname ===
+                                            item.href;
+
+                                          return (
+                                            <Link
+                                              key={
+                                                item.name
+                                              }
+                                              href={
+                                                item.href
+                                              }
+                                              onClick={() => {
+                                                setIsOpen(
+                                                  false
+                                                );
+                                                setMobileDropdownOpen(
+                                                  null
+                                                );
+                                              }}
+                                              className={`block rounded-xl px-4 py-2.5 text-center text-base font-semibold transition sm:py-3 sm:text-lg ${
+                                                itemActive
+                                                  ? "bg-emerald-100 text-emerald-700"
+                                                  : "text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"
+                                              }`}
+                                            >
+                                              {
+                                                item.name
+                                              }
+                                            </Link>
+                                          );
+                                        }
+                                      )}
+                                    </div>
+                                  </motion.div>
+                                )}
+                              </AnimatePresence>
+                            </>
+                          ) : (
+                            /* =================================================
+                               NORMAL MOBILE LINK
+                            ================================================= */
+
+                            <Link
+                              href={link.href}
+                              onClick={() => {
+                                setIsOpen(false);
+                                setMobileDropdownOpen(
+                                  null
+                                );
+                              }}
+                              className={`block rounded-2xl py-3 text-center text-2xl font-bold transition sm:py-4 sm:text-3xl ${
                                 active
                                   ? "bg-emerald-50 text-emerald-600"
                                   : "text-slate-800 hover:bg-emerald-50 hover:text-emerald-600"
                               }`}
                             >
-                              Our Work
+                              {link.name}
+                            </Link>
+                          )}
+                        </motion.li>
+                      );
+                    }
+                  )}
 
-                              <ChevronDown
-                                size={26}
-                                className={`transition-transform duration-300 ${
-                                  mobileWorkOpen
-                                    ? "rotate-180"
-                                    : ""
-                                }`}
-                              />
-                            </button>
+                  {/* =================================================
+                      MOBILE DONATE
+                  ================================================= */}
 
-                            <AnimatePresence>
-                              {mobileWorkOpen && (
-                                <motion.div
-                                  initial={{
-                                    height: 0,
-                                    opacity: 0,
-                                  }}
-                                  animate={{
-                                    height: "auto",
-                                    opacity: 1,
-                                  }}
-                                  exit={{
-                                    height: 0,
-                                    opacity: 0,
-                                  }}
-                                  className="overflow-hidden"
-                                >
-                                  <div className="mt-2 space-y-2 rounded-2xl bg-slate-50 p-3">
-                                    {link.dropdown.map(
-                                      (item) => (
-                                        <Link
-                                          key={item.name}
-                                          href={item.href}
-                                          onClick={() =>
-                                            setIsOpen(false)
-                                          }
-                                          className="block rounded-xl px-4 py-3 text-center text-lg font-semibold text-slate-600 transition hover:bg-emerald-50 hover:text-emerald-600"
-                                        >
-                                          {item.name}
-                                        </Link>
-                                      )
-                                    )}
-                                  </div>
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
-                          </>
-                        ) : (
-                          <Link
-                            href={link.href}
-                            onClick={() => setIsOpen(false)}
-                            className={`block rounded-2xl py-4 text-center text-3xl font-bold transition ${
-                              active
-                                ? "bg-emerald-50 text-emerald-600"
-                                : "text-slate-800 hover:bg-emerald-50 hover:text-emerald-600"
-                            }`}
-                          >
-                            {link.name}
-                          </Link>
-                        )}
-                      </motion.li>
-                    );
-                  })}
-
-                  {/* Donate */}
                   <motion.li
                     custom={links.length}
                     initial="closed"
                     animate="open"
                     variants={menuVariants}
+                    className="pt-2"
                   >
                     <Link
                       href="/donate"
-                      onClick={() => setIsOpen(false)}
-                      className="block rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 py-4 text-center text-xl font-bold text-white shadow-lg"
+                      onClick={() => {
+                        setIsOpen(false);
+                        setMobileDropdownOpen(null);
+                      }}
+                      className="block rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 py-3.5 text-center text-lg font-bold text-white shadow-lg transition hover:scale-[1.02] sm:py-4 sm:text-xl"
                     >
                       Donate Now ❤️
                     </Link>
                   </motion.li>
                 </ul>
 
-                <p className="mt-8 text-center text-sm uppercase tracking-widest text-slate-400">
+                {/* Footer */}
+
+                <p className="mt-6 text-center text-xs uppercase tracking-[0.2em] text-slate-400 sm:mt-8 sm:text-sm">
                   Serve. Empower. Transform.
                 </p>
               </div>

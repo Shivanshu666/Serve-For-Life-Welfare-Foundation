@@ -33,75 +33,29 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
 
         {/* LEFT */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          className="text-center lg:text-left"
-        >
+       <motion.div
+  initial="hidden"
+  animate="visible"
+  variants={fadeUp}
+  className="text-center lg:text-left"
+>
 
-          {/* Badge */}
-          <motion.span
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-sm font-semibold tracking-wider uppercase mb-5"
-          >
-            Sport For ALL
-          </motion.span>
+  {/* New Heading – bold and capitalised */}
+  <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-5xl font-bold leading-tight text-slate-900">
+    Sport for All.{" "} <br />
+    <span className="bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-500 bg-clip-text text-transparent">
+      A Right to Play. <br />
+    </span>{" "}
+    A Path to Thrive.
+  </h1>
 
-          {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-            <span className="text-slate-900">
-              Changing Lives
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-500 bg-clip-text text-transparent">
-              Through Sport
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="mt-6 text-slate-600 text-lg sm:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
-            Empowering under resoured children an Chattishgarh Durg/Bhilai through free coaching,
-            mentorship, and equipment — on and off the court.
-          </p>
-
-          {/* Buttons */}
-          <div className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-            <Link
-              href="/getInvolved"
-              className="px-8 py-3.5 rounded-full bg-emerald-600 text-white font-semibold shadow-md shadow-emerald-200 hover:bg-emerald-700 hover:shadow-emerald-300 hover:scale-105 transition-all duration-300 flex items-center gap-2"
-            >
-              Get Involved
-              <FaArrowRight className="text-sm" />
-            </Link>
-
-            <Link
-              href="/about"
-              className="px-8 py-3.5 rounded-full border border-slate-200 bg-white text-slate-700 hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-700 transition-all duration-300"
-            >
-              Learn More
-            </Link>
-          </div>
-
-          {/* Features */}
-          <div className="mt-10 flex flex-wrap gap-6 justify-center lg:justify-start text-sm text-slate-600">
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Free Coaching
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Mentorship
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Equipment
-            </div>
-          </div>
-
-        </motion.div>
+  {/* New Description */}
+  <p className="mt-6 text-slate-600 text-lg sm:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
+    Through our <span className="font-bold text-black">SET </span>philosophy – <span className="font-bold text-black">Serve, Empower, Transform </span> – we create opportunities
+    for children in underserved communities across Chhattisgarh to play, learn,
+    grow and thrive through sport.
+  </p>
+</motion.div>
 
         {/* RIGHT */}
         <motion.div
@@ -134,7 +88,7 @@ export default function Hero() {
 
               {/* Photo */}
               <Image
-                src="/images/tennis-hero.jpg"
+                src="/images/hero1.jpg"
                 alt="Young athlete playing tennis with Apex Tennis Foundation"
                 fill
                 priority

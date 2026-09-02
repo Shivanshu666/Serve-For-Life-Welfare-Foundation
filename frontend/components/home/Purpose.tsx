@@ -49,7 +49,7 @@ export default function Purpose() {
           variants={fadeUp}
           className="mx-auto max-w-5xl text-center"
         >
-                 <span className="inline-flex items-center rounded-full border border-lime-200 bg-lime-100 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-lime-700">
+                 <span className="inline-flex text-4xl items-center rounded-full border border-lime-200 bg-lime-100 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-lime-700">
             Our Purpose
           </span>
 
@@ -59,11 +59,7 @@ export default function Purpose() {
             and creating opportunities that extend far beyond the play grounds.
           </p>
 
-          <div className="mt-4 rounded-2xl bg-emerald-50/30 px-6 py-4 text-sm leading-relaxed text-slate-600 sm:text-base border border-emerald-100/50 inline-block mx-auto">
-            <span className="font-medium text-emerald-700">📍 Focus:</span>{" "}
-            Underserved youth in Chhattisgarh (Durg/Bhilai) — providing free
-            structured coaching, mentorship, gear, and equipment support.
-          </div>
+      
         </motion.div>
 
         {/* ===== CARDS GRID ===== */}
@@ -90,59 +86,22 @@ export default function Purpose() {
                 <div className="flex items-center gap-3">
                   <span className="h-1 w-10 rounded-full bg-lime-400" />
                   <span className="text-sm font-semibold uppercase tracking-[0.2em] text-lime-600">
-                    Our Mission
+                     Mission
                   </span>
                 </div>
                 <h3 className="mt-3 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
-                  Sustainable, Inclusive, Structured Sport- for ALL
+                  Sustainable, Inclusive, Structured Sport - for ALL
                 </h3>
               </div>
             </div>
 
             <p className="relative mt-5 text-lg leading-relaxed text-slate-600 sm:text-xl">
-              To transform lives through the power of sport by creating
-              sustainable, inclusive, and structured sports development programs
-              that empower children with opportunities to learn, grow, and
-              succeed.
+          Create inclusive, structured and sustainable opportunities for children to play, learn, grow and thrive through sport. Through our <span className="font-bold text-black">SET</span> framework—<span className="font-bold text-black">Serve, Empower, Transform,</span> we use sport to <span className="font-bold italic">build confidence, character, skills and pathways to a better future </span> .
             </p>
 
-            <div className="relative mt-7 border-t border-lime-200/50 pt-6">
-              <p className="text-base font-semibold text-slate-800 sm:text-lg">
-                Through our{" "}
-                <span className="bg-gradient-to-r from-lime-500 to-emerald-500 bg-clip-text text-transparent">
-                  SET Framework
-                </span>
-                :
-              </p>
+            
 
-              <ul className="mt-4 space-y-3">
-                {[
-                  "Expand access to quality sports and tennis education.",
-                  "Empower children with life skills beyond the playing field.",
-                  "Foster healthier lifestyles and stronger communities.",
-                  "Build future champions — in sport and in life.",
-                ].map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-start gap-3 text-base leading-relaxed text-slate-600 sm:text-lg"
-                  >
-                    <FaCheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-lime-400" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="relative mt-8 flex flex-wrap gap-3">
-              {["Serve", "Empower", "Transform"].map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-gradient-to-r from-lime-100 to-emerald-100 px-5 py-2 text-sm font-bold uppercase tracking-wider text-lime-800 shadow-sm"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+   
           </motion.div>
 
           {/* ——— VISION CARD ——— */}
@@ -161,7 +120,7 @@ export default function Purpose() {
                 <div className="flex items-center gap-3">
                   <span className="h-1 w-10 rounded-full bg-emerald-400" />
                   <span className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
-                    Our Vision
+                    Vision
                   </span>
                 </div>
                 <h3 className="mt-3 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
@@ -171,23 +130,11 @@ export default function Purpose() {
             </div>
 
             <p className="relative mt-5 text-lg leading-relaxed text-slate-600 sm:text-xl">
-              To create an inclusive society where every child, irrespective of
-              socio-economic background, has access to quality sports education
-              and the opportunity to realize their full potential through sport.
+        A future where every child, regardless of background, has access to quality sport and the opportunity to realise their potential - creating <span className="font-bold italic">healthier individuals, stronger communities and a more equitable society</span> .
+
             </p>
 
-            <div className="relative mt-7 border-t border-emerald-200/50 pt-6">
-              <p className="text-lg leading-relaxed text-slate-600 sm:text-xl">
-                We envision a future where sport is recognized as an essential
-                pillar of education — contributing to healthier individuals,
-                stronger communities, and a more equitable society.
-              </p>
-            </div>
-
-            <div className="relative mt-8 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-emerald-50 to-teal-50 px-6 py-3 text-base font-semibold text-emerald-700 shadow-sm sm:text-lg border border-emerald-200/50">
-              <FaGlobeAsia className="text-xl text-emerald-500" />
-              <span>Sport as a pillar of education</span>
-            </div>
+       
           </motion.div>
         </motion.div>
       </div>

@@ -359,35 +359,6 @@ export default function Philosophy() {
             );
           })}
         </motion.div>
-
-        {/* ================= FOOTER TAGLINE ================= */}
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{
-            once: true,
-            amount: 0.2,
-          }}
-          variants={fadeUp}
-          className="mt-20 border-t border-slate-800/60 pt-8 text-center"
-        >
-          <p className="text-sm text-slate-400">
-            <span className="font-semibold text-emerald-400">
-              SFLWF
-            </span>{" "}
-            —{" "}
-            <span className="italic text-slate-300">
-              Serving, Empowering, Transforming
-            </span>{" "}
-            communities through the power of sport.
-          </p>
-
-          <p className="mt-2 text-xs uppercase tracking-widest text-slate-600">
-            © 2026 Serve For Life Welfare Foundation
-          </p>
-        </motion.div>
-
       </div>
     </section>
   );
