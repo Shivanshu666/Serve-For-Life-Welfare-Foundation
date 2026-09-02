@@ -103,13 +103,14 @@ export default function AboutPartOne() {
       variants={fadeUp}
       className="max-w-4xl"
     >
-      <h1 className="mt-6 max-w-4xl font-serif font-bold leading-[1.05] tracking-tight text-[#182D22]">
-        <span className="text-2xl sm:text-4xl lg:text-5xl">Every child has</span>
-        <br />
-        <span className="text-5xl sm:text-7xl lg:text-8xl text-[#2F5D3A]">
-          ‘Right to Play’.
-        </span>
-      </h1>
+     <h1 className="mt-6 max-w-4xl font-serif font-bold leading-[1.05] tracking-tight text-[#182D22]">
+  <span className="text-2xl sm:text-4xl lg:text-5xl">Every child has</span>
+  <br />
+  <span className="text-5xl sm:text-7xl lg:text-8xl text-[#2F5D3A]">
+    ‘Right to Play’
+  </span>
+  <span className="text-2xl text-[#2F5D3A]">■</span>
+</h1>
       <p className="mt-8 max-w-2xl text-base leading-8 text-[#182D22]/75 sm:text-lg">
         Serve For Life Welfare Foundation is a purpose-driven
         non-profit organization established with a simple yet
