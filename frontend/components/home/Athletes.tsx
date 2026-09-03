@@ -187,7 +187,7 @@ export default function Athletes() {
             </p>
 
             <Link
-              href="/getInvolved"
+              href="/involved"
               className="mt-8 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-lime-500 to-emerald-500 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-lime-300/40"
             >
               Support Our Athletes
