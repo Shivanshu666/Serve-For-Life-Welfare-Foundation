@@ -19,12 +19,12 @@ import Logo from "@/assets/sflwflogo.jpeg";
 
 export default function Footer() {
   const quickLinks = [
-    { name: "Home", path: "/" },
+    // { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Our Work", path: "/work" },
-    { name: "Gallery", path: "/gallery" },
+    { name: "Get Involved", path: "/involved" },
     // { name: "Volunteer", path: "/volunteer" },
-    { name: "Contact", path: "/contact" },
+    // { name: "Contact", path: "/contact" },
   ];
 
 
@@ -359,7 +359,7 @@ text-slate-600
 text-sm
 "
                 >
-                  info@serveforlife.org
+                  info@serveforlife.org.in
                 </p>
               </div>
             </div>
@@ -401,19 +401,11 @@ text-lime-600
 "
               >
                 Serve For Life Welfare Foundation
-              </span>
-              . All Rights Reserved.
+              </span> <br />
+               All Rights Reserved.
             </p>
 
-            <p
-              className="
-mt-2
-text-xs
-text-slate-400
-"
-            >
-              Empowering communities through Tennis • Education • Leadership
-            </p>
+          
           </div>
 
           <div

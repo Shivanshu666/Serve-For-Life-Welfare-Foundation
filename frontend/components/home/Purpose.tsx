@@ -31,7 +31,7 @@ const stagger = {
 
 export default function Purpose() {
   return (
-    <section className="relative overflow-hidden bg-white py-24 px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-white py-5 px-4 sm:px-6 lg:px-8">
       {/* Background Glow — soft and layered */}
       <div className="pointer-events-none absolute -top-40 -right-40 h-[600px] w-[600px] rounded-full bg-lime-100/20 blur-[140px]" />
       <div className="pointer-events-none absolute -bottom-40 -left-40 h-[600px] w-[600px] rounded-full bg-emerald-100/20 blur-[140px]" />
@@ -95,7 +95,7 @@ export default function Purpose() {
               </div>
             </div>
 
-            <p className="relative mt-5 text-lg leading-relaxed text-slate-600 sm:text-xl">
+            <p className="relative mt-5 text-lg leading-relaxed text-slate-600 sm:text-lg">
           Create inclusive, structured and sustainable opportunities for children to play, learn, grow and thrive through sport. Through our <span className="font-bold text-black">SET</span> framework—<span className="font-bold text-black">Serve, Empower, Transform,</span> we use sport to <span className="font-bold italic">build confidence, character, skills and pathways to a better future </span> .
             </p>
 
@@ -129,7 +129,7 @@ export default function Purpose() {
               </div>
             </div>
 
-            <p className="relative mt-5 text-lg leading-relaxed text-slate-600 sm:text-xl">
+            <p className="relative mt-5 text-lg leading-relaxed text-slate-600 sm:text-lg">
         A future where every child, regardless of background, has access to quality sport and the opportunity to realise their potential - creating <span className="font-bold italic">healthier individuals, stronger communities and a more equitable society</span> .
 
             </p>

@@ -82,20 +82,25 @@ export default function AboutPartOne() {
       {/* =====================================================
           HERO – with background image
       ===================================================== */}
-<section className="relative overflow-hidden bg-[#F1F4EC] px-6 pb-24 pt-16 mt-10 text-[#182D22] sm:px-8 lg:pb-28 lg:pt-20">
-  {/* Background image – covers the entire section */}
+<section className="relative mt-10 min-h-[600px] overflow-hidden bg-[#F1F4EC] px-6 pb-24 pt-16 text-[#182D22] sm:min-h-[650px] sm:px-8 lg:min-h-[700px] lg:pb-28 lg:pt-20">
+
+  {/* Background Image - Full Section */}
   <div className="absolute inset-0 z-0">
     <Image
-      src="/images/PreHero.png"
+      src="/images/PreHero.jpeg"
       alt="Children playing sports"
       fill
-      className="object-cover object-center opacity-20"
       priority
+      sizes="100vw"
+      className="object-cover object-center"
     />
+
+    {/* Image Overlay */}
+    <div className="absolute inset-0 bg-[#F1F4EC]/70" />
   </div>
 
-  {/* Content – sits on top of the image */}
-  <div className="relative z-10 mx-auto max-w-6xl">
+  {/* Content */}
+  <div className="relative z-10 mx-auto flex min-h-[500px] max-w-6xl items-center sm:min-h-[550px] lg:min-h-[600px]">
     <motion.div
       initial="hidden"
       whileInView="visible"
@@ -103,14 +108,22 @@ export default function AboutPartOne() {
       variants={fadeUp}
       className="max-w-4xl"
     >
-     <h1 className="mt-6 max-w-4xl font-serif font-bold leading-[1.05] tracking-tight text-[#182D22]">
-  <span className="text-2xl sm:text-4xl lg:text-5xl">Every child has</span>
-  <br />
-  <span className="text-5xl sm:text-7xl lg:text-8xl text-[#2F5D3A]">
-    ‘Right to Play’
-  </span>
-  <span className="text-2xl text-[#2F5D3A]">■</span>
-</h1>
+      <h1 className="mt-6 max-w-4xl font-serif font-bold leading-[1.05] tracking-tight text-[#182D22]">
+        <span className="text-2xl sm:text-4xl lg:text-5xl">
+          Every child has
+        </span>
+
+        <br />
+
+        <span className="text-5xl text-[#2F5D3A] sm:text-7xl lg:text-8xl">
+          ‘Right to Play’
+        </span>
+
+        <span className="text-2xl text-[#2F5D3A]">
+          ■
+        </span>
+      </h1>
+
       <p className="mt-8 max-w-2xl text-base leading-8 text-[#182D22]/75 sm:text-lg">
         Serve For Life Welfare Foundation is a purpose-driven
         non-profit organization established with a simple yet
@@ -141,7 +154,7 @@ export default function AboutPartOne() {
                 What We Believe
               </div>
               <h2 className="mt-5 max-w-md font-serif text-4xl font-semibold leading-tight text-[#182D22] sm:text-5xl">
-                Play is development,
+                Playing is development,
                 <br />
                 not a break from it.
               </h2>
@@ -173,7 +186,7 @@ export default function AboutPartOne() {
               {/* Image inserted here */}
               <motion.div variants={fadeUp} className="mt-8">
                 <Image
-                  src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80"
+                  src="/images/About2.jpeg"
                   alt="Kids playing tennis"
                   width={600}
                   height={400}
@@ -201,85 +214,115 @@ export default function AboutPartOne() {
           OFF THE COUCH – with image and transformations
       ===================================================== */}
 
-      <section className="border-b border-[#182D22]/10 bg-[#EAEEE2] px-6 py-24 sm:px-8 lg:py-28">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-24">
-            {/* Text */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeUp}
-            >
-              <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.16em] text-[#2F5D3A]">
-                <span className="h-px w-6 bg-[#2F5D3A]" />
-                From Restless to Purposeful
-              </div>
+    <section className="border-b border-[#182D22]/10 bg-[#EAEEE2] px-6 py-24 sm:px-8 lg:py-28">
+  <div className="mx-auto max-w-6xl">
 
-              <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight text-[#182D22] sm:text-5xl">
-                Screens down,
-                <br />
-                Shoes on.
-              </h2>
+    {/* ================= TOP: LEFT + RIGHT ================= */}
+    <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
 
-              <p className="mt-6 max-w-xl text-base leading-8 text-[#3c4237] sm:text-lg">
-                In a world of screens and couches, we want children
-                to look up, step outside, and simply come out and
-                play. We give that energy somewhere to go — onto
-                the court, into a game, toward a goal — and help
-                every child channel it into a sense of purpose for
-                themselves.
-              </p>
-
-              {/* Image inside text block */}
-              <div className="mt-8">
-                <Image
-                  src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=600&q=80"
-                  alt="Children running"
-                  width={600}
-                  height={400}
-                  className="rounded-2xl object-cover shadow-md"
-                />
-              </div>
-            </motion.div>
-
-            {/* Transformations with image background? Keep transformations as is */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={stagger}
-              className="flex flex-col gap-3"
-            >
-              {transformations.map((item) => (
-                <motion.div
-                  key={item.from}
-                  variants={fadeUp}
-                  className="flex items-center gap-3 border border-[#182D22]/10 bg-white px-5 py-4 font-mono text-xs sm:text-sm"
-                >
-                  <span className="text-[#8a8f80] line-through decoration-[#A9461E]">
-                    {item.from}
-                  </span>
-                  <span className="text-[#A9461E]">→</span>
-                  <span className="font-bold text-[#2F5D3A]">
-                    {item.to}
-                  </span>
-                </motion.div>
-              ))}
-              {/* Add a small image below transformations */}
-              <div className="mt-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&q=80"
-                  alt="Tennis action"
-                  width={400}
-                  height={300}
-                  className="rounded-2xl object-cover shadow-md"
-                />
-              </div>
-            </motion.div>
-          </div>
+      {/* ================= LEFT SIDE ================= */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeUp}
+        className="flex flex-col justify-center"
+      >
+        <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.16em] text-[#2F5D3A]">
+          <span className="h-px w-6 bg-[#2F5D3A]" />
+          From Restless to Purposeful
         </div>
-      </section>
+
+        <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight text-[#182D22] sm:text-5xl">
+          Screens down,
+          <br />
+          Shoes on.
+        </h2>
+
+        <p className="mt-6 text-base leading-8 text-[#3c4237] sm:text-lg">
+          In a world of screens and couches, we want children
+          to look up, step outside, and simply come out and
+          play. We give that energy somewhere to go — onto
+          the court, into a game, toward a goal — and help
+          every child channel it into a sense of purpose for
+          themselves.
+        </p>
+      </motion.div>
+
+      {/* ================= RIGHT SIDE ================= */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={stagger}
+        className="flex flex-col justify-center gap-4"
+      >
+        {transformations.map((item) => (
+          <motion.div
+            key={item.from}
+            variants={fadeUp}
+            className="
+              flex
+              items-center
+              gap-4
+              border
+              border-[#182D22]/10
+              bg-white
+              px-6
+              py-5
+              font-mono
+              text-sm
+              shadow-sm
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:shadow-md
+              sm:text-base
+            "
+          >
+            <span className="text-[#8a8f80] line-through decoration-[#A9461E]">
+              {item.from}
+            </span>
+
+            <span className="text-lg text-[#A9461E]">
+              →
+            </span>
+
+            <span className="font-bold text-[#2F5D3A]">
+              {item.to}
+            </span>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+
+    {/* ================= BOTTOM: FULL WIDTH IMAGE ================= */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7 }}
+      className="mt-14 w-full"
+    >
+      <Image
+        src="/images/About1.jpeg"
+        alt="Children playing and participating in sports"
+        width={1200}
+        height={600}
+        className="
+          h-full
+          w-full
+          rounded-2xl
+          object-cover
+          shadow-md
+          sm:h-full
+          lg:h-full
+        "
+      />
+    </motion.div>
+
+  </div>
+</section>
 
       {/* =====================================================
           VISION STATEMENT – with background image

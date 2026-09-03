@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 
+
 export default function Home() {
   return (
     <section className="relative flex min-h-screen w-full items-end justify-center overflow-hidden bg-[#1a2e1f] pb-12 sm:pb-16 md:pb-20">
@@ -52,9 +53,9 @@ export default function Home() {
       </div>
 
       {/* ===== CONTENT – BOTTOM CENTER ===== */}
-      <div className="relative z-10 mx-auto w-full max-w-5xl px-6 text-center sm:px-8">
+      <div className="relative z-10 mx-auto top-5 w-full max-w-5xl px-6 text-center sm:px-8">
         {/* Tagline – main heading */}
-        <h1 className="text-4xl font-bold leading-[1.1] tracking-tight drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-3xl font-bold leading-[1.1] tracking-tight drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl">
           Every Dream Deserves
           <br />
           <span className="bg-gradient-to-r from-[#facc15] via-[#f59e0b] to-[#fbbf24] bg-clip-text text-transparent">
@@ -63,29 +64,17 @@ export default function Home() {
         </h1>
 
         {/* Supporting subtext */}
-        <p className="mx-auto mt-4 max-w-2xl text-sm font-light leading-relaxed text-white/80 drop-shadow-lg sm:text-base md:text-lg">
+        <p className="mx-auto mt-4 max-w-3xl text-sm font-light leading-relaxed text-white/80 drop-shadow-lg sm:text-base md:text-lg">
           Where Sport Builds Character, Inspire Confidence and Creates Stronger Coummunities.
         </p>
 
-        {/* Call‑to‑action buttons */}
-        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Link href="/donate">
-            <button className="inline-flex w-full items-center justify-center rounded-full bg-[#d82e0c] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#d82e0c]/30 transition-all duration-300 hover:bg-[#b3240a] hover:-translate-y-0.5 hover:shadow-xl active:scale-95 sm:w-auto sm:px-10 sm:py-3.5 sm:text-base">
-              Support Our Mission
-            </button>
-          </Link>
-          <Link href="/about">
-            <button className="inline-flex w-full items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:-translate-y-0.5 sm:w-auto sm:px-10 sm:py-3.5 sm:text-base">
-              Learn More
-            </button>
-          </Link>
-        </div>
+   
 
         {/* Small decorative note */}
-        <div className="mt-10 flex items-center justify-center gap-3 text-xs text-white/40 sm:text-sm">
-          <span className="h-px w-8 bg-white/20" />
-          <span>Every swing matters</span>
-          <span className="h-px w-8 bg-white/20" />
+        <div className="mt-5 flex items-center justify-center gap-3 text-xs text-white/40 sm:text-sm">
+          <span className="h-px w-8 bg-white" />
+          <span className="font-bold text-white">Finding JOY through Sport</span>
+          <span className="h-px w-8 bg-white" />
         </div>
       </div>
     </section>

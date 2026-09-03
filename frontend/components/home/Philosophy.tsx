@@ -47,7 +47,7 @@ export default function Philosophy() {
       accentText: "text-emerald-600 dark:text-emerald-400",
       borderHover: "group-hover:border-emerald-500/50",
       description:
-        "We exist to serve children and communities by creating opportunities where none exist — ensuring every child has the chance to play, learn, and grow.",
+        "We exist to serve children and communities by creating opportunities where none exist — ensuring every child has the chance to play, learn, grow and thrive.",
     },
 
     {
@@ -59,7 +59,7 @@ export default function Philosophy() {
       accentText: "text-lime-600 dark:text-lime-400",
       borderHover: "group-hover:border-lime-500/50",
       description:
-        "We empower young people through sport by building confidence, resilience, leadership, discipline, and the life skills that prepare them for lifelong success.",
+        "We use sport to build more than athletes—we build confidence, resilience, leadership, discipline, and life skills for a brighter future.",
     },
 
     {
@@ -71,7 +71,7 @@ export default function Philosophy() {
       accentText: "text-teal-600 dark:text-teal-400",
       borderHover: "group-hover:border-teal-500/50",
       description:
-        "We believe sport has the power to transform individuals, families, schools, and communities — creating lasting social impact far beyond the playing field.",
+        "We believe sport has the power to transform individuals, families, schools, and communities — creating lasting social impact far beyond the Field of Play.",
     },
   ];
 

@@ -28,28 +28,7 @@ const stagger = {
   },
 };
 
-const impactStats = [
-  {
-    icon: <FaChild />,
-    value: "500+",
-    label: "Youth Reached",
-  },
-  {
-    icon: <FaTrophy />,
-    value: "12",
-    label: "Tournaments Supported",
-  },
-  {
-    icon: <FaHandsHelping />,
-    value: "40+",
-    label: "Volunteers",
-  },
-  {
-    icon: <FaGlobeAsia />,
-    value: "8",
-    label: "Partner Schools",
-  },
-];
+
 
 export default function Promise() {
   return (
@@ -116,44 +95,7 @@ At Serve For Life Welfare Foundation, we do more than teach children how to play
 
         {/* Community Impact Cards */}
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={stagger}
-          className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
-        >   {impactStats.map((item, index) => (
-  <motion.div
-    key={index}
-    variants={fadeUp}
-    whileHover={{ y: -8 }}
-    transition={{ duration: 0.3 }}
-    className="group relative overflow-hidden rounded-3xl border border-lime-100 bg-white p-8 text-center shadow-lg shadow-lime-100/40 transition-all duration-500 hover:border-lime-300 hover:shadow-2xl hover:shadow-lime-200/40"
-  >
-    {/* Glow */}
-    <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-lime-100 opacity-0 blur-3xl transition-all duration-500 group-hover:opacity-100" />
-
-    <div className="relative z-10">
-      {/* Icon */}
-      <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-lime-100 to-emerald-100 text-4xl text-lime-600 transition-transform duration-300 group-hover:scale-110">
-        {item.icon}
-      </div>
-
-      {/* Number */}
-      <h3 className="mt-6 text-4xl font-extrabold text-slate-900">
-        {item.value}
-      </h3>
-
-      {/* Label */}
-      <p className="mt-3 text-base font-medium text-slate-600">
-        {item.label}
-      </p>
-
-      {/* Bottom Accent */}
-      <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-lime-400 to-emerald-500" />
-    </div>
-  </motion.div>
-))}</motion.div>
+       
 
       
 

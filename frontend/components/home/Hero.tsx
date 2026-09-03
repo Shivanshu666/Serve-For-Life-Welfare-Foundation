@@ -21,7 +21,7 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-12 py-20 overflow-hidden bg-white">
+    <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-12 py-10 overflow-hidden bg-white">
 
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-emerald-50/40 -z-10" />
@@ -42,7 +42,7 @@ export default function Hero() {
 
   {/* New Heading – bold and capitalised */}
   <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-5xl font-bold leading-tight text-slate-900">
-    Sport for All.{" "} <br />
+    Sports for All.{" "} <br />
     <span className="bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-500 bg-clip-text text-transparent">
       A Right to Play. <br />
     </span>{" "}
