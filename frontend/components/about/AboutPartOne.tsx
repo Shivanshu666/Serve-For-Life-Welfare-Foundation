@@ -371,7 +371,7 @@ export default function AboutPartOne() {
             <Image
               src="/images/About3.jpeg"
               alt="Children playing together"
-              width={800}
+              width={1200}
               height={400}
               className="rounded-2xl object-cover shadow-md"
             />
