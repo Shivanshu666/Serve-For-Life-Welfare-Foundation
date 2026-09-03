@@ -8,7 +8,7 @@ const Involved = () => {
     <>
      <Involved1/> ;
      <Involved2/>;
-     <CTA/>
+     {/* <CTA/> */}
     </>
   )
 }

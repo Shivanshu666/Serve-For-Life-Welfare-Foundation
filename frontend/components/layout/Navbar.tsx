@@ -65,15 +65,27 @@ const links: NavLink[] = [
     href: "/events",
   },
 
+  // ========== UPDATED: Gallery with Dropdown ==========
+  {
+    name: "Gallery",
+    href: "/gallery",
+    dropdown: [
+      {
+        name: "Images",
+        href: "/gallery/images",
+      },
+      {
+        name: "Videos",
+        href: "/gallery/videos",
+      },
+    ],
+  },
+
   {
     name: "Get Involved",
     href: "/involved",
   },
 
-  {
-    name: "Contact",
-    href: "/contact",
-  },
 ];
 
 /* =========================================================
