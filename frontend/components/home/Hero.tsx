@@ -50,8 +50,8 @@ export default function Hero() {
   </h1>
 
   {/* New Description */}
-  <p className="mt-6 text-slate-600 text-lg sm:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
-    Through our <span className="font-bold text-black">SET </span>philosophy – <br /> <span className="font-bold text-black">Serve, Empower, Transform </span> – we create opportunities
+  <p className="mt-6 text-slate-600 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed">
+    Through our <span className="font-bold text-black">SET </span>philosophy – <span className="font-bold text-black">Serve, Empower, Transform </span><br /> – we create opportunities
     for children in underserved communities across Chhattisgarh to play, learn,
     grow and thrive through sport.
   </p>
