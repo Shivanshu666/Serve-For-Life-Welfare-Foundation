@@ -51,7 +51,7 @@ export default function Hero() {
 
   {/* New Description */}
   <p className="mt-6 text-slate-600 text-lg sm:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
-    Through our <span className="font-bold text-black">SET </span>philosophy – <span className="font-bold text-black">Serve, Empower, Transform </span> – we create opportunities
+    Through our <span className="font-bold text-black">SET </span>philosophy – <br /> <span className="font-bold text-black">Serve, Empower, Transform </span> – we create opportunities
     for children in underserved communities across Chhattisgarh to play, learn,
     grow and thrive through sport.
   </p>
