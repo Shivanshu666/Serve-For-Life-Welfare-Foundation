@@ -8,6 +8,7 @@ import {
   ArrowRight,
   Sparkles,
 } from "lucide-react";
+import { FaArrowRight, FaHeart } from "react-icons/fa";
 
 export default function Involved1() {
   const waysToHelp = [
@@ -45,38 +46,45 @@ export default function Involved1() {
 
       <div className="relative mx-auto max-w-7xl">
         {/* Heading */}
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#C8D6C2] bg-white px-4 py-2 text-sm font-medium text-[#426044] shadow-sm">
             <Sparkles className="h-4 w-4" />
             
-Be Part of the Change
+Be a Part of the Change
 
           </div>
 
-          <h2 className="text-4xl font-semibold tracking-tight text-[#182D22] sm:text-5xl lg:text-6xl">
-            Donate to make a{" "}
-            <span className="text-[#66845D]">difference.</span>
+               <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-lime-100 to-emerald-100 text-4xl text-lime-600 shadow-lg shadow-lime-200/40">
+                      <FaHeart />
+                    </div>
+
+
+ <h2 className="mt-5 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
+            Ready to{" "}
+            <span className="bg-gradient-to-r from-lime-500 to-emerald-500 bg-clip-text text-transparent">
+              Make a Difference?
+            </span>
           </h2>
 
           <p className="mt-6 text-base leading-7 text-[#657067] sm:text-lg">
             At Serve For Life Welfare Foundation, we believe change starts
-            with people like you. Every act of kindness, every rupee, and
-            every moment of your time brings us closer to our vission.
+            with people like you. <br /> Every act of kindness, every rupee, and
+            every moment of your time brings us closer to our mission.
           </p>
         </div>
 
         {/* Main CTA */}
-        <div className="mt-14 overflow-hidden rounded-[2rem] bg-[#182D22] shadow-xl">
+        <div className="mt-14 overflow-hidden rounded-[2rem] bg-[#009146ef] shadow-xl">
           <div className="grid lg:grid-cols-[1.2fr_0.8fr]">
             {/* Left */}
             <div className="relative px-7 py-10 sm:px-10 lg:px-14 lg:py-14">
               <div className="absolute right-10 top-8 opacity-10">
-                <Heart className="h-32 w-32 fill-current text-white" />
+                <Heart className="h-32 w-32 fill-current text-red-900" />
               </div>
 
               <div className="relative max-w-xl">
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#DDE9D8] text-[#315337]">
-                  <Heart className="h-6 w-6 fill-current" />
+                  <Heart className="h-6 w-6 fill-current text-red-900" />
                 </div>
 
                 <h3 className="text-3xl font-semibold text-white sm:text-4xl">
@@ -84,8 +92,8 @@ Be Part of the Change
                 </h3>
 
                 <p className="mt-5 leading-7 text-[#C8D3CB]">
-                  Your support helps us continue our work and reach the people
-                  who need it most. No contribution is too small when we come
+                  Your support helps us continue our work and reach those
+                  who need it most. <br /> No contribution is too small when we come
                   together.
                 </p>
 
@@ -125,19 +133,18 @@ Be Part of the Change
         <div className="mt-20">
           <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#66845D]">
+              
+            <div className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.16em] text-[#2F5D3A]">
+                <span className="h-px w-6 bg-[#2F5D3A]" />
                 How you can help
-              </p>
+              </div>
 
               <h3 className="mt-3 text-3xl font-semibold text-[#182D22] sm:text-4xl">
-                Power our vision.
+                Power the vision. Empower Children
               </h3>
             </div>
 
-            <p className="max-w-md text-sm leading-6 text-[#69736B] sm:text-right">
-              There are many ways to support our mission. Choose what feels
-              right for you.
-            </p>
+         
           </div>
 
           {/* Cards */}
@@ -178,22 +185,13 @@ Be Part of the Change
               );
             })}
           </div>
+
+          <div className="mt-15 text-center">
+            <p className="text-black text-bold">
+              Choose a way to support us and help create opportunities for every child to play, learn and thrive.
+            </p>
+          </div>
         </div>
-
-        {/* Bottom message */}
-        {/* <div className="mt-16 rounded-2xl border border-[#DCE2D9] bg-white px-6 py-7 text-center shadow-sm sm:px-10">
-          <Heart className="mx-auto h-6 w-6 fill-[#66845D] text-[#66845D]" />
-
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-[#626B64] sm:text-base">
-            Thank you for supporting our vision. Your generosity, time, and
-            belief in our mission are invaluable. Together, we can build a
-            brighter and more compassionate world for everyone.
-          </p>
-
-          <p className="mt-4 font-semibold text-[#182D22]">
-            — Serve For Life Welfare Foundation
-          </p>
-        </div> */}
       </div>
     </section>
   );

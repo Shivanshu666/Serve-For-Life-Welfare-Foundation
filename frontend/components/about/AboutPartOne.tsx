@@ -149,7 +149,7 @@ export default function AboutPartOne() {
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeUp}
             >
-              <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.16em] text-[#2F5D3A]">
+              <div className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.16em] text-[#2F5D3A]">
                 <span className="h-px w-6 bg-[#2F5D3A]" />
                 What We Believe
               </div>
@@ -228,7 +228,7 @@ export default function AboutPartOne() {
         variants={fadeUp}
         className="flex flex-col justify-center"
       >
-        <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.16em] text-[#2F5D3A]">
+        <div className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.16em] text-[#2F5D3A]">
           <span className="h-px w-6 bg-[#2F5D3A]" />
           From Restless to Purposeful
         </div>
@@ -346,9 +346,10 @@ export default function AboutPartOne() {
           variants={fadeUp}
           className="mx-auto max-w-5xl border-l-4 border-[#CBDB4E] pl-6 sm:pl-10"
         >
-          <div className="font-mono text-xs uppercase tracking-[0.16em] text-[#2F5D3A]">
-            Our Future
-          </div>
+          <div className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.16em] text-[#2F5D3A]">
+                <span className="h-px w-6 bg-[#2F5D3A]" />
+                Our Future
+              </div>
 
           <p className="mt-5 font-serif text-2xl font-medium leading-relaxed text-[#182D22] sm:text-3xl">
             We envision a future where{" "}

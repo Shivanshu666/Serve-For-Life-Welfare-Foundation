@@ -90,54 +90,75 @@ export default function Values() {
           </p>
         </motion.div>
 
-        {/* Value Cards */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={stagger}
-          className="mt-16 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {values.map((value, index) => (
-            <motion.article
-              key={index}
-              variants={fadeUp}
-              className="group relative overflow-hidden rounded-3xl border border-lime-100 bg-white shadow-lg shadow-lime-100/40 transition-all duration-500 hover:-translate-y-2 hover:border-lime-300 hover:shadow-2xl hover:shadow-lime-200/40"
-            >
-              {/* Image */}
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={value.image}
-                  alt={`${value.title} - Serve For Life Welfare Foundation`}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+     {/* Value Cards */}
+<motion.div
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.1 }}
+  variants={stagger}
+  className="mt-16 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-6"
+>
+  {values.map((value, index) => (
+    <motion.article
+      key={index}
+      variants={fadeUp}
+      className={`
+        group
+        relative
+        overflow-hidden
+        rounded-3xl
+        border
+        border-lime-100
+        bg-white
+        shadow-lg
+        shadow-lime-100/40
+        transition-all
+        duration-500
+        hover:-translate-y-2
+        hover:border-lime-300
+        hover:shadow-2xl
+        hover:shadow-lime-200/40
 
-                {/* Image Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent" />
+        lg:col-span-2
 
-                {/* Number */}
-                <div className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/20 text-sm font-bold text-white backdrop-blur-md">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
+        ${index === 3 ? "lg:col-start-2" : ""}
+        ${index === 4 ? "lg:col-start-4" : ""}
+      `}
+    >
+      {/* Image */}
+      <div className="relative h-56 overflow-hidden">
+        <img
+          src={value.image}
+          alt={`${value.title} - Serve For Life Welfare Foundation`}
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
 
-                {/* Title on Image */}
-                <h3 className="absolute bottom-5 left-6 text-2xl font-bold text-white">
-                  {value.title}
-                </h3>
-              </div>
+        {/* Image Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent" />
 
-              {/* Content */}
-              <div className="relative p-7">
-                {/* Small Accent */}
-                <div className="mb-5 h-1 w-10 rounded-full bg-gradient-to-r from-lime-500 to-emerald-500 transition-all duration-500 group-hover:w-20" />
+        {/* Number */}
+        <div className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/20 text-sm font-bold text-white backdrop-blur-md">
+          {String(index + 1).padStart(2, "0")}
+        </div>
 
-                <p className="leading-7 text-slate-600">
-                  {value.desc}
-                </p>
-              </div>
-            </motion.article>
-          ))}
-        </motion.div>
+        {/* Title */}
+        <h3 className="absolute bottom-5 left-6 text-2xl font-bold text-white">
+          {value.title}
+        </h3>
+      </div>
+
+      {/* Content */}
+      <div className="relative p-7">
+        {/* Small Accent */}
+        <div className="mb-5 h-1 w-10 rounded-full bg-gradient-to-r from-lime-500 to-emerald-500 transition-all duration-500 group-hover:w-20" />
+
+        <p className="leading-7 text-slate-600">
+          {value.desc}
+        </p>
+      </div>
+    </motion.article>
+  ))}
+</motion.div>
       </div>
     </section>
   );

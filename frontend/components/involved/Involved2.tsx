@@ -92,11 +92,11 @@ export default function Involved2() {
 
                     {/* Description */}
                     <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#657068] sm:mt-6 sm:text-base sm:leading-7 lg:text-lg">
-                        The future of any sport begins with opportunity. Your
+                        The future of any sport begins with an <span className="font-bold">OPPORTUNITY</span>. <br />Your
                         contribution helps create access to sport, strengthen
                         grassroots development, improve sporting infrastructure,
-                        and nurture the next generation of athletes—building a
-                        stronger, more inclusive sporting ecosystem for all.
+                        and nurture the next generation of athletes— <span className="font-bold italic">building a
+                        stronger, more inclusive sporting ecosystem for all. </span>
                     </p>
                 </div>
 
@@ -224,14 +224,6 @@ export default function Involved2() {
 
                 {/* ================= BOTTOM STATEMENT ================= */}
                 <div className="mt-8 flex flex-col gap-3 border-t border-[#D9E0D6] pt-7 text-center sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:text-left">
-                    <div>
-                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6A7C68] sm:text-[11px]">
-                            Together
-                        </p>
-                        <p className="mt-1 text-xs text-[#657068] sm:text-sm">
-                            Building a more inclusive sporting ecosystem for all.
-                        </p>
-                    </div>
 
                     <div className="flex items-center justify-center gap-2 text-xs font-medium text-[#4F6A4D] sm:justify-start sm:text-sm">
                         <Heart className="h-3.5 w-3.5 fill-current sm:h-4 sm:w-4" />
