@@ -369,7 +369,7 @@ export default function AboutPartOne() {
           {/* Additional image for vision */}
           <div className="mt-8">
             <Image
-              src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80"
+              src="/images/About3.jpeg"
               alt="Children playing together"
               width={800}
               height={400}
