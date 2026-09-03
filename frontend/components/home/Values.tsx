@@ -46,7 +46,7 @@ const values = [
     title: "Excellence",
     desc: "We are committed to delivering high-quality coaching, meaningful programs and measurable outcomes that create lasting value.",
     image:
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85",
+      "/images/value1.jpeg",
   },
   {
     title: "Collaboration",
