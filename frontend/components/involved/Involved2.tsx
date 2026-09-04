@@ -18,7 +18,8 @@ const initiatives = [
         description:
             "Your contribution can open doors to quality sports education, equipment, coaching, and opportunities for children who may otherwise be left behind. Every donation helps create access, build confidence, nurture talent, and give children the opportunity to grow through sport.",
         icon: GraduationCap,
-        image: "/images/sports-children.png",
+        image: "/involved/involved1.jpg",
+        
     },
     {
         number: "02",
@@ -26,7 +27,7 @@ const initiatives = [
         description:
             "Your support helps promising athletes from underserved communities overcome barriers and pursue their sporting potential. Through the SET framework—Serve, Empower, Transform—every scholarship provides meaningful support across coaching, equipment, tournament participation, travel, nutrition, and athlete development.",
         icon: Trophy,
-        image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop",
+        image: "/involved/involved2.png",
     },
     {
         number: "03",
@@ -34,7 +35,7 @@ const initiatives = [
         description:
             "Your support helps create greater opportunities for children and athletes to play, train, and grow. From developing and renovating sports infrastructure to creating safe, accessible, and well-equipped sporting spaces, every contribution strengthens the foundation for a more inclusive and sustainable sports ecosystem.",
         icon: Building2,
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85f6ef?w=800&h=600&fit=crop",
+        image: "/involved/involved3.jpeg",
     },
     {
         number: "04",
@@ -186,10 +187,7 @@ export default function Involved2() {
                             {/* Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A14] via-[#172A20]/30 to-transparent" />
 
-                            {/* Top label */}
-                            <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/15 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.16em] text-white/90 backdrop-blur-md sm:left-5 sm:top-5 sm:px-4 sm:py-2 sm:text-[10px]">
-                                Your contribution matters
-                            </div>
+                        
 
                             {/* Bottom content */}
                             <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7 lg:p-8">

@@ -24,7 +24,7 @@ const fadeUp = {
 const teamMembers = [
   {
     name: "Ravinder Singh Madan",
-    role: "Independent Founder-Member",
+    role: "Independent Founder - Member",
     bio: `Ravinder is a passionate tennis enthusiast and a former college-level tennis player who continues to compete in the ITF Seniors 65+ category.His enduring connection with the sport is matched by a strong commitment to community initiatives and the development of grassroot sports. \n
 With over 15 years of experience in real estate, Ravinder brings extensive business and entrepreneurial experience to the Foundation.
 Prior to entering real estate, he spent 20 years managing and running industrial ventures.\n
@@ -34,7 +34,7 @@ His experience across sport, business and community engagement reflects his comm
 
   {
     name: "Rachna Sharma",
-    role: "Founder-Member",
+    role: "Founder - Member",
     bio: `Rachna is a former tennis player who achieved success both in state and national tournaments.In 2022, she won the ITF Singles Women (35) title at ITF World Tennis Masters Tour MT 200, Bhilai in Singles event.From 2004-07, she also won State Championship tournaments in Singles event and had achieved highest National Ranking of # 28 in Women’s Category.
 
 She is an experienced sports development and management professional, coach and leader who comes with extensive national and international working experience of over 15 years in the field of sports administration, business development, grassroots coaching systems, event management and operations management who believes passionately in active and experiential learning.
@@ -45,7 +45,7 @@ She has a track record of working in leading sports corporates and with high per
 
   {
     name: "Kiran Sarjapuram",
-    role: "Board-Member",
+    role: "Board - Member",
     bio: `Kiran is a fitness enthusiast who believes in a healthy lifestyle, discipline, and the value of a good routine. With over 15 years of experience in sports operations and development, she brings expertise in administration, team leadership, partnerships, and program execution.
 
 Over the years, she has played an important role in building teams, systems, and grassroots programs that have reached thousands of young people. 
@@ -103,9 +103,13 @@ export default function CoreTeam() {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="text-4xl font-bold text-slate-800 sm:text-5xl">
-            Meet the{" "}
+            Our{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-lime-500 bg-clip-text text-transparent">
-              Core Team
+              Team,
+            </span>
+            Our{" "}
+             <span className="bg-gradient-to-r from-emerald-600 to-lime-500 bg-clip-text text-transparent">
+              Strength
             </span>
           </h2>
 
@@ -164,7 +168,7 @@ export default function CoreTeam() {
                     {member.role}
                   </p>
 
-                  <div className="mt-3 h-px w-12 bg-emerald-200 transition-all group-hover:w-16" />
+                  <div className="mt-3 h-px w-12 bg-emerald-500 transition-all group-hover:w-16" />
 
                   {/* Bio */}
                   <div className="mt-4 flex-1">

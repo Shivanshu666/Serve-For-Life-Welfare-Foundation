@@ -50,7 +50,7 @@ export default function Program1() {
             SFLWF Child Empowerment School Program
           </h1>
           <p className="mt-2 max-w-2xl text-sm text-white/90 sm:text-base">
-            Using sport and play to help children from underserved communities build confidence, teamwork, leadership, and healthy habits.
+           Building confidence, teamwork, and leadership — and finding <span className="font-bold italic">JOY</span>  through sport.
           </p>
         </div>
       </motion.div>
@@ -80,68 +80,30 @@ export default function Program1() {
           </p>
         </div>
 
-        {/* Quick Stats */}
-        {/* <div className="space-y-4 rounded-2xl bg-emerald-50/80 p-6 shadow-sm">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
-            At a Glance
-          </h3>
-          <div className="space-y-3">
-            <div className="flex items-center gap-3">
-              <FaUsers className="text-emerald-600" />
-              <div>
-                <p className="font-bold text-slate-800">120+</p>
-                <p className="text-xs text-slate-500">Children enrolled</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaClock className="text-emerald-600" />
-              <div>
-                <p className="font-bold text-slate-800">8 Months</p>
-                <p className="text-xs text-slate-500">Program duration</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaChild className="text-emerald-600" />
-              <div>
-                <p className="font-bold text-slate-800">Ages 8–14</p>
-                <p className="text-xs text-slate-500">Target group</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
+       
       </motion.div>
 
       {/* ===== KEY BENEFITS ===== */}
       <motion.div variants={fadeUp}>
-        <h2 className="mb-6 text-2xl font-bold text-slate-800 sm:text-3xl">
-          What Children Gain
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {["Confidence", "Teamwork", "Leadership", "Healthy Habits"].map((benefit, idx) => (
-            <div
-              key={idx}
-              className="rounded-xl bg-white/70 p-4 text-center shadow-sm transition hover:shadow-md"
-            >
-              <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
-                <FaHeart />
-              </div>
-              <p className="font-semibold text-slate-800">{benefit}</p>
-            </div>
-          ))}
-        </div>
+        {/* <h2 className=" text-2xl font-bold text-slate-800 sm:text-3xl">
+         
+        </h2> */}
+      <h2 className="mt-5 text-3xl text-center font-bold text-slate-900 sm:text-4xl lg:text-5xl">
+             What the Program{' '}
+            <span className="bg-gradient-to-r from-lime-500 to-emerald-500 bg-clip-text text-transparent">
+               builds?
+            </span>
+          </h2>
       </motion.div>
 
-      {/* ===== BEYOND THE PLAYING FIELD + QUOTE ===== */}
+       {/* ===== AT THE PLAYGROUND ===== */}
       <motion.div variants={fadeUp} className="rounded-2xl bg-white/80 p-6 shadow-sm sm:p-8">
         <h2 className="mb-4 text-2xl font-bold text-slate-800 sm:text-3xl">
-          Beyond the Playing Field
+          At the Playground - Skill and Confidence
         </h2>
         {/* === EXACT ORIGINAL TEXT (third paragraph) === */}
         <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-          Beyond the playing field, the program encourages children to learn about
-          healthy living, hydration, mental wellbeing, discipline, and positive habits,
-          while creating a safe space where they can express themselves, make friends,
-          and discover their potential.
+          The program builds the confidence to try, fail, and try again—all while keeping the <span className="font-bold italic">JOY</span> of learning at its heart. Through the experience, children develop teamwork, respect, and the courage to speak up, express themselves, and believe in their own abilities.
         </p>
         {/* === EXACT ORIGINAL QUOTE (with border) === */}
         <div className="mt-6 border-l-4 border-emerald-400/60 pl-4 italic text-slate-900">
@@ -154,13 +116,35 @@ export default function Program1() {
         </div>
       </motion.div>
 
+      {/* ===== BEYOND THE PLAYING FIELD + QUOTE ===== */}
+      <motion.div variants={fadeUp} className="rounded-2xl bg-white/80 p-6 shadow-sm sm:p-8">
+        <h2 className="mb-4 text-2xl font-bold text-slate-800 sm:text-3xl">
+          Beyond the Playground - Habits and Wellbeing
+        </h2>
+        {/* === EXACT ORIGINAL TEXT (third paragraph) === */}
+        <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+          Beyond the playing field, the program encourages children to learn about
+          healthy living, hydration, mental wellbeing, discipline, and positive habits,
+          while creating a safe space where they can express themselves, make friends,
+          and discover their potential.
+        </p>
+        {/* === EXACT ORIGINAL QUOTE (with border) === */}
+        <div className="mt-6 border-l-4 border-emerald-400/60 pl-4 italic text-slate-900">
+          <p className="text-center font-bold">
+         As the program continues through the year, SFLWF hopes these children carry its lessons far beyond the playing area – <br /> into their Schools, Families and Communities at large.
+          </p>
+        </div>
+      </motion.div>
+
+  
+
       {/* ===== CTA ===== */}
       <motion.div variants={fadeUp} className="text-center">
   <Link
     href="/involved"
     className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-600 to-lime-500 px-8 py-3 font-semibold text-white shadow-md transition hover:scale-105 hover:shadow-lg"
   >
-    Support This Program
+    Support this Program
     <FaArrowRight />
   </Link>
 </motion.div>

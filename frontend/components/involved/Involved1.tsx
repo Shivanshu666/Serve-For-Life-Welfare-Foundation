@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import {
   Heart,
   IndianRupee,
@@ -19,6 +19,7 @@ export default function Involved1() {
       description:
         "Every rupee counts. Contribute now to help us reach our goal.",
       button: "Donate Now",
+      link:"/donate"
     },
     {
       number: "02",
@@ -97,10 +98,13 @@ Be a Part of the Change
                   together.
                 </p>
 
-                <button className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 font-semibold text-[#182D22] transition-all duration-300 hover:-translate-y-1 hover:bg-[#EDF2E9]">
-                  Donate Now
-                  <ArrowRight className="h-5 w-5" />
-                </button>
+          <Link
+  href="/donate"
+  className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 font-semibold text-[#182D22] transition-all duration-300 hover:-translate-y-1 hover:bg-[#EDF2E9]"
+>
+  Donate Now
+  <ArrowRight className="h-5 w-5" />
+</Link>
               </div>
             </div>
 
@@ -176,10 +180,20 @@ Be a Part of the Change
                       {item.description}
                     </p>
 
-                    <button className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#426044] transition-all group-hover:gap-3">
-                      {item.button}
-                      <ArrowRight className="h-4 w-4" />
-                    </button>
+                    {item.link ? (
+  <Link
+    href={item.link}
+    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#426044] transition-all group-hover:gap-3"
+  >
+    {item.button}
+    <ArrowRight className="h-4 w-4" />
+  </Link>
+) : (
+  <button className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#426044] transition-all group-hover:gap-3">
+    {item.button}
+    <ArrowRight className="h-4 w-4" />
+  </button>
+)}
                   </div>
                 </div>
               );

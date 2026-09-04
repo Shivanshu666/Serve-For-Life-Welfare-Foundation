@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const eventData = {
   title: "Baseline of Hope – Invitational Tennis Tournament",
@@ -31,7 +31,7 @@ export default function Event1() {
         </h2>
 
         <p className="mx-auto mt-2 max-w-2xl text-gray-500">
-          Relive the highlights of our most recent gathering.
+          Relive Last Year’s Tournament Highlights.
         </p>
       </div>
 
@@ -41,12 +41,16 @@ export default function Event1() {
         {/* ================= LEFT CARD ================= */}
         <div className="flex h-full flex-col rounded-2xl bg-white/50 p-6 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8">
 
-          {/* Date */}
-          <div className="mb-3 flex items-center gap-2 text-lg font-semibold text-green-600">
-            <Calendar size={18} />
+        {/* Date */}
+<div className="mb-3 flex items-center gap-2 text-lg font-semibold text-green-600">
+  <img
+    src="/images/logo.jpeg"
+    alt="Logo"
+    className="h-5 w-5 object-contain"
+  />
 
-            <span>{eventData.date}</span>
-          </div>
+  <span>{eventData.date}</span>
+</div>
 
           {/* Event Title */}
           <h3 className="mb-5 text-2xl font-bold leading-tight text-gray-800 sm:text-3xl">
@@ -105,7 +109,7 @@ export default function Event1() {
             rel="noopener noreferrer"
             className="group mt-8 inline-flex w-fit items-center gap-2 rounded-lg border-2 border-green-600 px-4 py-2 font-semibold text-green-600 transition-all duration-300 hover:scale-105 hover:bg-green-600 hover:text-white"
           >
-            View Our Website For More Details
+            View the tournament website for more details
 
             <ArrowRight
               size={18}

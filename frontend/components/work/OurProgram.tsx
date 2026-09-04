@@ -176,7 +176,7 @@ export default function OurProgram() {
 
                     <p className="mt-4 text-lg leading-relaxed text-slate-300">
                         Every child deserves the opportunity to play, learn and grow.
-                        Every athlete deserves the opportunity to pursue their potential.
+                       <br /> Every athlete deserves the opportunity to pursue their potential.
                     </p>
                 </motion.div>
             </section>
