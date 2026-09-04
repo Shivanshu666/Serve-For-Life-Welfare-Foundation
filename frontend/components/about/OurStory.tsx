@@ -139,76 +139,116 @@ export default function OurStory() {
           BELIEF – with image next to text
       ===================================================== */}
 
-      <section className="border-b border-[#182D22]/10 bg-white px-6 py-24 sm:px-8 lg:py-28">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.3fr] lg:gap-24">
-            {/* Heading */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeUp}
-            >
-              <div className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.16em] text-[#2F5D3A]">
-                <span className="h-px w-6 bg-[#2F5D3A]" />
-                What We Believe
-              </div>
-              <h2 className="mt-5 max-w-md font-serif text-4xl font-semibold leading-tight text-[#182D22] sm:text-5xl">
-                Playing is development,
-                <br />
-                not a break from it.
-              </h2>
-            </motion.div>
+    <section className="border-b border-[#182D22]/10 bg-white px-6 py-24 sm:px-8 lg:py-28">
+  <div className="mx-auto max-w-6xl">
 
-            {/* Content + Image */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={stagger}
-            >
-              <motion.p variants={fadeUp} className="max-w-2xl text-base leading-8 text-[#3c4237] sm:text-lg">
-                Every child has a <span>
-  <span className="font-bold text-black">'R</span>ight to <span className="font-bold text-black">P</span>lay'
-</span>. At Serve For Life
-                Welfare Foundation, we believe sport isn't just
-                recreation — it's a way to channel restless,
-                negative energy into something purposeful and to
-                help every child discover a sense of direction and
-                purpose for themselves.
-              </motion.p>
+    {/* ================= TOP CONTENT ================= */}
+    <div className="grid gap-12 lg:grid-cols-[0.9fr_1.3fr] lg:gap-24">
 
-              <motion.p variants={fadeUp} className="mt-6 max-w-2xl text-base leading-8 text-[#3c4237] sm:text-lg">
-                Sport shapes how children grow physically,
-                emotionally and socially — building along the way;
-              </motion.p>
-
-              {/* Image inserted here */}
-              <motion.div variants={fadeUp} className="mt-8">
-                <Image
-                  src="/images/About2.jpeg"
-                  alt="Kids playing tennis"
-                  width={600}
-                  height={400}
-                  className="rounded-2xl object-cover shadow-md"
-                />
-              </motion.div>
-
-              {/* Qualities */}
-              <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-2">
-                {qualities.map((quality) => (
-                  <span
-                    key={quality}
-                    className="border border-[#182D22]/15 bg-white px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-[#2F5D3A]"
-                  >
-                    {quality}
-                  </span>
-                ))}
-              </motion.div>
-            </motion.div>
-          </div>
+      {/* Heading */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeUp}
+      >
+        <div className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.16em] text-[#2F5D3A]">
+          <span className="h-px w-6 bg-[#2F5D3A]" />
+          What We Believe
         </div>
-      </section>
+
+        <h2 className="mt-5 max-w-md font-serif text-4xl font-semibold leading-tight text-[#182D22] sm:text-5xl">
+          Playing is development,
+          <br />
+          not a break from it.
+        </h2>
+      </motion.div>
+
+      {/* Right Content */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={stagger}
+        className="w-full"
+      >
+
+        {/* Paragraph 1 */}
+        <motion.p
+          variants={fadeUp}
+          className="w-full text-base leading-8 text-[#3c4237] sm:text-lg"
+        >
+          Every child has a{" "}
+          <span>
+            <span className="font-bold text-black">'R</span>ight to{" "}
+            <span className="font-bold text-black">P</span>lay'
+          </span>
+          . At Serve For Life Welfare Foundation, we believe sport isn't just
+          recreation — it's a way to channel restless,
+          negative energy into something purposeful and to
+          help every child discover a sense of direction and
+          purpose for themselves.
+        </motion.p>
+
+        {/* Paragraph 2 */}
+        <motion.p
+          variants={fadeUp}
+          className="mt-6 w-full text-base leading-8 text-[#3c4237] sm:text-lg"
+        >
+          Sport shapes how children grow physically,
+          emotionally and socially — building along the way;
+        </motion.p>
+
+      </motion.div>
+    </div>
+
+    {/* ================= FULL WIDTH IMAGE ================= */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeUp}
+      className="mt-12 w-full lg:mt-16"
+    >
+      <Image
+        src="/images/About2.jpeg"
+        alt="Kids playing tennis"
+        width={1200}
+        height={700}
+        priority
+        className="h-auto max-h-[600px] w-full rounded-2xl object-cover shadow-md"
+      />
+    </motion.div>
+
+    {/* ================= FULL WIDTH LINE ================= */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeUp}
+      className="mt-8 w-full border-t border-[#182D22]/10"
+    />
+
+    {/* ================= FULL WIDTH QUALITIES ================= */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeUp}
+      className="mt-6 items-center justify-center flex w-full flex-wrap gap-2"
+    >
+      {qualities.map((quality) => (
+        <span
+          key={quality}
+          className="border border-[#182D22]/15 bg-white px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-[#2F5D3A]"
+        >
+          {quality}
+        </span>
+      ))}
+    </motion.div>
+
+  </div>
+</section>
 
       {/* =====================================================
           OFF THE COUCH – with image and transformations

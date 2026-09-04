@@ -35,7 +35,7 @@ export default function Program2() {
       {/* ===== HERO BANNER ===== */}
       <motion.div variants={fadeUp} className="relative h-[300px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[400px]">
         <Image
-          src="https://images.unsplash.com/photo-1560012057-8d7d7d7d7d7d?w=1200"
+          src="/images/program22.jpg"
           alt="Athlete Sponsorship Program"
           fill
           className="object-cover"
