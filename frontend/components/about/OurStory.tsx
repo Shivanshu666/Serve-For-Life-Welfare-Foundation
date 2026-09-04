@@ -409,7 +409,7 @@ export default function OurStory() {
           {/* Additional image for vision */}
           <div className="mt-8">
             <Image
-              src="/images/About3.jpeg"
+              src="/images/About333.jpeg"
               alt="Children playing together"
               width={1200}
               height={400}

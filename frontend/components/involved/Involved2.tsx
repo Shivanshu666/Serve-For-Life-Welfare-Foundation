@@ -43,7 +43,7 @@ const initiatives = [
         description:
             "Drive meaningful change through a transparent, accountable, and outcome-driven approach. Every contribution helps create sustainable sporting opportunities and strengthens the ecosystem for long-term community impact.",
         icon: ShieldCheck,
-        image: "/involved/involved4.jpeg",
+        image: "/involved/involved4.avif",
     },
 ];
 
