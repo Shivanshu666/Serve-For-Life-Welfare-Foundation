@@ -85,9 +85,7 @@ export default function OurProgram() {
                         </h1>
 
                         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-                            From empowering children through sport to supporting the next
-                            generation of tennis talent, our programs are designed to create
-                            meaningful and lasting change.
+                            From empowering children through sport to nurturing the next generation of tennis talent, our programs create opportunities, inspire growth, and drive meaningful, lasting change.
                         </p>
                     </motion.div>
                 </div>

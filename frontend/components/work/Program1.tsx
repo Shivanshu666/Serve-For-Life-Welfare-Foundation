@@ -81,7 +81,7 @@ export default function Program1() {
         </div>
 
         {/* Quick Stats */}
-        <div className="space-y-4 rounded-2xl bg-emerald-50/80 p-6 shadow-sm">
+        {/* <div className="space-y-4 rounded-2xl bg-emerald-50/80 p-6 shadow-sm">
           <h3 className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
             At a Glance
           </h3>
@@ -108,7 +108,7 @@ export default function Program1() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </motion.div>
 
       {/* ===== KEY BENEFITS ===== */}
