@@ -9,7 +9,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import ravinderImg from "@/assets/team/ravinder.jpeg";
 import rachnaImg from "@/assets/team/rachna.png";
 import kiranImg from "@/assets/team/kiran.jpeg";
-// import kavitaImg from "@/assets/team/kavita.jpg";
+import kavitaImg from "@/assets/team/kavitasha.jpeg";
 
 // Animation variants
 const fadeUp = {
@@ -60,7 +60,7 @@ She brings a hands-on, yet strategic approach to developing sustainable programs
     bio: `Kavita brings a wealth of experience and dedication to the Foundation.
 
 Her passion for community service and sport makes her an invaluable member of the team, working tirelessly to support the foundation's mission.`,
-    // image: kavitaImg,
+    image: kavitaImg,
   },
 ];
 
