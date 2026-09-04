@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { FaChild, FaUsers, FaClock, FaHeart, FaArrowRight } from "react-icons/fa";
 
@@ -72,7 +73,7 @@ export default function Program1() {
           {/* === EXACT ORIGINAL TEXT (second paragraph) === */}
           <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
             Launched in August 2026, the eight‑month program engages around{" "}
-            <span className="font-semibold text-slate-800">120 children, aged 8–12</span>{" "}
+            <span className="font-semibold text-slate-800">240 children, aged 8–14</span>{" "}
             from Junwani, Durg. Through weekly sessions led by the SFLWF coaching team,
             children participate in fun, structured activities that develop physical
             skills, coordination, communication, and teamwork.
@@ -102,7 +103,7 @@ export default function Program1() {
             <div className="flex items-center gap-3">
               <FaChild className="text-emerald-600" />
               <div>
-                <p className="font-bold text-slate-800">Ages 8–12</p>
+                <p className="font-bold text-slate-800">Ages 8–14</p>
                 <p className="text-xs text-slate-500">Target group</p>
               </div>
             </div>
@@ -155,11 +156,14 @@ export default function Program1() {
 
       {/* ===== CTA ===== */}
       <motion.div variants={fadeUp} className="text-center">
-        <button className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-600 to-lime-500 px-8 py-3 font-semibold text-white shadow-md transition hover:scale-105 hover:shadow-lg">
-          Support This Program
-          <FaArrowRight />
-        </button>
-      </motion.div>
+  <Link
+    href="/involved"
+    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-600 to-lime-500 px-8 py-3 font-semibold text-white shadow-md transition hover:scale-105 hover:shadow-lg"
+  >
+    Support This Program
+    <FaArrowRight />
+  </Link>
+</motion.div>
     </motion.div>
   );
 }

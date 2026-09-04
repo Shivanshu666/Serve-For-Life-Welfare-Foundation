@@ -41,7 +41,7 @@ const programs = [
         icon: FaChild,
         href: "/work/Program1",
         tag: "Child Development",
-        stats: "120 Children • Ages 8–12",
+        stats: "240 Children • Ages 8–14",
         iconBg: "bg-emerald-100",
         iconColor: "text-emerald-700",
         accent: "from-emerald-600 to-lime-600",

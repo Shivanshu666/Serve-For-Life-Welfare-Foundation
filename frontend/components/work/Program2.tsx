@@ -67,7 +67,7 @@ export default function Program2() {
             <span className="font-semibold text-lime-700">SET Framework</span> —
             <span className="font-bold text-black"> Serve</span>{" "}
             <span className="font-bold text-black">• Empower</span>{" "}
-            <span className="font-bold text-black">• Transform</span> — is committed
+            <span className="font-bold text-black">• Transform</span><br /> — is committed
             to identifying, nurturing, and supporting talented young tennis players
             from economically under‑resourced backgrounds{" "}
             <span className="font-bold italic text-slate-900">
@@ -84,38 +84,66 @@ export default function Program2() {
         </div>
 
         {/* Quick Stats */}
-        <div className="space-y-4 rounded-2xl bg-lime-50/80 p-6 shadow-sm">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-lime-700">
-            At a Glance
-          </h3>
-          <div className="space-y-3">
-            <div className="flex items-center gap-3">
-              <FaTrophy className="text-lime-600" />
-              <div>
-                <p className="font-bold text-slate-800">Tennis Talent</p>
-                <p className="text-xs text-slate-500">Young athletes identified</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaHandsHelping className="text-lime-600" />
-              <div>
-                <p className="font-bold text-slate-800">Holistic Support</p>
-                <p className="text-xs text-slate-500">Training, competition, development</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaHeart className="text-lime-600" />
-              <div>
-                <p className="font-bold text-slate-800">SET Framework</p>
-                <p className="text-xs text-slate-500">Serve • Empower • Transform</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="space-y-4 rounded-2xl bg-lime-50/80 p-6 shadow-sm">
+  <h3 className="text-sm font-semibold uppercase tracking-wider text-lime-700">
+    At a Glance
+  </h3>
+
+  <div className="space-y-4">
+    {/* FIND */}
+    <div className="flex items-start gap-3">
+      <FaTrophy className="mt-1 text-lime-600" />
+      <div>
+        <p className="font-bold text-slate-800">FIND</p>
+        <p className="text-xs leading-relaxed text-slate-500">
+          Identify promising young tennis players through identification
+          programs.
+        </p>
+      </div>
+    </div>
+
+    {/* FUND */}
+    <div className="flex items-start gap-3">
+      <FaHandsHelping className="mt-1 text-lime-600" />
+      <div>
+        <p className="font-bold text-slate-800">FUND</p>
+        <p className="text-xs leading-relaxed text-slate-500">
+          Eliminate the financial barriers that keep talented athletes off
+          the court.
+        </p>
+      </div>
+    </div>
+
+    {/* GROW */}
+    <div className="flex items-start gap-3">
+      <FaTrophy className="mt-1 text-lime-600" />
+      <div>
+        <p className="font-bold text-slate-800">GROW</p>
+        <p className="text-xs leading-relaxed text-slate-500">
+          Provide long-term athlete development pathways that build
+          excellence in sport and education together.
+        </p>
+      </div>
+    </div>
+
+    {/* RISE */}
+    <div className="flex items-start gap-3">
+      <FaHandsHelping className="mt-1 text-lime-600" />
+      <div>
+        <p className="font-bold text-slate-800">RISE</p>
+        <p className="text-xs leading-relaxed text-slate-500">
+          Enable athletes to compete at district, state, and national
+          levels and be part of college tennis globally.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
       </motion.div>
 
       {/* ===== SET FRAMEWORK BREAKDOWN ===== */}
-      <motion.div variants={fadeUp}>
+      {/* <motion.div variants={fadeUp}>
         <h2 className="mb-6 text-2xl font-bold text-slate-800 sm:text-3xl">
           The SET Framework
         </h2>
@@ -137,13 +165,11 @@ export default function Program2() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* ===== ATHLETES SECTION ===== */}
       <motion.div variants={fadeUp}>
-        <h2 className="mb-4 text-2xl font-bold text-slate-800 sm:text-3xl">
-          Our Athletes
-        </h2>
+    
         <Athletes />
       </motion.div>
 
