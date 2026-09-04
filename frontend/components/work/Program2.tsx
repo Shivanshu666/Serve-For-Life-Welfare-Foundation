@@ -69,7 +69,7 @@ export default function Program2() {
             <span className="font-bold text-black">• Empower</span>{" "}
             <span className="font-bold text-black">• Transform</span><br /> — is committed
             to identifying, nurturing, and supporting talented young tennis players
-            from economically under‑resourced backgrounds{" "}
+            from economically underresourced backgrounds{" "}
             <span className="font-bold italic text-slate-900">
               who have the game but not the means.
             </span>

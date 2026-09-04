@@ -101,14 +101,9 @@ const Event2 = () => {
 
         <p className="mt-6 text-slate-600 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto">
 
-          We're working hard to bring you exciting events, tournaments, and community
-          programs. Stay tuned for updates!
+        Stay tuned for the updates!
 
         </p>
-
-
-
-
 
         {/* Divider */}
 

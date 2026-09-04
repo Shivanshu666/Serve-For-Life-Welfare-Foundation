@@ -55,11 +55,11 @@ She brings a hands-on, yet strategic approach to developing sustainable programs
   },
 
   {
-    name: "Kavita Sharma",
+    name: "Kavita JD Sharma",
     role: "Board-Member",
-    bio: `Kavita brings a wealth of experience and dedication to the Foundation.
+    bio: `Kavita brings over 30 years of leadership experience across diverse businesses and industries to her role at SFLWL, spanning strategic leadership, operations, stakeholder engagement, and fundraising across corporate and non-profit sectors.
 
-Her passion for community service and sport makes her an invaluable member of the team, working tirelessly to support the foundation's mission.`,
+She excels at building strong relationships with partners, donors, and sponsors and turning those relationships into sustained community impact. With a strong understanding of the development sector and a talent for impactful communication, she brings a unique blend of commercial acumen, strategic thinking, and genuine care for people to the Foundation’s work.`,
     image: kavitaImg,
   },
 ];
@@ -114,11 +114,11 @@ export default function CoreTeam() {
           </h2>
 
           <p className="mt-6 text-lg leading-relaxed text-slate-600">
-            SFLWF brings together passionate sports professionals and business leaders who believe in the power of sport to transform lives.
+            SFLWF brings together passionate sports professionals and business leaders <br /> who believe in the power of sport to transform lives.
           </p>
 
-          <p className="mt-3 text-base text-slate-500">
-            United by a shared purpose, we turn this belief into meaningful action—creating opportunities, inspiring change, and building lasting impact through sport.
+          <p className="mt-3 italic text-base text-slate-500">
+            United by a shared purpose, we turn this belief into meaningful action — <br />creating opportunities, inspiring change, and building lasting impact through sport.
           </p>
         </motion.div>
 

@@ -72,7 +72,7 @@ const links: NavLink[] = [
     dropdown: [
       {
         name: "Images",
-        href: "/gallery/Gallery1",
+        href: "/gallery",
       },
       {
         name: "Videos",

@@ -41,7 +41,7 @@ const programs = [
         icon: FaChild,
         href: "/work/Program1",
         tag: "Child Development",
-        stats: "240 Children • Ages 8–14",
+        stats: "240 Children  • Ages 8–14",
         iconBg: "bg-emerald-100",
         iconColor: "text-emerald-700",
         accent: "from-emerald-600 to-lime-600",
@@ -50,7 +50,7 @@ const programs = [
         title: "SFLWF (SET) Athlete Sponsorship Program",
         description:
             "Supporting talented young tennis players from economically under-resourced backgrounds who have the game but not the means.",
-        image: "/images/Athlete.jpeg",
+        image: "/images/program2.jpg",
         icon: FaTrophy,
         href: "/work/Program2",
         tag: "Athlete Development",
@@ -84,8 +84,8 @@ export default function OurProgram() {
                             </span>
                         </h1>
 
-                        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-                            From empowering children through sport to nurturing the next generation of tennis talent, our programs create opportunities, inspire growth, and drive meaningful, lasting change.
+                        <p className="mx-auto mt-6 max-w-4xl text-lg leading-relaxed text-slate-600">
+                            From empowering children through sport to nurturing the next generation of tennis talent, <br /> our programs create opportunities, inspire growth, and drive meaningful, lasting change.
                         </p>
                     </motion.div>
                 </div>
@@ -98,7 +98,7 @@ export default function OurProgram() {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.1 }}
                     variants={stagger}
-                    className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2"
+                    className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-2"
                 >
                     {programs.map((program) => {
                         const Icon = program.icon;
@@ -109,18 +109,18 @@ export default function OurProgram() {
                                     href={program.href}
                                     className="group block h-full overflow-hidden border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
                                 >
-                                    {/* Image — slightly bigger height */}
-                                    <div className="relative h-56 overflow-hidden sm:h-64">
+                                    {/* Image — Full Image Visible */}
+                                    <div className="relative h-56 overflow-hidden bg-slate-100 sm:h-64">
                                         <Image
                                             src={program.image}
                                             alt={program.title}
                                             fill
+                                            sizes="(max-width: 640px) 100vw, 50vw"
                                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                                         />
 
                                         {/* Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent" />
-
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" />
                                     </div>
 
                                     {/* Content — compact padding */}
@@ -176,7 +176,7 @@ export default function OurProgram() {
 
                     <p className="mt-4 text-lg leading-relaxed text-slate-300">
                         Every child deserves the opportunity to play, learn and grow.
-                       <br /> Every athlete deserves the opportunity to pursue their potential.
+                        <br /> Every athlete deserves the opportunity to pursue their potential.
                     </p>
                 </motion.div>
             </section>

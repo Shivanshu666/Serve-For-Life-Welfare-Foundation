@@ -1,4 +1,4 @@
-// components/GallerySection.tsx
+
 "use client";
 
 import Image from "next/image";
@@ -131,9 +131,118 @@ const galleryImages = [
     category: "community",
     aspect: "square",
   },
+  {
+    id: 20,
+    src: "/gallery/G20.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  },
+   {
+    id: 21,
+    src: "/gallery/G21.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 22,
+    src: "/gallery/G22.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 23,
+    src: "/gallery/G23.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 24,
+    src: "/gallery/G24.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  },
+  {
+    id: 25,
+    src: "/gallery/G25.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  },
+  {
+    id: 26,
+    src: "/gallery/G26.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  },
+   {
+    id: 27,
+    src: "/gallery/G27.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  },
+   {
+    id: 28,
+    src: "/gallery/G28.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 29,
+    src: "/gallery/G29.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 30,
+    src: "/gallery/G30.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 31,
+    src: "/gallery/G31.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 32,
+    src: "/gallery/G32.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 33,
+    src: "/gallery/G33.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 34,
+    src: "/gallery/G34.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  }, {
+    id: 35,
+    src: "/gallery/G35.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  },
+  {
+    id: 36,
+    src: "/gallery/G36.jpeg",
+    title: "Together Through Sport",
+    category: "community",
+    aspect: "square",
+  },
 ];
 
-export default function GallerySection() {
+export default function Gallery1() {
   const getHeightClass = (aspect: string) => {
     switch (aspect) {
       case "square":
@@ -161,9 +270,8 @@ export default function GallerySection() {
           </span>
         </h1>
 
-        <p className="mx-auto max-w-2xl text-gray-600">
-          Relive the moments – from thrilling matches to community outreach.
-          Explore our journey through the lens.
+        <p className="mx-auto italic font-bold text-base max-w-2xl text-gray-600">
+          Your Lens, Our Journey
         </p>
       </div>
 
@@ -192,18 +300,7 @@ export default function GallerySection() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
-              {/* Image Overlay */}
-              <div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-black/20 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="w-full text-white">
-                  <p className="truncate text-sm font-medium">
-                    {image.title}
-                  </p>
-
-                  <span className="text-xs capitalize opacity-80">
-                    {image.category}
-                  </span>
-                </div>
-              </div>
+           
             </div>
           </div>
         ))}

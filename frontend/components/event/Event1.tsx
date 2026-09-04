@@ -6,14 +6,19 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const eventData = {
-  title: "Baseline of Hope – Invitational Tennis Tournament",
+  title:  (
+    <>
+      'Baseline of Hope'
+      <br />
+      Invitational Tennis Tournament
+    </>
+  ),
+
   date: "FSNL–KONOIKE Open 2025",
 
   images: [
-    "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800",
-    "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800",
-    "https://images.unsplash.com/photo-1560012057-8d7d7d7d7d7d?w=800",
-    "https://images.unsplash.com/photo-1543269865-7a6a4c6e5e4e?w=800",
+    "/images/Event1.jpeg",
+    "/images/Event11.jpeg",
   ],
 };
 
@@ -24,14 +29,14 @@ export default function Event1() {
       {/* ================= SECTION TITLE ================= */}
       <div className="mb-12 text-center">
         <h2 className="text-3xl font-bold text-gray-800 md:text-4xl">
-          Previous{" "}
+          The Journey So{" "}
           <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
-            Event
+            Far
           </span>
         </h2>
 
-        <p className="mx-auto mt-2 max-w-2xl text-gray-500">
-          Relive Last Year’s Tournament Highlights.
+        <p className="mx-auto text-2xl italic mt-2 max-w-2xl text-gray-500">
+          Relive the Moments
         </p>
       </div>
 
@@ -41,19 +46,19 @@ export default function Event1() {
         {/* ================= LEFT CARD ================= */}
         <div className="flex h-full flex-col rounded-2xl bg-white/50 p-6 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8">
 
-        {/* Date */}
-<div className="mb-3 flex items-center gap-2 text-lg font-semibold text-green-600">
+{/* Date */}
+{/* Date */}
+<div className="mb-1 flex flex-col items-center text-lg font-semibold text-green-600">
   <img
     src="/images/logo.jpeg"
     alt="Logo"
-    className="h-5 w-5 object-contain"
+    className="mb-2 h-28 w-28 object-contain"
   />
 
-  <span>{eventData.date}</span>
+  <span className="text-3xl">{eventData.date}</span>
 </div>
-
           {/* Event Title */}
-          <h3 className="mb-5 text-2xl font-bold leading-tight text-gray-800 sm:text-3xl">
+          <h3 className="mb-5 italic text-center text-2xl font-bold leading-tight text-gray-800 sm:text-3xl">
             {eventData.title}
           </h3>
 
@@ -64,7 +69,7 @@ export default function Event1() {
             <p>
               Held on 20–21 December 2025, the FSNL–KONOIKE Open 2025{" "}
               <span className="font-semibold italic">
-                “Baseline of Hope”
+                'Baseline of Hope'
               </span>{" "}
               brought together emerging tennis talent from across Chhattisgarh
               for a celebration of sport, community, and social development.
@@ -93,7 +98,7 @@ export default function Event1() {
             <p>
               More than a tournament,{" "}
               <span className="font-semibold italic">
-                Baseline of Hope
+                'Baseline of Hope'
               </span>{" "}
               reflected the transformative power of sport—bringing communities
               together, nurturing young talent, and creating opportunities for
@@ -119,25 +124,23 @@ export default function Event1() {
         </div>
 
         {/* ================= RIGHT IMAGE COLLAGE ================= */}
-        <div className="grid h-full min-h-[500px] grid-cols-2 grid-rows-2 gap-2">
-
-          {eventData.images.map((src, idx) => (
-            <div
-              key={idx}
-              className="group relative h-full w-full min-h-0 overflow-hidden rounded-xl shadow-sm transition-shadow duration-300 hover:shadow-md"
-            >
-              <Image
-                src={src}
-                alt={`${eventData.title} - image ${idx + 1}`}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                priority={idx < 2}
-              />
-            </div>
-          ))}
-
-        </div>
+     <div className="grid h-full min-h-[500px] grid-cols-1 grid-rows-2 gap-2">
+  {eventData.images.map((src, idx) => (
+    <div
+      key={idx}
+      className="group relative min-h-0 w-full overflow-hidden rounded-xl shadow-sm transition-shadow duration-300 hover:shadow-md"
+    >
+      <Image
+        src={src}
+        alt={`${eventData.title} - image ${idx + 1}`}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        priority={idx < 2}
+      />
+    </div>
+  ))}
+</div>
 
       </div>
     </section>
