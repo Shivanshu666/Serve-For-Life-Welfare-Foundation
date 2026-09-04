@@ -72,7 +72,7 @@ const links: NavLink[] = [
     dropdown: [
       {
         name: "Images",
-        href: "/gallery/images",
+        href: "/gallery/Gallery1",
       },
       {
         name: "Videos",
@@ -307,56 +307,60 @@ export default function Navbar() {
                       DESKTOP DROPDOWN
                   ================================================= */}
 
-                  <AnimatePresence>
-                    {hasDropdown &&
-                      isDropdownOpen && (
-                        <motion.div
-                          initial={{
-                            opacity: 0,
-                            y: 10,
-                            scale: 0.96,
-                          }}
-                          animate={{
-                            opacity: 1,
-                            y: 0,
-                            scale: 1,
-                          }}
-                          exit={{
-                            opacity: 0,
-                            y: 10,
-                            scale: 0.96,
-                          }}
-                          transition={{
-                            duration: 0.2,
-                          }}
-                          className="absolute left-1/2 top-full z-50 w-60 -translate-x-1/2 pt-3"
-                        >
-                          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl shadow-slate-200/60">
-                            {link.dropdown?.map(
-                              (item) => {
-                                const active =
-                                  pathname ===
-                                  item.href;
+                 {/* =================================================
+    DESKTOP DROPDOWN
+================================================= */}
 
-                                return (
-                                  <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className={`block rounded-xl px-4 py-3 text-sm font-medium transition ${
-                                      active
-                                        ? "bg-emerald-50 text-emerald-600"
-                                        : "text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"
-                                    }`}
-                                  >
-                                    {item.name}
-                                  </Link>
-                                );
-                              }
-                            )}
-                          </div>
-                        </motion.div>
-                      )}
-                  </AnimatePresence>
+<AnimatePresence>
+  {hasDropdown && isDropdownOpen && (
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 8,
+        scale: 0.96,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        scale: 1,
+      }}
+      exit={{
+        opacity: 0,
+        y: 8,
+        scale: 0.96,
+      }}
+      transition={{
+        duration: 0.2,
+      }}
+      className="absolute left-1/2 top-full z-[100] w-60 -translate-x-1/2 pt-2"
+    >
+      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl shadow-slate-200/60">
+        {link.dropdown?.map((item) => {
+          const active = pathname === item.href;
+
+          return (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={(e) => {
+                console.log("CLICKED:", item.name);
+                console.log("TARGET URL:", item.href);
+                setDropdownOpen(null);
+              }}
+              className={`block rounded-xl px-4 py-3 text-sm font-medium transition ${
+                active
+                  ? "bg-emerald-50 text-emerald-600"
+                  : "text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"
+              }`}
+            >
+              {item.name}
+            </Link>
+          );
+        })}
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
                 </li>
               );
             })}

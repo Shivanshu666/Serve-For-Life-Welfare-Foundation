@@ -1,5 +1,5 @@
-import WorkPage from "@/components/work/WorkPage";
+import OurProgram from "@/components/work/OurProgram";
 
 export default function Work() {
-  return <WorkPage />;
+  return <OurProgram />;
 }

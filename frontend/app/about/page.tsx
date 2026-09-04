@@ -1,15 +1,5 @@
-import React from 'react'
-import AboutPartOne from '@/components/about/AboutPartOne'
-// import AboutPartTwo from '@/components/about/AboutPartTwo'
-// import AboutPartThree from '@/components/about/AboutPartThree'
-const about = () => {
-  return (
-    <>
-      <AboutPartOne/>
-      {/* <AboutPartTwo/> */}
-      {/* <AboutPartThree/> */}
-    </>
-  )
-}
+import OurStory from "@/components/about/OurStory";
 
-export default about
+export default function AboutPage() {
+  return <OurStory />;
+}

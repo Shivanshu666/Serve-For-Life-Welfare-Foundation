@@ -1,279 +1,279 @@
-"use client";
+// "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  FaHeart,
-  FaArrowRight,
-} from "react-icons/fa";
+// import Link from "next/link";
+// import { motion } from "framer-motion";
+// import {
+//   FaHeart,
+//   FaArrowRight,
+// } from "react-icons/fa";
 
 
-const fadeUp = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
+// const fadeUp = {
+//   hidden: {
+//     opacity: 0,
+//     y: 40,
+//   },
 
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 0.6,
+//     },
+//   },
+// };
 
 
 
-export default function AboutPartThree() {
+// export default function AboutPartThree() {
 
 
-return (
+// return (
 
-<>
+// <>
 
 
-{/* ================= COMMITMENT ================= */}
+// {/* ================= COMMITMENT ================= */}
 
 
-<section
-className="
-relative
-py-24
-px-6
-sm:px-8
-lg:px-12
-overflow-hidden
-bg-gradient-to-b
-from-[#F8FBF8]
-via-white
-to-[#FCFCFC]
-"
->
+// <section
+// className="
+// relative
+// py-24
+// px-6
+// sm:px-8
+// lg:px-12
+// overflow-hidden
+// bg-gradient-to-b
+// from-[#F8FBF8]
+// via-white
+// to-[#FCFCFC]
+// "
+// >
 
 
-{/* Background Glow */}
+// {/* Background Glow */}
 
 
-<div
-className="
-absolute
--top-20
--right-20
-h-80
-w-80
-rounded-full
-bg-emerald-200/40
-blur-[150px]
-"
-/>
+// <div
+// className="
+// absolute
+// -top-20
+// -right-20
+// h-80
+// w-80
+// rounded-full
+// bg-emerald-200/40
+// blur-[150px]
+// "
+// />
 
 
 
-<div
-className="
-absolute
--bottom-20
--left-20
-h-80
-w-80
-rounded-full
-bg-lime-200/40
-blur-[150px]
-"
-/>
+// <div
+// className="
+// absolute
+// -bottom-20
+// -left-20
+// h-80
+// w-80
+// rounded-full
+// bg-lime-200/40
+// blur-[150px]
+// "
+// />
 
 
 
-<div
-className="
-relative
-z-10
-max-w-4xl
-mx-auto
-text-center
-"
->
+// <div
+// className="
+// relative
+// z-10
+// max-w-4xl
+// mx-auto
+// text-center
+// "
+// >
 
 
-<motion.div
+// <motion.div
 
-initial="hidden"
-whileInView="visible"
-viewport={{
-once:true
-}}
+// initial="hidden"
+// whileInView="visible"
+// viewport={{
+// once:true
+// }}
 
-variants={fadeUp}
+// variants={fadeUp}
 
->
+// >
 
 
 
-<FaHeart
-className="
-text-5xl
-text-emerald-500
-mx-auto
-mb-6
-"
-/>
+// <FaHeart
+// className="
+// text-5xl
+// text-emerald-500
+// mx-auto
+// mb-6
+// "
+// />
 
 
 
 
-<h2
-className="
-text-3xl
-sm:text-4xl
-lg:text-5xl
-font-bold
-text-slate-900
-"
->
+// <h2
+// className="
+// text-3xl
+// sm:text-4xl
+// lg:text-5xl
+// font-bold
+// text-slate-900
+// "
+// >
 
 
-Our Commitment to{" "}
+// Our Commitment to{" "}
 
 
-<span
-className="
-bg-gradient-to-r
-from-emerald-500
-to-lime-500
-bg-clip-text
-text-transparent
-"
->
+// <span
+// className="
+// bg-gradient-to-r
+// from-emerald-500
+// to-lime-500
+// bg-clip-text
+// text-transparent
+// "
+// >
 
-Change
+// Change
 
-</span>
+// </span>
 
 
-</h2>
+// </h2>
 
 
 
 
 
-<p
-className="
-mt-6
-text-lg
-text-slate-600
-leading-relaxed
-"
->
+// <p
+// className="
+// mt-6
+// text-lg
+// text-slate-600
+// leading-relaxed
+// "
+// >
 
 
-At Serve For Life Welfare Foundation, we are committed
-to mobilizing resources and building sustainable,
-structured sports programs that make quality sports
-education accessible to children from economically
-disadvantaged backgrounds.
+// At Serve For Life Welfare Foundation, we are committed
+// to mobilizing resources and building sustainable,
+// structured sports programs that make quality sports
+// education accessible to children from economically
+// disadvantaged backgrounds.
 
 
-</p>
+// </p>
 
 
 
 
 
 
-<div
-className="
-mt-10
-inline-block
-p-8
-rounded-3xl
-bg-white
-border
-border-emerald-100
-shadow-xl
-shadow-emerald-100/40
-"
->
+// <div
+// className="
+// mt-10
+// inline-block
+// p-8
+// rounded-3xl
+// bg-white
+// border
+// border-emerald-100
+// shadow-xl
+// shadow-emerald-100/40
+// "
+// >
 
 
-<p
-className="
-text-xl
-sm:text-2xl
-font-semibold
-text-slate-900
-leading-relaxed
-"
->
+// <p
+// className="
+// text-xl
+// sm:text-2xl
+// font-semibold
+// text-slate-900
+// leading-relaxed
+// "
+// >
 
 
-We are not simply building athletes —
+// We are not simply building athletes —
 
-<br/>
+// <br/>
 
 
-<span
-className="
-text-emerald-500
-"
->
+// <span
+// className="
+// text-emerald-500
+// "
+// >
 
-we are building healthier children,
+// we are building healthier children,
 
-</span>
+// </span>
 
 
-<br/>
+// <br/>
 
 
-<span
-className="
-text-lime-600
-"
->
+// <span
+// className="
+// text-lime-600
+// "
+// >
 
-stronger communities,
+// stronger communities,
 
-</span>
+// </span>
 
 
-<br/>
+// <br/>
 
 
-<span
-className="
-text-emerald-500
-"
->
+// <span
+// className="
+// text-emerald-500
+// "
+// >
 
-and brighter futures
+// and brighter futures
 
-</span>
+// </span>
 
 
-<br/>
+// <br/>
 
 
-through the power of sport.
+// through the power of sport.
 
 
 
-</p>
+// </p>
 
 
 
-</div>
+// </div>
 
 
 
-</motion.div>
+// </motion.div>
 
 
-</div>
+// </div>
 
 
 
-</section>
+// </section>
 
 
 
@@ -283,197 +283,197 @@ through the power of sport.
 
 
 
-{/* ================= CTA ================= */}
+// {/* ================= CTA ================= */}
 
 
 
-<section
-className="
-relative
-py-24
-px-6
-sm:px-8
-lg:px-12
-bg-gradient-to-r
-from-emerald-50
-via-lime-50
-to-emerald-50
-"
->
+// <section
+// className="
+// relative
+// py-24
+// px-6
+// sm:px-8
+// lg:px-12
+// bg-gradient-to-r
+// from-emerald-50
+// via-lime-50
+// to-emerald-50
+// "
+// >
 
 
-<div
-className="
-max-w-4xl
-mx-auto
-text-center
-"
->
+// <div
+// className="
+// max-w-4xl
+// mx-auto
+// text-center
+// "
+// >
 
 
 
-<motion.div
+// <motion.div
 
-initial="hidden"
-whileInView="visible"
-viewport={{
-once:true
-}}
+// initial="hidden"
+// whileInView="visible"
+// viewport={{
+// once:true
+// }}
 
-variants={fadeUp}
+// variants={fadeUp}
 
->
+// >
 
 
 
-<h2
-className="
-text-3xl
-sm:text-4xl
-lg:text-5xl
-font-bold
-text-slate-900
-"
->
+// <h2
+// className="
+// text-3xl
+// sm:text-4xl
+// lg:text-5xl
+// font-bold
+// text-slate-900
+// "
+// >
 
 
-Ready to{" "}
+// Ready to{" "}
 
 
-<span
-className="
-bg-gradient-to-r
-from-emerald-500
-to-lime-500
-bg-clip-text
-text-transparent
-"
->
+// <span
+// className="
+// bg-gradient-to-r
+// from-emerald-500
+// to-lime-500
+// bg-clip-text
+// text-transparent
+// "
+// >
 
-Make a Difference?
+// Make a Difference?
 
-</span>
+// </span>
 
 
-</h2>
+// </h2>
 
 
 
 
-<p
-className="
-mt-5
-text-lg
-text-slate-600
-max-w-2xl
-mx-auto
-leading-relaxed
-"
->
+// <p
+// className="
+// mt-5
+// text-lg
+// text-slate-600
+// max-w-2xl
+// mx-auto
+// leading-relaxed
+// "
+// >
 
 
-Join us in creating opportunities for every child
-to experience the transformative power of play
-and sport.
+// Join us in creating opportunities for every child
+// to experience the transformative power of play
+// and sport.
 
 
-</p>
+// </p>
 
 
 
 
 
-<div
-className="
-mt-10
-flex
-flex-wrap
-justify-center
-gap-4
-"
->
+// <div
+// className="
+// mt-10
+// flex
+// flex-wrap
+// justify-center
+// gap-4
+// "
+// >
 
 
-<Link
+// <Link
 
-href="/volunteer"
+// href="/volunteer"
 
-className="
-px-8
-py-3.5
-rounded-full
-bg-gradient-to-r
-from-emerald-500
-to-lime-500
-text-white
-font-semibold
-shadow-lg
-hover:scale-105
-transition
-flex
-items-center
-gap-2
-"
+// className="
+// px-8
+// py-3.5
+// rounded-full
+// bg-gradient-to-r
+// from-emerald-500
+// to-lime-500
+// text-white
+// font-semibold
+// shadow-lg
+// hover:scale-105
+// transition
+// flex
+// items-center
+// gap-2
+// "
 
->
+// >
 
 
-Volunteer Now
+// Volunteer Now
 
 
-<FaArrowRight/>
+// <FaArrowRight/>
 
 
-</Link>
+// </Link>
 
 
 
 
 
-<Link
+// <Link
 
-href="/donate"
+// href="/donate"
 
-className="
-px-8
-py-3.5
-rounded-full
-border
-border-emerald-300
-text-emerald-700
-font-semibold
-hover:bg-emerald-100
-transition
-"
+// className="
+// px-8
+// py-3.5
+// rounded-full
+// border
+// border-emerald-300
+// text-emerald-700
+// font-semibold
+// hover:bg-emerald-100
+// transition
+// "
 
->
+// >
 
 
-Make a Donation
+// Make a Donation
 
 
-</Link>
+// </Link>
 
 
 
 
-</div>
+// </div>
 
 
 
-</motion.div>
+// </motion.div>
 
 
 
-</div>
+// </div>
 
 
-</section>
+// </section>
 
 
 
-</>
+// </>
 
-)
+// )
 
-}
+// }

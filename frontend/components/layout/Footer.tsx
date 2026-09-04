@@ -27,8 +27,6 @@ export default function Footer() {
     // { name: "Contact", path: "/contact" },
   ];
 
-
-
   const socialLinks = [
     {
       icon: <FaFacebookF />,
@@ -71,7 +69,6 @@ text-slate-900
 "
     >
       {/* Top Gradient Line */}
-
       <div
         className="
 h-1 w-full
@@ -83,7 +80,6 @@ to-green-500
       />
 
       {/* Background Glow */}
-
       <div
         className="
 absolute -top-20 -left-20
@@ -93,7 +89,6 @@ bg-lime-300/30
 blur-[140px]
 "
       />
-
       <div
         className="
 absolute bottom-0 right-0
@@ -103,7 +98,6 @@ bg-emerald-300/20
 blur-[160px]
 "
       />
-
       <div
         className="
 absolute top-1/2 left-1/2
@@ -115,7 +109,6 @@ bg-green-200/20
 blur-[200px]
 "
       />
-
       <div
         className="
 absolute inset-0
@@ -132,7 +125,6 @@ linear-gradient(90deg,#94a3b8 1px,transparent 1px)
       />
 
       {/* MAIN */}
-
       <div
         className="
 relative z-10
@@ -141,21 +133,22 @@ px-5 sm:px-8 lg:px-12
 py-14
 "
       >
+        {/* Three‑column grid: Brand | Quick Links | Contact */}
         <div
           className="
 grid grid-cols-1
 sm:grid-cols-2
-lg:grid-cols-4
+lg:grid-cols-3
 gap-10
 "
         >
-          {/* BRAND */}
-
+          {/* BRAND — centered content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col items-center text-center"
           >
             <Link href="/">
               <Image
@@ -206,13 +199,13 @@ transition-all
             </div>
           </motion.div>
 
-          {/* QUICK LINKS */}
-
+          {/* QUICK LINKS — centered */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.6 }}
+            className="flex flex-col items-center text-center"
           >
             <h3
               className="
@@ -250,7 +243,6 @@ group-hover:scale-150
 transition
 "
                     />
-
                     <span
                       className="
 group-hover:translate-x-1
@@ -265,19 +257,7 @@ transition
             </ul>
           </motion.div>
 
-          {/* PROGRAMS */}
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
-      
-          </motion.div>
-
           {/* CONTACT */}
-
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -309,7 +289,6 @@ text-lime-500
 mt-1
 "
                 />
-
                 <p
                   className="
 text-slate-600
@@ -331,7 +310,6 @@ flex items-center gap-4
 text-lime-500
 "
                 />
-
                 <p
                   className="
 text-slate-600
@@ -352,7 +330,6 @@ flex items-center gap-4
 text-lime-500
 "
                 />
-
                 <p
                   className="
 text-slate-600
@@ -367,7 +344,6 @@ text-sm
         </div>
 
         {/* BOTTOM BAR */}
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -401,11 +377,10 @@ text-lime-600
 "
               >
                 Serve For Life Welfare Foundation
-              </span> <br />
-               All Rights Reserved.
+              </span>{" "}
+              <br />
+              All Rights Reserved.
             </p>
-
-          
           </div>
 
           <div
@@ -425,9 +400,7 @@ transition
             >
               Privacy Policy
             </Link>
-
             <span className="text-slate-300">|</span>
-
             <Link
               href="/terms"
               className="
@@ -438,9 +411,7 @@ transition
             >
               Terms & Conditions
             </Link>
-
             <span className="text-slate-300">|</span>
-
             <Link
               href="/faq"
               className="
@@ -455,7 +426,6 @@ transition
         </motion.div>
 
         {/* SCROLL TOP BUTTON */}
-
         <motion.button
           whileHover={{
             scale: 1.1,
@@ -488,7 +458,6 @@ z-50
         </motion.button>
 
         {/* DECORATIVE TENNIS BALLS */}
-
         <motion.div
           animate={{
             y: [0, -25, 0],
@@ -512,7 +481,7 @@ bg-lime-300/20
 border
 border-lime-300/40
 "
-        ></motion.div>
+        />
 
         <motion.div
           animate={{
@@ -537,7 +506,7 @@ bg-emerald-300/20
 border
 border-emerald-300/40
 "
-        ></motion.div>
+        />
       </div>
     </footer>
   );

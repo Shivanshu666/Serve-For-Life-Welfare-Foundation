@@ -68,20 +68,12 @@ const Event2 = () => {
         className="absolute bottom-1/4 right-1/4 h-32 w-32 rounded-full bg-lime-300/20 border border-lime-300/30 blur-sm hidden lg:block"
       />
 
-
-
       <motion.div
         initial="hidden"
         animate="visible"
         variants={fadeUp}
         className="text-center max-w-3xl relative z-10"
       >
-
-
-
-       
-
-
 
         <div className="flex justify-center mb-6">
           <FaCalendarAlt className="text-6xl text-lime-500" />

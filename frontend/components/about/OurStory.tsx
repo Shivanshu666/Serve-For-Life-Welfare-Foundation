@@ -47,7 +47,7 @@ const stagger: Variants = {
    MAIN COMPONENT
 ========================================================= */
 
-export default function AboutPartOne() {
+export default function OurStory() {
   const qualities = [
     "Discipline",
     "Resilience",
