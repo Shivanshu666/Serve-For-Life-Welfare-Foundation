@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 // Import your images
 import athlete1 from "@/assets/athlete/athlete1.jpeg";
-// import athlete2 from "@/assets/athlete/athlete2.jpg";
+import athlete2 from "@/assets/athlete/athlete2.jpeg";
 import athlete3 from "@/assets/athlete/athlete3.jpeg";
 
 const fadeUp = {
@@ -47,7 +47,7 @@ const athletes = [
   {
     name: "Tanvya Goel ",
     // age: "13",
-    // image: athlete2,
+    image: athlete2,
     desc: "An emerging young player who is in high school this year, he is a dedicated athlete who approaches every opportunity to improve with determination and focus. He enjoys training, embraces hard work and brings a strong work ethic to everything he does on and off the court.",
   },
   {
@@ -118,9 +118,7 @@ export default function Athletes() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
 
-                <div className="absolute top-5 right-5 rounded-full bg-white/95 px-4 py-1.5 text-sm font-semibold text-lime-700 shadow-md backdrop-blur">
-                  {athlete.age} Years
-                </div>
+              
               </div>
 
               {/* Content */}
