@@ -4,6 +4,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { FaCalendarAlt, FaEnvelope, FaFutbol } from "react-icons/fa";
+
 import {
   ArrowRight,
   ChevronDown,
@@ -11,6 +14,21 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+const countdownItems = ["DAYS", "HOURS", "MINUTES", "SECONDS"];
 const eventData = {
   title: (
     <>
@@ -39,7 +57,72 @@ export default function Event1() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24 lg:px-10">
+    <>  
+{/* ================================================= */}
+{/* ============== EVENTS SOON TO BE ================ */}
+{/* ================================================= */}
+
+{/* ================================================= */}
+{/* ============== EVENTS SOON TO BE ================ */}
+{/* ================================================= */}
+
+<section className="w-full px-4 mt-[125px] sm:px-6 lg:px-10">
+  <div className="mx-auto flex min-h-[100px] max-w-6xl items-center justify-around gap-4 rounded-2xl border border-emerald-100 bg-gradient-to-r from-emerald-50 via-white to-lime-50 px-4 py-2 shadow-sm sm:px-6">
+
+    {/* Left Side */}
+<div className="flex flex-col gap-1">
+  {/* Events + Soon to be */}
+  <div className="flex items-center gap-3">
+    <FaCalendarAlt className="shrink-0 text-lg text-emerald-500 sm:text-xl" />
+
+    <div className="flex items-center gap-2">
+      <span className="text-2xl font-bold text-slate-800">
+        Events
+      </span>
+
+      <span className="text-slate-400">•</span>
+
+      <span className="text-2xl font-semibold text-emerald-500">
+        Soon to be
+      </span>
+    </div>
+  </div>
+
+  {/* Stay tuned - niche */}
+  <div className="ml-8">
+    <span className="text-sm font-medium text-slate-500">
+      Stay tuned for the updates!
+    </span>
+  </div>
+</div>
+
+    {/* Right Side */}
+  <div className="flex items-center gap-2">
+  {countdownItems.map((label: string, index: number) => (
+    <div
+      key={index}
+      className="hidden min-w-[60px] flex-col items-center justify-center rounded-lg bg-white px-2 py-1 text-xl shadow-sm sm:flex"
+    >
+      <span className="font-bold leading-tight text-emerald-500">
+        00
+      </span>
+
+      <span className="text-xs font-medium  text-slate-500">
+        {label}
+      </span>
+    </div>
+  ))}
+
+  <span className="text-xs font-medium text-slate-500 sm:hidden">
+    Stay tuned!
+  </span>
+</div>
+
+  </div>
+</section>
+
+
+    <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-10">
 
       {/* ================= SECTION TITLE ================= */}
       <div className="mb-10 text-center sm:mb-12">
@@ -247,5 +330,6 @@ export default function Event1() {
 
       </div>
     </section>
+    </>
   );
 }
