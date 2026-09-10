@@ -147,7 +147,7 @@ export default function Philosophy() {
               bg-emerald-500/10
               px-4
               py-1.5
-              text-xs
+              text-lg
               font-semibold
               uppercase
               tracking-wider

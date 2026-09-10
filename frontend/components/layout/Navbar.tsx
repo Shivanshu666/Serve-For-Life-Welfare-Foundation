@@ -53,10 +53,10 @@ const links: NavLink[] = [
         name: "Our Programs",
         href: "/work",
       },
-      {
-        name: "Success Stories",
-        href: "/work/stories",
-      },
+      // {
+      //   name: "Success Stories",
+      //   href: "/work/stories",
+      // },
     ],
   },
 

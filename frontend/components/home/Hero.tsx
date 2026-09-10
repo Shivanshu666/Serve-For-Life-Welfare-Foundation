@@ -97,10 +97,10 @@ export default function Hero() {
               />
 
               {/* Emerald tint overlay — keeps it on-brand instead of a raw photo */}
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/30 via-green-500/10 to-emerald-900/40 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-br  from-emerald-400/10 via-transparent to-emerald-700/10" />
 
               {/* Soft inner ring for polish */}
-              <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/40" />
+              <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/40" /> 
             </div>
 
             {/* Floating Bubble 1 */}

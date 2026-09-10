@@ -96,7 +96,7 @@ export default function OurStory() {
     />
 
     {/* Image Overlay */}
-    <div className="absolute inset-0 bg-[#F1F4EC]/70" />
+    <div className="absolute inset-0 bg-[#F1F4EC]/80" />
   </div>
 
   {/* Content */}
@@ -369,15 +369,7 @@ export default function OurStory() {
       ===================================================== */}
 
       <section className="relative bg-white px-6 py-20 sm:px-8 overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0 -z-10 opacity-10">
-          <Image
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85f6ef?w=1200&q=80"
-            alt="Sports facility"
-            fill
-            className="object-cover"
-          />
-        </div>
+      
 
         <motion.div
           initial="hidden"

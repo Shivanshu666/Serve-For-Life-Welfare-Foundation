@@ -145,7 +145,7 @@ export default function Involved2() {
                                     <div
                                         key={item.number}
                                         onClick={() => setSelectedIndex(index)}
-                                        className={`group relative cursor-pointer overflow-hidden rounded-xl p-4 transition-all duration-300 sm:p-5 lg:p-5 ${
+                                        className={`group text-start relative cursor-pointer overflow-hidden rounded-xl p-4 transition-all duration-300 sm:p-5 lg:p-5 ${
                                             isActive
                                                 ? "bg-[#D85A42] text-white shadow-md ring-2 ring-[#D85A42] ring-offset-2 ring-offset-[#EBF0E8]"
                                                 : "bg-white/90 text-[#17221D] shadow-sm ring-1 ring-[#DCE3D8]/60 transition-all hover:bg-white hover:shadow-md hover:ring-[#C8D2C4]"
@@ -245,14 +245,8 @@ export default function Involved2() {
                                 <h3 className="max-w-md text-2xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
                                     One contribution.
                                     <br />
-                                    Four ways to create change.
+                                    Four ways to create a change.
                                 </h3>
-
-                                <p className="mt-3 max-w-md text-xs leading-5 text-white/65 sm:text-sm sm:leading-6">
-                                    From the first opportunity to the journey
-                                    toward excellence, your support helps build
-                                    a stronger future through sport.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -261,7 +255,7 @@ export default function Involved2() {
                     <div className="mt-4 flex justify-center border-t border-[#DCE3D8] pt-4 sm:mt-5 sm:pt-5">
 
                         <Link href="/donate">
-                            <button className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#d82e0c] px-8 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#C14D38] hover:-translate-y-0.5 hover:shadow-lg active:scale-95 sm:px-10 sm:py-3.5 sm:text-base">
+                            <button className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 px-8 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#C14D38] hover:-translate-y-0.5 hover:shadow-lg active:scale-95 sm:px-10 sm:py-3.5 sm:text-base">
                                 Donate Now
                             </button>
                         </Link>

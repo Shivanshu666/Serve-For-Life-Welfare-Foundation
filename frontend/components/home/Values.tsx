@@ -58,7 +58,7 @@ export default function Values() {
       <div className="relative mx-auto max-w-[1400px]">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center rounded-full border border-lime-200 bg-lime-100 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-lime-700">
+          <span className="inline-flex items-center rounded-full border border-lime-200 bg-lime-100 px-4 py-2 text-lg font-semibold uppercase tracking-widest text-lime-700">
             What We Stand For
           </span>
 

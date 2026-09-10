@@ -120,7 +120,7 @@ export default function OurProgram() {
                                         />
 
                                         {/* Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" />
+                                        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" /> */}
                                     </div>
 
                                     {/* Content — compact padding */}
