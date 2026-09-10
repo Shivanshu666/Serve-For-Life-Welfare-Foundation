@@ -1,5 +1,3 @@
-
-"use client"
 const Purpose = () => {
   return (
     <section className="relative overflow-hidden bg-white px-4 py-5 sm:px-6 lg:px-8">
