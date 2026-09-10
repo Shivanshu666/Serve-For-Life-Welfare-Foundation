@@ -144,7 +144,7 @@ Be a Part of the Change
               </div>
 
               <h3 className="mt-3 text-3xl font-semibold text-[#182D22] sm:text-4xl">
-                Power the vision. Empower Children
+                Power the Vision. Empower Children
               </h3>
             </div>
 

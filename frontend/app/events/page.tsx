@@ -5,8 +5,8 @@ import React from 'react'
 const page = () => {
   return (
     <>
-    <Event1/>
       <Event2/>
+    <Event1/>
     </>
   )
 }

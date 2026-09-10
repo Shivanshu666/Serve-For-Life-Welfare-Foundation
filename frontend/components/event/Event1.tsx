@@ -1,152 +1,4 @@
 
-// "use client";
-
-// import Image from "next/image";
-// import Link from "next/link";
-// import { ArrowRight } from "lucide-react";
-
-// const eventData = {
-//   title:  (
-//     <>
-//       'Baseline of Hope'
-//       <br />
-//       Invitational Tennis Tournament
-//     </>
-//   ),
-
-//   date: "FSNL–KONOIKE Open 2025",
-
-//   images: [
-//     "/images/Event1.jpeg",
-//     "/images/Event11.jpeg",
-//   ],
-// };
-
-// export default function Event1() {
-//   return (
-//     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-22 lg:px-10">
-
-//       {/* ================= SECTION TITLE ================= */}
-//       <div className="mb-12 text-center">
-//         <h2 className="text-3xl font-bold text-gray-800 md:text-4xl">
-//           The Journey So{" "}
-//           <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
-//             Far
-//           </span>
-//         </h2>
-
-//         <p className="mx-auto text-2xl italic mt-2 max-w-2xl text-gray-500">
-//           Relive the Moments
-//         </p>
-//       </div>
-
-//       {/* ================= MAIN CONTENT ================= */}
-//       <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2">
-
-//         {/* ================= LEFT CARD ================= */}
-//         <div className="flex h-full flex-col rounded-2xl bg-white/50 p-6 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8">
-
-// {/* Date */}
-// {/* Date */}
-// <div className="mb-1 flex flex-col items-center text-lg font-semibold text-green-600">
-//   <img
-//     src="/images/logo.jpeg"
-//     alt="Logo"
-//     className="mb-2 h-28 w-28 object-contain"
-//   />
-
-//   <span className="text-3xl">{eventData.date}</span>
-// </div>
-//           {/* Event Title */}
-//           <h3 className="mb-5 italic text-center text-2xl font-bold leading-tight text-gray-800 sm:text-3xl">
-//             {eventData.title}
-//           </h3>
-
-//           {/* ================= DESCRIPTION ================= */}
-//           <div className="space-y-4 text-gray-600 leading-relaxed">
-
-//             {/* Paragraph 1 */}
-//             <p>
-//               Held on 20–21 December 2025, the FSNL–KONOIKE Open 2025{" "}
-//               <span className="font-semibold italic">
-//                 'Baseline of Hope'
-//               </span>{" "}
-//               brought together emerging tennis talent from across Chhattisgarh
-//               for a celebration of sport, community, and social development.
-//             </p>
-
-//             {/* Paragraph 2 */}
-//             <p>
-//               With the theme{" "}
-//               <span className="font-bold italic text-gray-700">
-//                 “The Power of Sport to Fuel Social Development”
-//               </span>
-//               , the tournament went beyond competition. It created a platform
-//               for young players to showcase their talent, build connections,
-//               and experience the values of discipline, teamwork, resilience,
-//               and fair play.
-//             </p>
-
-//             {/* Paragraph 3 */}
-//             <p>
-//               The event brought together tennis academies, tennis schools, and
-//               tennis clubs from across Chhattisgarh, making it one of the
-//               region’s largest academy- and club-based tennis tournaments.
-//             </p>
-
-//             {/* Paragraph 4 */}
-//             <p>
-//               More than a tournament,{" "}
-//               <span className="font-semibold italic">
-//                 'Baseline of Hope'
-//               </span>{" "}
-//               reflected the transformative power of sport—bringing communities
-//               together, nurturing young talent, and creating opportunities for
-//               positive social change.
-//             </p>
-
-//           </div>
-
-//           {/* ================= WEBSITE BUTTON ================= */}
-//           <Link
-//             href="https://www.fsnlkonoiketennis.in/"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="group mt-8 inline-flex w-fit items-center gap-2 rounded-lg border-2 border-green-600 px-4 py-2 font-semibold text-green-600 transition-all duration-300 hover:scale-105 hover:bg-green-600 hover:text-white"
-//           >
-//             View the tournament website for more details
-
-//             <ArrowRight
-//               size={18}
-//               className="transition-transform duration-300 group-hover:translate-x-1"
-//             />
-//           </Link>
-//         </div>
-
-//         {/* ================= RIGHT IMAGE COLLAGE ================= */}
-//      <div className="grid h-full min-h-[500px] grid-cols-1 grid-rows-2 gap-2">
-//   {eventData.images.map((src, idx) => (
-//     <div
-//       key={idx}
-//       className="group relative min-h-0 w-full overflow-hidden rounded-xl shadow-sm transition-shadow duration-300 hover:shadow-md"
-//     >
-//       <Image
-//         src={src}
-//         alt={`${eventData.title} - image ${idx + 1}`}
-//         fill
-//         className="object-cover transition-transform duration-500 group-hover:scale-105"
-//         sizes="(max-width: 1024px) 100vw, 50vw"
-//         priority={idx < 2}
-//       />
-//     </div>
-//   ))}
-// </div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
 
 "use client";
 
@@ -171,6 +23,16 @@ const eventData = {
   date: "FSNL–KONOIKE Open 2025",
 
   image: "/images/Event1.jpeg",
+
+  // 5 photos
+  photos: [
+    "/gallery/G3.avif",
+    "/gallery/G4.avif",
+    "/gallery/G5.avif",
+    "/gallery/G6.avif",
+    "/gallery/G7.avif",
+   
+  ],
 };
 
 export default function Event1() {
@@ -194,7 +56,7 @@ export default function Event1() {
       </div>
 
       {/* ================= MAIN CARD ================= */}
-      <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl bg-white/60 shadow-sm backdrop-blur-sm">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-white/60 shadow-sm backdrop-blur-sm">
 
         {/* ================= TOP IMAGE ================= */}
         <div className="group relative h-[260px] w-full overflow-hidden sm:h-[380px] md:h-[450px] lg:h-[500px]">
@@ -210,6 +72,15 @@ export default function Event1() {
 
         {/* ================= CONTENT ================= */}
         <div className="p-6 sm:p-8 md:p-10">
+
+          {/* ================= LOGO ================= */}
+          <div className="mb-4 flex justify-center">
+            <img
+              src="/images/logo.jpeg"
+              alt="Logo"
+              className="h-24 w-24 object-contain sm:h-28 sm:w-28"
+            />
+          </div>
 
           {/* ================= DATE ================= */}
           <div className="mb-2 text-center">
@@ -319,8 +190,62 @@ export default function Event1() {
           )}
 
         </div>
+
+        {/* ================================================= */}
+        {/* ================= 5 PHOTOS ======================= */}
+        {/* ================================================= */}
+
+     <div className="border-t border-gray-200/70 px-4 py-5 sm:px-6 md:px-10">
+  
+     <p className="mx-auto italic font-bold text-base max-w-2xl text-gray-600">
+          Your Lens, Our Journey
+        </p>
+
+  <div className="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4">
+
+    {eventData.photos.map((src, index) => (
+      <div
+        key={index}
+        className="group relative aspect-[16/9] w-full overflow-hidden shadow-sm"
+      >
+        <Image
+          src={src}
+          alt={`Baseline of Hope event photo ${index + 1}`}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 640px) 20vw, (max-width: 1024px) 18vw, 16vw"
+        />
+      </div>
+    ))}
+
+  </div>
+
+</div>
+
+     <div className="border-t border-gray-200/70 px-4 py-5 sm:px-6 md:px-10">
+
+  <div className="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4">
+
+    {eventData.photos.map((src, index) => (
+      <div
+        key={index}
+        className="group relative aspect-[16/9] w-full overflow-hidden shadow-sm"
+      >
+        <Image
+          src={src}
+          alt={`Baseline of Hope event photo ${index + 1}`}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 640px) 20vw, (max-width: 1024px) 18vw, 16vw"
+        />
+      </div>
+    ))}
+
+  </div>
+
+</div>
+
       </div>
     </section>
   );
 }
-

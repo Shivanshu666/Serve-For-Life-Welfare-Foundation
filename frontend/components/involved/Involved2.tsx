@@ -21,14 +21,22 @@ const initiatives = [
         icon: GraduationCap,
         image: "/involved/involved1.jpg",
     },
-    {
-        number: "02",
-        title: "Support the Journey to Excellence",
-        description:
-            "Your support helps promising athletes from underserved communities overcome barriers and pursue their sporting potential. Through the SET framework—Serve, Empower, Transform—every scholarship provides meaningful support across coaching, equipment, tournament participation, travel, nutrition, and athlete development.",
-        icon: Trophy,
-        image: "/involved/involved2.png",
-    },
+  {
+  number: "02",
+  title: "Support the Journey to Excellence",
+  description: (
+    <>
+      Your support helps promising athletes from underserved communities overcome
+      barriers and pursue their sporting potential.
+      
+      Through the SET framework— <br /> <span className="text-black font-semibold">Serve, Empower, Transform </span>— everyscholarship
+      provides meaningful support across coaching, equipment, tournament
+      participation, travel, nutrition, and athlete development.
+    </>
+  ),
+  icon: Trophy,
+  image: "/involved/involved2.png",
+},
     {
         number: "03",
         title: "Create Spaces to Thrive",
@@ -97,7 +105,7 @@ export default function Involved2() {
                 <div className="mx-auto max-w-4xl text-center">
 
                     {/* Badge */}
-                    <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D0DCD0] bg-white/80 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#4F6A4D] shadow-sm backdrop-blur-sm transition-all hover:bg-white sm:text-[11px]">
+                    <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D0DCD0] bg-white/80 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#4F6A4D] shadow-sm backdrop-blur-sm transition-all hover:bg-white sm:text-lg">
                         <Heart className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                         Make an Impact
                     </div>
@@ -233,21 +241,32 @@ export default function Involved2() {
                             />
 
                             {/* Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A14] via-[#172A20]/30 to-transparent" />
+                            {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A14] via-[#172A20]/10 to-transparent" /> */}
 
-                            {/* Bottom content */}
-                            <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7 lg:p-8">
+                        {/* Bottom content */}
+<div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7 lg:p-8">
 
-                                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-[#17221D] shadow-sm sm:h-11 sm:w-11">
-                                    <Heart className="h-4 w-4 fill-current sm:h-5 sm:w-5" />
-                                </div>
+  <h3 className="mx-auto max-w-md text-center text-2xl font-semibold leading-[1.1] tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
+    {/* Heart + Headline — centered row */}
+    <span className="flex items-center justify-center gap-2">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/95 text-[#17221D] shadow-sm sm:h-11 sm:w-11">
+        <Heart className="h-4 w-4 fill-current sm:h-5 sm:w-5" />
+      </span>
+      <span className="relative inline-block">
+        <span className="relative z-10 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent">
+          One Contribution.
+        </span>
+        <span className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-gradient-to-r from-amber-400/80 via-yellow-300/60 to-transparent" />
+      </span>
+    </span>
 
-                                <h3 className="max-w-md text-2xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
-                                    One contribution.
-                                    <br />
-                                    Four ways to create a change.
-                                </h3>
-                            </div>
+    {/* Subtitle — centered, no forced left margin */}
+    <span className="mt-0 ml-[55px] text-white block text-center text-lg font-normal italic leading-snug sm:text-xl">
+      Four ways to create a change.
+    </span>
+  </h3>
+
+</div>
                         </div>
                     </div>
 
