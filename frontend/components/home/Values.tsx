@@ -50,7 +50,7 @@ const values = [
 
 export default function Values() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#F8FBF8] via-white to-[#FCFCFC] px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#F8FBF8] via-white to-[#FCFCFC] px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-20">
       {/* Background Glow */}
       <div className="pointer-events-none absolute -left-32 -top-32 h-[420px] w-[420px] rounded-full bg-lime-100 blur-[180px]" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-[420px] w-[420px] rounded-full bg-emerald-100 blur-[180px]" />

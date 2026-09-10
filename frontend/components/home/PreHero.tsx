@@ -144,7 +144,7 @@ export default function Home() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => prev + 1);
-        }, 5000);
+        }, 3000);
         return () => clearInterval(interval);
     }, []);
 
@@ -218,7 +218,7 @@ export default function Home() {
             {/* ===== CONTENT – BOTTOM CENTER ===== */}
             <div className="relative z-10 mx-auto top-5 w-full max-w-5xl px-6 text-center sm:px-8">
                 {/* Tagline – main heading */}
-                <h1 className="text-3xl font-bold leading-[1.1] tracking-tight drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl">
+                <h1 className="text-3xl font-bold leading-[1.1] text-white tracking-tight drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl">
                     Every Dream Deserves
                     <br />
                     <span className="bg-gradient-to-r from-[#facc15] via-[#f59e0b] to-[#fbbf24] bg-clip-text text-transparent">

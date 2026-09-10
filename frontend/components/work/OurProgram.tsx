@@ -161,7 +161,7 @@ export default function OurProgram() {
             </section>
 
             {/* Bottom statement */}
-            <section className="relative z-10 bg-[#182D22] px-6 py-16 text-center sm:px-8 lg:py-20">
+            <section className="relative z-10 bg-[#182D22] px-6 py-16 text-center sm:px-8 lg:py-15">
                 <motion.div
                     initial="hidden"
                     whileInView="visible"

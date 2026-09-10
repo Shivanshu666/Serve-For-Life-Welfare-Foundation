@@ -112,7 +112,7 @@ const fadeUp = {
 // ---------- Component ----------
 export default function Stats() {
   return (
-    <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-white ">
       <div className="relative z-10 mx-auto flex max-w-7xl justify-center px-6 sm:px-8">
 
         {/* Stats Grid */}

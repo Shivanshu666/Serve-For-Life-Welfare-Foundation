@@ -21,7 +21,7 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-12 py-10 overflow-hidden bg-white">
+    <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-5 py-10 overflow-hidden bg-white">
 
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-emerald-50/40 -z-10" />

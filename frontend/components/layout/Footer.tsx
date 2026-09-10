@@ -130,7 +130,7 @@ linear-gradient(90deg,#94a3b8 1px,transparent 1px)
 relative z-10
 max-w-7xl mx-auto
 px-5 sm:px-8 lg:px-12
-py-14
+py-10
 "
       >
         {/* Three‑column grid: Brand | Quick Links | Contact */}

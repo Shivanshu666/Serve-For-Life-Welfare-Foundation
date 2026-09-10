@@ -76,7 +76,7 @@ export default function Philosophy() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-24 text-slate-100 sm:py-32">
+    <section className="relative overflow-hidden bg-slate-950 py-24 text-slate-100 sm:py-20">
       {/* ================= BACKGROUND ================= */}
 
       <div
