@@ -42,10 +42,10 @@ export default function Philosophy() {
       title: "Serve",
       tagline: "Purpose in Action",
       icon: FaHandsHelping,
-      gradient: "from-emerald-500 to-teal-500",
-      glowBg: "bg-emerald-500/10",
-      accentText: "text-emerald-600 dark:text-emerald-400",
-      borderHover: "group-hover:border-emerald-500/50",
+      gradient: "from-emerald-400 to-teal-400",
+      glowBg: "bg-emerald-200/60",
+      accentText: "text-emerald-600",
+      borderHover: "group-hover:border-emerald-300",
       description:
         "We exist to serve children and communities by creating opportunities where none exist — ensuring every child has the chance to play, learn, grow and thrive.",
     },
@@ -54,35 +54,35 @@ export default function Philosophy() {
       title: "Empower",
       tagline: "Unlocking Potential",
       icon: FaRocket,
-      gradient: "from-lime-500 to-emerald-500",
-      glowBg: "bg-lime-500/10",
-      accentText: "text-lime-600 dark:text-lime-400",
-      borderHover: "group-hover:border-lime-500/50",
+      gradient: "from-lime-400 to-emerald-400",
+      glowBg: "bg-lime-200/60",
+      accentText: "text-lime-600",
+      borderHover: "group-hover:border-lime-300",
       description:
-        "We use sport to build more than athletes—we build confidence, resilience, leadership, discipline, and life skills for a brighter future.",
+        (<>We use sport to build more than athletes— <br />we build confidence, resilience, leadership, discipline, and life skills for a brighter future.</>),
     },
 
     {
       title: "Transform",
       tagline: "Enduring Impact",
       icon: FaLeaf,
-      gradient: "from-teal-500 to-cyan-500",
-      glowBg: "bg-teal-500/10",
-      accentText: "text-teal-600 dark:text-teal-400",
-      borderHover: "group-hover:border-teal-500/50",
+      gradient: "from-teal-400 to-cyan-400",
+      glowBg: "bg-teal-200/60",
+      accentText: "text-teal-600",
+      borderHover: "group-hover:border-teal-300",
       description:
         "We believe sport has the power to transform individuals, families, schools, and communities — creating lasting social impact far beyond the Field of Play.",
     },
   ];
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-24 text-slate-100 sm:py-20">
+    <section className="relative overflow-hidden bg-white py-24 text-slate-900 sm:py-20">
       {/* ================= BACKGROUND ================= */}
 
       <div
         className="
           absolute inset-0
-          bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)]
+          bg-[linear-gradient(to_right,#a7f3d0_1px,transparent_1px),linear-gradient(to_bottom,#a7f3d0_1px,transparent_1px)]
           bg-[size:4rem_4rem]
           [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]
           opacity-20
@@ -99,7 +99,7 @@ export default function Philosophy() {
           w-[800px]
           -translate-x-1/2
           rounded-full
-          bg-emerald-500/15
+          bg-emerald-300/30
           blur-[140px]
         "
       />
@@ -113,7 +113,7 @@ export default function Philosophy() {
           h-[400px]
           w-[400px]
           rounded-full
-          bg-teal-500/10
+          bg-teal-300/25
           blur-[120px]
         "
       />
@@ -143,19 +143,19 @@ export default function Philosophy() {
               gap-2
               rounded-full
               border
-              border-emerald-500/30
-              bg-emerald-500/10
+              border-emerald-300
+              bg-emerald-50
               px-4
               py-1.5
               text-lg
               font-semibold
               uppercase
               tracking-wider
-              text-emerald-400
+              text-emerald-700
               backdrop-blur-md
             "
           >
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
 
             Core Philosophy
           </div>
@@ -168,7 +168,7 @@ export default function Philosophy() {
               text-4xl
               font-extrabold
               tracking-tight
-              text-white
+              text-slate-900
               sm:text-6xl
             "
           >
@@ -177,15 +177,15 @@ export default function Philosophy() {
             <span
               className="
                 bg-gradient-to-r
-                from-emerald-400
-                via-teal-300
-                to-lime-400
+                from-emerald-500
+                via-teal-400
+                to-lime-500
                 bg-clip-text
                 text-transparent
               "
             >
               SET{" "}
-              <span className="text-white">
+              <span className="text-slate-900">
                 Framework
               </span>
             </span>
@@ -193,11 +193,11 @@ export default function Philosophy() {
 
           {/* Subtitle */}
 
-          <p className="mt-5 text-lg leading-relaxed text-slate-400">
+          <p className="mt-5 text-lg font-bold leading-relaxed text-slate-800">
             Serve · Empower · Transform
           </p>
 
-          <p className="mt-5 text-lg leading-relaxed text-slate-400">
+          <p className="mt-5 text-lg leading-relaxed text-slate-600">
             — Is the philosophy at the heart of every SFLWF program.
             <br />
             The three pillars behind everything we do.
@@ -232,16 +232,16 @@ export default function Philosophy() {
                   overflow-hidden
                   rounded-3xl
                   border
-                  border-slate-800
-                  bg-slate-900/60
+                  border-emerald-100
+                  bg-white
                   p-8
                   backdrop-blur-xl
                   transition-all
                   duration-500
                   hover:-translate-y-2
-                  hover:bg-slate-900/90
+                  hover:bg-white
                   hover:shadow-2xl
-                  hover:shadow-emerald-950/50
+                  hover:shadow-emerald-200/60
                   ${pillar.borderHover}
                 `}
               >
@@ -283,7 +283,7 @@ export default function Philosophy() {
                         bg-gradient-to-br
                         ${pillar.gradient}
                         text-2xl
-                        text-slate-950
+                        text-white
                         shadow-lg
                         transition-transform
                         duration-300
@@ -301,10 +301,10 @@ export default function Philosophy() {
                         text-3xl
                         font-black
                         tracking-tighter
-                        text-slate-800
+                        text-emerald-100
                         transition-colors
                         duration-300
-                        group-hover:text-slate-700
+                        group-hover:text-emerald-200
                       "
                     >
                       {String(index + 1).padStart(2, "0")}
@@ -333,7 +333,7 @@ export default function Philosophy() {
                         text-3xl
                         font-bold
                         tracking-tight
-                        text-white
+                        text-slate-900
                       "
                     >
                       {pillar.title}
@@ -347,9 +347,9 @@ export default function Philosophy() {
                       mt-4
                       text-sm
                       leading-relaxed
-                      text-slate-400
+                      text-slate-600
                       transition-colors
-                      group-hover:text-slate-300
+                      group-hover:text-slate-700
                     "
                   >
                     {pillar.description}

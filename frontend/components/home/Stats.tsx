@@ -21,7 +21,7 @@ const statsData = [
     color: "#000000",
   },
   {
-    number: "02",
+    number: "04",
     suffix: "",
     primary: "Programs",
     secondary: "Ongoing",
@@ -139,79 +139,105 @@ export default function Stats() {
             const numericTarget = parseInt(stat.number, 10);
 
             return (
-              <motion.div
+              <div
                 key={idx}
-                variants={fadeUp}
-                whileHover={{
-                  y: -8,
-                  scale: 1.03,
-                }}
-                transition={{
-                  duration: 0.25,
-                }}
-                className="
-                  group
-                  relative
-                  w-full
-                  max-w-sm
-                  overflow-hidden
-                  rounded-3xl
-                  p-8
-                  text-center
-                  sm:p-10
-                "
+                className="relative flex w-full justify-center"
               >
-                {/* Content */}
-                <div className="relative z-10">
-
-                  {/* BIG NUMBER */}
-                  <h3
+                {/* VERTICAL DIVIDER (only between items, lg and up) */}
+                {idx > 0 && (
+                  <span
+                    aria-hidden="true"
                     className="
-                      text-4xl
-                      font-black
-                      leading-none
-                      tracking-tight
-                      sm:text-5xl
+                      pointer-events-none
+                      absolute
+                      -left-5
+                      top-1/2
+                      hidden
+                      h-24
+                      w-3
+                      -translate-y-1/2
+                      bg-gradient-to-b
+                      from-transparent
+                      via-slate-300
+                      to-transparent
+                      lg:block
                     "
-                    style={{
-                      color: stat.color,
-                    }}
-                  >
-                    <CountUp
-                      target={numericTarget}
-                      duration={2}
-                    />
-                    {stat.suffix}
-                  </h3>
+                  />
+                )}
 
-                  {/* PRIMARY TEXT */}
-                  <p
-                    className="
-                      mt-5
-                      text-xl
-                      font-bold
-                      text-slate-800
-                      sm:text-2xl
-                    "
-                  >
-                    {stat.primary}
-                  </p>
+                <motion.div
+                  variants={fadeUp}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.03,
+                  }}
+                  transition={{
+                    duration: 0.25,
+                  }}
+                  className="
+                    group
+                    relative
+                    w-full
+                    max-w-sm
+                    overflow-hidden
+                    rounded-3xl
+                    p-8
+                    text-center
+                    sm:p-10
+                  "
+                >
+                  {/* Content */}
+                  <div className="relative z-10">
 
-                  {/* SECONDARY TEXT */}
-                  <p
-                    className="
-                      mt-1
-                      text-lg
-                      font-medium
-                      text-slate-500
-                      sm:text-xl
-                    "
-                  >
-                    {stat.secondary}
-                  </p>
+                    {/* BIG NUMBER */}
+                    <h3
+                      className="
+                        text-4xl
+                        font-black
+                        leading-none
+                        tracking-tight
+                        sm:text-5xl
+                      "
+                      style={{
+                        color: stat.color,
+                      }}
+                    >
+                      <CountUp
+                        target={numericTarget}
+                        duration={2}
+                      />
+                      {stat.suffix}
+                    </h3>
 
-                </div>
-              </motion.div>
+                    {/* PRIMARY TEXT */}
+                    <p
+                      className="
+                        mt-5
+                        text-xl
+                        font-bold
+                        text-slate-800
+                        sm:text-2xl
+                      "
+                    >
+                      {stat.primary}
+                    </p>
+
+                    {/* SECONDARY TEXT */}
+                    <p
+                      className="
+                        mt-1
+                        text-lg
+                        font-medium
+                        text-slate-500
+                        sm:text-xl
+                      "
+                    >
+                      {stat.secondary}
+                    </p>
+
+                  </div>
+                </motion.div>
+              </div>
             );
           })}
         </motion.div>

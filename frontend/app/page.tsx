@@ -7,6 +7,7 @@ import Purpose from "@/components/home/Purpose";
 import Values from "@/components/home/Values";
 import Philosophy from "@/components/home/Philosophy";
 import Stats from "@/components/home/Stats";
+import SponsorshipPage from "@/components/home/Sponsorship";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Purpose />
       <Philosophy />
       <Values />
+      <SponsorshipPage/>
       {/* <Promise /> */}
     </main>
   );

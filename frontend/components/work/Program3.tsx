@@ -38,7 +38,7 @@ export default function Program3() {
         className="relative h-[300px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[400px]"
       >
         <Image
-          src="/images/program22.jpg"
+          src="/program/TennisProgram.jpeg"
           alt="Tennis Development Program"
           fill
           className="object-cover"
@@ -103,7 +103,7 @@ export default function Program3() {
               Performance Program
             </span>{" "}
             and, upon meeting the selection criteria, become eligible for the
-            SFLWF (SET) <span className="text-black font-bold">Athlete Sponsorship Program</span>.
+            <span className="text-black font-bold"> SFLWF (SET) Athlete Sponsorship Program</span>.
           </p>
         </div>
 

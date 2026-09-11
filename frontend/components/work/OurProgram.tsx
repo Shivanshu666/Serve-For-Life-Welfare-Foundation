@@ -50,11 +50,11 @@ const programs = [
         title: "Tennis Development Program",
         description:
             "The primary objective of the Tennis Development Program is to increase awareness of tennis and encourage greater participation in the sport within the community.",
-        image: "/images/program2.jpg",
+        image: "/program/tennisp.jpeg",
         icon: FaTrophy,
         href: "/work/Program3",
         tag: "Athlete Development",
-        stats: "Serve • Empower • Transform",
+        stats: "25+ Players • 10+ Adults • Location",
         iconBg: "bg-lime-100",
         iconColor: "text-lime-700",
         accent: "from-lime-600 to-emerald-600",
@@ -75,14 +75,18 @@ const programs = [
     },
 
           {
-        title: "SHOES FOR ALL",
-        description:
-            "The Serve For Life “Shoes for ALL” Campaign aims to ensure that every child has access to appropriate sports shoes so that lack of equipment does not become a barrier to participation in sport.",
-        image: "/images/program2.jpg",
+        title: "Shoes For ALL",
+        description: (
+  <>
+    The{" "}
+    <strong><span className="text-black">Serve For Life “Shoes for ALL”</span></strong> campaign aims to ensure that every child has access to appropriate sports shoes so that lack of equipment does not become a barrier to participation in sport.
+  </>
+),
+        image: "/program/shoesfA.jpeg",
         icon: FaTrophy,
         href: "/work/Program4",
         tag: "Athlete Development",
-        stats: "Serve • Empower • Transform",
+        stats: "Support Shoes for ALL",
         iconBg: "bg-lime-100",
         iconColor: "text-lime-700",
         accent: "from-lime-600 to-emerald-600",

@@ -38,7 +38,7 @@ export default function Program3() {
         className="relative h-[300px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[400px]"
       >
         <Image
-          src="/images/program22.jpg"
+          src="/program/shoesfB.png"
           alt="Shoes for ALL Campaign"
           fill
           className="object-cover"
@@ -57,7 +57,7 @@ export default function Program3() {
           </h1>
 
           <p className="mt-2 max-w-2xl text-sm text-white/90 sm:text-base">
-            Every Child Deserves the Right Shoes to Play
+            One Pair. One Child. A Whole New Begining
           </p>
         </div>
       </motion.div>
@@ -75,7 +75,7 @@ export default function Program3() {
           <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
             The Serve For Life{" "}
             <span className="font-semibold text-lime-700">
-              “Shoes for ALL” Campaign
+              “Shoes for ALL” campaign
             </span>{" "}
             aims to ensure that every child has access to appropriate sports
             shoes so that lack of equipment does not become a barrier to
@@ -162,8 +162,8 @@ export default function Program3() {
 
                 <p className="text-sm leading-relaxed text-slate-500">
                   Aim to provide 500 pairs of sports shoes to children in
-                  schools implementing the Child Empowerment Sports School
-                  Program.
+                  schools implementing the <span className="text-black font-black">Child Empowerment School
+                  Program</span>.
                 </p>
               </div>
             </div>
@@ -178,8 +178,7 @@ export default function Program3() {
       >
         <div className="text-center font-bold italic text-slate-900">
           <p>
-            Every child deserves the opportunity to play with confidence and
-            dignity. <br /> With the “Shoes for ALL” Campaign, we aim to remove
+            Every child deserves the Right Shoes to Play. <br /> With the “Shoes for ALL” Campaign, we aim to remove
             equipment barriers and help children take every step towards a
             healthier, more active future.
           </p>

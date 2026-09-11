@@ -18,7 +18,7 @@ const Purpose = () => {
 
           <p className="mt-6 text-lg leading-relaxed text-slate-600 sm:text-xl lg:text-xl">
             To transform lives through sport by making quality sports
-            education accessible to every child — nurturing character,
+            education accessible to every child <br /> — nurturing character,
             promoting inclusion, and creating opportunities that extend far
             beyond the playgrounds.
           </p>
