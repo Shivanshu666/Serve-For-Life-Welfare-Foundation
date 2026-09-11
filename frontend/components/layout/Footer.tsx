@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 
 import Image from "next/image";
-import Logo from "@/assets/sflwflogo.jpeg";
+import Logo from "@/assets/logo3.png";
 
 export default function Footer() {
   const quickLinks = [
@@ -154,13 +154,10 @@ gap-10
               <Image
                 src={Logo}
                 alt="Serve For Life Foundation"
-                width={110}
-                height={110}
+                width={200}
+                height={200}
                 className="
-rounded-xl
-shadow-lg
-hover:scale-105
-transition duration-500
+
 "
               />
             </Link>
@@ -263,6 +260,7 @@ transition
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.6 }}
+            
           >
             <h3
               className="
@@ -296,7 +294,7 @@ text-sm
 leading-relaxed
 "
                 >
-                  #95 B, Satish Kunj, SBI Colony, Junwani, Bhilai, Chhattishgarh
+                  #95 B, Satish Kunj, SBI Colony, Junwani,<br /> Bhilai - 490020, Chhattishgarh, India
                 </p>
               </div>
 
@@ -336,7 +334,7 @@ text-slate-600
 text-sm
 "
                 >
-                  info@serveforlife.org.in
+                  support@serveforlife.in
                 </p>
               </div>
             </div>

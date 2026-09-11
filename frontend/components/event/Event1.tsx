@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FaCalendarAlt, FaEnvelope, FaFutbol } from "react-icons/fa";
+import { FaCalendarAlt} from "react-icons/fa";
 
 import {
   ArrowRight,
@@ -170,7 +170,7 @@ export default function Event1() {
 
         {/* ================= SECTION TITLE ================= */}
         <div className="mb-10 text-center sm:mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 md:text-4xl">
+          <h2 className="text-4xl font-bold text-gray-800 md:text-4xl">
             The Journey So{" "}
             <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
               Far
@@ -180,6 +180,7 @@ export default function Event1() {
           <p className="mx-auto mt-2 max-w-2xl text-2xl italic text-gray-500">
             Relive the Moments
           </p>
+          <div className="mx-auto mt-3 h-0.5 w-[120px] bg-emerald-500" />
         </div>
 
         {/* ================= MAIN CARD ================= */}

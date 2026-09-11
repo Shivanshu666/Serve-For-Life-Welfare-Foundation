@@ -111,10 +111,10 @@ export default function CoreTeam() {
           variants={fadeUp}
           className="mx-auto max-w-3xl text-center"
         >
-          <h2 className="text-4xl font-bold text-slate-800 sm:text-5xl">
+          <h2 className=" font-bold text-slate-800 text-4xl">
             Our{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-lime-500 bg-clip-text text-transparent">
-              Team,
+              Team,{" "}
             </span>
             Our{" "}
              <span className="bg-gradient-to-r from-emerald-600 to-lime-500 bg-clip-text text-transparent">

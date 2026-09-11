@@ -14,15 +14,15 @@ export default function SponsorshipPage() {
       <section className="relative overflow-hidden border-b border-emerald-200">
         <div className="mx-auto flex max-w-4xl flex-col items-center px-6 py-10 text-center">
           {/* Heading */}
-         <div className="mx-auto max-w-5xl px-6 py-5">
+         <div className="mx-auto max-w-7xl px-6 py-5">
   <div className="flex flex-col items-center gap-6 text-center">
     {/* Badge - Top */}
-    <span className="inline-flex items-center rounded-full border border-lime-200 bg-lime-100 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-lime-700 sm:text-base">
+    <span className="inline-flex items-center rounded-full border border-lime-200 bg-lime-100 px-4 py-2 font-semibold uppercase tracking-widest text-lime-700 text-lg">
       Impact Partners
     </span>
 
     {/* Heading - Below */}
-    <h2 className="max-w-4xl mt-5 text-2xl text-center font-bold text-slate-900 sm:text-3xl lg:text-4xl">
+    <h2 className="max-w-7xl mt-5 text-3xl text-center font-bold text-slate-900 ">
       Partnerships That Move{" "} 
       <span className="bg-gradient-to-r from-lime-500 to-emerald-500 bg-clip-text italic text-transparent">
         Communities Forward

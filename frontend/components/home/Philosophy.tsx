@@ -165,7 +165,7 @@ export default function Philosophy() {
           <h2
             className="
               mt-6
-              text-4xl
+              text-3xl
               font-extrabold
               tracking-tight
               text-slate-900
