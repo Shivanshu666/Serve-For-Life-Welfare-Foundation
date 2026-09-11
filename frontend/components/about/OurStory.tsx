@@ -139,7 +139,7 @@ export default function OurStory() {
           BELIEF – with image next to text
       ===================================================== */}
 
-    <section className="border-b border-[#182D22]/10 bg-white px-6 py-24 sm:px-8 lg:py-28">
+    <section className="border-b border-[#182D22]/10 bg-white px-6 py-20 sm:px-8 lg:py-20">
   <div className="mx-auto max-w-6xl">
 
     {/* ================= TOP CONTENT ================= */}
@@ -254,7 +254,7 @@ export default function OurStory() {
           OFF THE COUCH – with image and transformations
       ===================================================== */}
 
-    <section className="border-b border-[#182D22]/10 bg-[#EAEEE2] px-6 py-24 sm:px-8 lg:py-28">
+    <section className="border-b border-[#182D22]/10 bg-[#EAEEE2] px-6 py-24 sm:px-8 lg:py-20">
   <div className="mx-auto max-w-6xl">
 
     {/* ================= TOP: LEFT + RIGHT ================= */}
