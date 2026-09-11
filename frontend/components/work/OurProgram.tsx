@@ -46,6 +46,20 @@ const programs = [
         iconColor: "text-emerald-700",
         accent: "from-emerald-600 to-lime-600",
     },
+       {
+        title: "Tennis Development Program",
+        description:
+            "The primary objective of the Tennis Development Program is to increase awareness of tennis and encourage greater participation in the sport within the community.",
+        image: "/images/program2.jpg",
+        icon: FaTrophy,
+        href: "/work/Program3",
+        tag: "Athlete Development",
+        stats: "Serve • Empower • Transform",
+        iconBg: "bg-lime-100",
+        iconColor: "text-lime-700",
+        accent: "from-lime-600 to-emerald-600",
+    },
+
     {
         title: "SFLWF (SET) Athlete Sponsorship Program",
         description:
@@ -53,6 +67,20 @@ const programs = [
         image: "/images/program2.jpg",
         icon: FaTrophy,
         href: "/work/Program2",
+        tag: "Athlete Development",
+        stats: "Serve • Empower • Transform",
+        iconBg: "bg-lime-100",
+        iconColor: "text-lime-700",
+        accent: "from-lime-600 to-emerald-600",
+    },
+
+          {
+        title: "SHOES FOR ALL",
+        description:
+            "The Serve For Life “Shoes for ALL” Campaign aims to ensure that every child has access to appropriate sports shoes so that lack of equipment does not become a barrier to participation in sport.",
+        image: "/images/program2.jpg",
+        icon: FaTrophy,
+        href: "/work/Program4",
         tag: "Athlete Development",
         stats: "Serve • Empower • Transform",
         iconBg: "bg-lime-100",

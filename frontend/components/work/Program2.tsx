@@ -55,117 +55,169 @@ export default function Program2() {
         </div>
       </motion.div>
 
-      {/* ===== OVERVIEW + STATS ===== */}
-      <motion.div variants={fadeUp} className="grid gap-8 md:grid-cols-3">
-        <div className="col-span-2 space-y-4">
-          <h2 className="text-2xl font-bold text-slate-800 sm:text-3xl">
-            Program Overview
-          </h2>
-          {/* === EXACT ORIGINAL TEXT (first paragraph) === */}
-          <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-            The Serve For Life Welfare Foundation (SFLWF), through its{" "}
-            <span className="font-semibold text-lime-700">SET Framework</span> —
-            <span className="font-bold text-black"> Serve</span>{" "}
-            <span className="font-bold text-black">• Empower</span>{" "}
-            <span className="font-bold text-black">• Transform</span><br /> — is committed
-            to identifying, nurturing, and supporting talented young tennis players
-            from economically underresourced backgrounds{" "}
-            <span className="font-bold italic text-slate-900">
-              who have the game but not the means.
-            </span>
-          </p>
-          {/* === EXACT ORIGINAL TEXT (second paragraph) === */}
-          <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-            The SFLWF (SET) Athlete Sponsorship Program is designed to bridge this
-            gap by providing deserving athletes with holistic support, enabling
-            them to train, compete, and develop in a structured high‑performance
-            environment.
+
+{/* ===== OVERVIEW + STATS ===== */}
+<motion.div variants={fadeUp} className="grid gap-8 md:grid-cols-3">
+  <div className="col-span-2 space-y-4">
+    <h2 className="text-2xl font-bold text-slate-800 sm:text-3xl">
+      Program Overview
+    </h2>
+
+    <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+      The{" "}
+      <span className="font-semibold text-lime-700">
+        SFLWF (SET) Athlete Sponsorship Program
+      </span>{" "}
+      is a flagship initiative designed to identify, nurture, and support
+      talented young tennis players who demonstrate strong potential but face
+      financial barriers in pursuing their sporting aspirations.
+    </p>
+
+    <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+      Guided by the{" "}
+      <span className="font-semibold text-lime-700">
+        SET Framework
+      </span>{" "}
+      —{" "}
+      <span className="font-bold text-black">Serve</span>{" "}
+      •{" "}
+      <span className="font-bold text-black">Empower</span>{" "}
+      •{" "}
+      <span className="font-bold text-black">Transform</span>{" "}
+      — the program focuses on providing deserving athletes, particularly
+      those from economically under-resourced backgrounds, with meaningful
+      support that directly contributes to their development and performance.
+    </p>
+
+    <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+      Through a structured pathway, selected athletes receive assistance in
+      the following key areas:
+    </p>
+
+    {/* Support Areas */}
+    <ul className="space-y-1 text-base leading-relaxed text-slate-600 sm:text-lg">
+      <li className="flex items-start gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime-600" />
+        <span>
+          <span>Coaching</span>
+        </span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime-600" />
+        <span>
+          <span>
+            Tournament participation and competitive exposure
+          </span>
+        </span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime-600" />
+        <span>
+          <span>
+            Tennis equipment and playing essentials
+          </span>
+        </span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime-600" />
+        <span>
+          <span>
+            Athlete development and mentorship
+          </span>
+        </span>
+      </li>
+
+      <li className="flex items-start gap-3">
+        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime-600" />
+        <span>
+          <span>
+            Improved accessibility to training and competitive opportunities
+          </span>
+        </span>
+      </li>
+    </ul>
+
+    <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+      Beyond sporting success, the program aims to develop{" "}
+      <span className="font-bold text-slate-900">
+        confident, disciplined, and resilient individuals
+      </span>{" "}
+      who embody the Foundation’s core values and serve as positive role
+      models within their communities.
+    </p>
+  </div>
+
+  {/* Quick Stats */}
+  <div className="space-y-4 rounded-2xl bg-lime-50/80 p-6 shadow-sm">
+    <h3 className="text-sm font-semibold uppercase tracking-wider text-lime-700">
+      At a Glance
+    </h3>
+
+    <div className="space-y-4">
+      {/* FIND */}
+      <div className="flex items-start gap-3">
+        <FaTrophy className="mt-1 text-lime-600" />
+
+        <div>
+          <p className="font-bold text-slate-800">FIND</p>
+
+          <p className="text-sm leading-relaxed text-slate-500">
+            Identify talented young tennis players with strong potential
+            and sporting aspirations.
           </p>
         </div>
-
-        {/* Quick Stats */}
-      <div className="space-y-4 rounded-2xl bg-lime-50/80 p-6 shadow-sm">
-  <h3 className="text-sm font-semibold uppercase tracking-wider text-lime-700">
-    At a Glance
-  </h3>
-
-  <div className="space-y-4">
-    {/* FIND */}
-    <div className="flex items-start gap-3">
-      <FaTrophy className="mt-1 text-lime-600" />
-      <div>
-        <p className="font-bold text-slate-800">FIND</p>
-        <p className="text-xs leading-relaxed text-slate-500">
-          Identify promising young tennis players through identification
-          programs.
-        </p>
       </div>
-    </div>
 
-    {/* FUND */}
-    <div className="flex items-start gap-3">
-      <FaHandsHelping className="mt-1 text-lime-600" />
-      <div>
-        <p className="font-bold text-slate-800">FUND</p>
-        <p className="text-xs leading-relaxed text-slate-500">
-          Eliminate the financial barriers that keep talented athletes off
-          the court.
-        </p>
+      {/* FUND */}
+      <div className="flex items-start gap-3">
+        <FaHandsHelping className="mt-1 text-lime-600" />
+
+        <div>
+          <p className="font-bold text-slate-800">FUND</p>
+
+          <p className="text-sm leading-relaxed text-slate-500">
+            Reduce financial barriers by supporting coaching, equipment,
+            tournaments, and other essential sporting needs.
+          </p>
+        </div>
       </div>
-    </div>
 
-    {/* GROW */}
-    <div className="flex items-start gap-3">
-      <FaTrophy className="mt-1 text-lime-600" />
-      <div>
-        <p className="font-bold text-slate-800">GROW</p>
-        <p className="text-xs leading-relaxed text-slate-500">
-          Provide long-term athlete development pathways that build
-          excellence in sport and education together.
-        </p>
+      {/* GROW */}
+      <div className="flex items-start gap-3">
+        <FaTrophy className="mt-1 text-lime-600" />
+
+        <div>
+          <p className="font-bold text-slate-800">GROW</p>
+
+          <p className="text-sm leading-relaxed text-slate-500">
+            Develop athletes through structured training, mentorship,
+            competitive exposure, and long-term development.
+          </p>
+        </div>
       </div>
-    </div>
 
-    {/* RISE */}
-    <div className="flex items-start gap-3">
-      <FaHandsHelping className="mt-1 text-lime-600" />
-      <div>
-        <p className="font-bold text-slate-800">RISE</p>
-        <p className="text-xs leading-relaxed text-slate-500">
-          Enable athletes to compete at district, state, and national
-          levels and be part of college tennis globally.
-        </p>
+      {/* RISE */}
+      <div className="flex items-start gap-3">
+        <FaHandsHelping className="mt-1 text-lime-600" />
+
+        <div>
+          <p className="font-bold text-slate-800">RISE</p>
+
+          <p className="text-sm leading-relaxed text-slate-500">
+            Empower athletes to become confident, disciplined, and resilient
+            individuals who inspire their communities.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</motion.div>
 
-      </motion.div>
 
-      {/* ===== SET FRAMEWORK BREAKDOWN ===== */}
-      {/* <motion.div variants={fadeUp}>
-        <h2 className="mb-6 text-2xl font-bold text-slate-800 sm:text-3xl">
-          The SET Framework
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-3">
-          {[
-            { name: "Serve", icon: FaTrophy, color: "lime", desc: "Identifying and supporting talent" },
-            { name: "Empower", icon: FaHandsHelping, color: "emerald", desc: "Providing opportunities to grow" },
-            { name: "Transform", icon: FaUsers, color: "teal", desc: "Creating lasting impact" },
-          ].map((item, idx) => (
-            <div
-              key={idx}
-              className="rounded-xl bg-white/70 p-4 text-center shadow-sm transition hover:shadow-md"
-            >
-              <div className={`mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-${item.color}-100 text-${item.color}-700`}>
-                <item.icon className="text-xl" />
-              </div>
-              <p className="font-bold text-slate-800">{item.name}</p>
-              <p className="text-xs text-slate-500">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </motion.div> */}
+
 
       {/* ===== ATHLETES SECTION ===== */}
       <motion.div variants={fadeUp}>

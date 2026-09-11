@@ -1,6 +1,10 @@
 // app/work/[slug]/page.tsx
 import Program1Component from "@/components/work/Program1";
 import Program2Component from "@/components/work/Program2";
+import Program3Component from "@/components/work/Program3";
+import Program4Component from "@/components/work/Program4";
+
+
 
 export default async function WorkDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -21,6 +25,25 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
     );
   }
 
+   if (slug === "Program3") {
+    return (
+      <main className="min-h-screen bg-slate-100 py-20 px-4">
+        <Program3Component />
+      </main>
+    );
+
+    
+  }
+
+   if (slug === "Program4") {
+    return (
+      <main className="min-h-screen bg-slate-100 py-20 px-4">
+        <Program4Component />
+      </main>
+    );
+
+    
+  }
   return (
     <main className="min-h-screen bg-slate-100 py-20 px-4 text-center">
       <h1 className="text-3xl font-bold text-red-500">Program not found</h1>

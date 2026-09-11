@@ -10,6 +10,8 @@ import ravinderImg from "@/assets/team/ravinder.jpeg";
 import rachnaImg from "@/assets/team/rachna.png";
 import kiranImg from "@/assets/team/kiran.jpeg";
 import kavitaImg from "@/assets/team/kavitasha.jpeg";
+import BabitaImg from "@/assets/team/Foundingp2.jpeg";
+
 
 // Animation variants
 const fadeUp = {
@@ -22,9 +24,16 @@ const fadeUp = {
 };
 
 const teamMembers = [
+
+   {
+    name: "Babita Sharma",
+    role: "Founding President",
+    bio: `The Foundation was established under the inspiration and guidance of Late Mrs. Babita Sharma, whose vision of empowering children continues to shape our mission and values. As Founding President, her legacy remains at the heart of the Foundation's work.`,
+    image: BabitaImg,
+  },
   {
     name: "Ravinder Singh Madan",
-    role: "Independent Founder - Member",
+    role: "Independent Founding - Mentor",
     bio: `Ravinder is a passionate tennis enthusiast and a former college-level tennis player who continues to compete in the ITF Seniors 65+ category.His enduring connection with the sport is matched by a strong commitment to community initiatives and the development of grassroot sports. \n
 With over 15 years of experience in real estate, Ravinder brings extensive business and entrepreneurial experience to the Foundation.
 Prior to entering real estate, he spent 20 years managing and running industrial ventures.\n

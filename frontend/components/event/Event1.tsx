@@ -50,7 +50,7 @@ const eventData = {
     "/gallery/fsnl2025/G9.avif",
     "/gallery/fsnl2025/G10.avif",
     "/gallery/fsnl2025/G12.avif",
-    "/gallery/fsnl2025/G13.avif",
+    // "/gallery/fsnl2025/G13.avif",
     "/gallery/fsnl2025/G15.avif",
     "/gallery/fsnl2025/G16.avif",
     "/gallery/fsnl2025/G18.avif",

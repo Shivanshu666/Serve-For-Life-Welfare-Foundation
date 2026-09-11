@@ -7,7 +7,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 
-import NaviLogo from "@/assets/sflwflogo.jpeg";
+import NaviLogo from "@/assets/logo3.png";
 
 /* =========================================================
    NAVIGATION DATA
@@ -229,10 +229,10 @@ export default function Navbar() {
                 width={48}
                 height={48}
                 priority
-                className="h-12 w-auto rounded-xl shadow-md transition duration-500 group-hover:scale-110"
+                className="h-12 w-auto"
               />
 
-              <div className="absolute inset-0 -z-10 rounded-xl bg-emerald-300/30 blur-xl" />
+              {/* <div className="absolute inset-0 -z-10 rounded-xl bg-emerald-300/30 blur-xl" /> */}
             </div>
           </Link>
 
