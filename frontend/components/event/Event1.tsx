@@ -50,12 +50,12 @@ const eventData = {
     "/gallery/fsnl2025/G9.avif",
     "/gallery/fsnl2025/G10.avif",
     "/gallery/fsnl2025/G12.avif",
-    // "/gallery/fsnl2025/G13.avif",
+    "/gallery/fsnl2025/G13.avif",
     "/gallery/fsnl2025/G15.avif",
     "/gallery/fsnl2025/G16.avif",
     "/gallery/fsnl2025/G18.avif",
     "/gallery/fsnl2025/G19.avif",
-    "/gallery/fsnl2025/G30.avif",
+    "/gallery/fsnl2025/G30.jpeg",
     "/gallery/fsnl2025/G31.jpeg",
     "/gallery/fsnl2025/G32.jpeg",
     "/gallery/fsnl2025/Gallery1.avif",
@@ -81,8 +81,8 @@ const eventData = {
   ],
 };
 
-const marqueePhotos = [...eventData.photos, ...eventData.photos];
-const marqueePhotos1 = [...eventData.photos1, ...eventData.photos1];
+const marqueePhotos = [...eventData.photos, ...eventData.photos, ...eventData.photos, ...eventData.photos];
+const marqueePhotos1 = [...eventData.photos1, ...eventData.photos1, ...eventData.photos1, ...eventData.photos1];
 
 export default function Event1() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -90,22 +90,7 @@ export default function Event1() {
   // ✅ Hooks — component ke andar
   const row1Ref = useRef<HTMLDivElement>(null);
   const row2Ref = useRef<HTMLDivElement>(null);
-  const [row1Width, setRow1Width] = useState(0);
-  const [row2Width, setRow2Width] = useState(0);
-
-  useEffect(() => {
-    const measure = () => {
-      if (row1Ref.current) {
-        setRow1Width(row1Ref.current.scrollWidth / 2);
-      }
-      if (row2Ref.current) {
-        setRow2Width(row2Ref.current.scrollWidth / 2);
-      }
-    };
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, []);
+ 
 
   return (
     <>
@@ -318,87 +303,66 @@ export default function Event1() {
               <span className="text-green-600">Lens</span>,{" "}
               <span className="text-black">Our</span>{" "}
               <span className="text-green-600">Journey</span>
+          <div className="mx-auto mt-1 h-0.5 w-[80px] bg-emerald-500" />
+
             </p>
 
+
             <div className="overflow-hidden">
-              <motion.div
-                ref={row1Ref}
-                layout={false}
-                className="flex w-max"
-                style={{
-                  willChange: "transform",
-                  transform: "translateZ(0)",
-                  backfaceVisibility: "hidden",
-                }}
-            animate={{ x: [0, -row1Width] }}
-transition={{
-  x: {
-    duration: 40,
-    ease: "linear",
-    repeat: Infinity,
-    repeatType: "loop",
-  },
-}}
-              >
-                {marqueePhotos.map((src, index) => (
-                  <div
-                    key={index}
-                    className="group relative mr-2 aspect-[16/9] w-40 shrink-0 overflow-hidden bg-gray-100 shadow-sm ring-1 ring-black/5 sm:mr-3 sm:w-48 md:mr-4 md:w-56"
-                  >
-                    <Image
-                      src={src}
-                      alt={`Event photo ${index + 1}`}
-                      fill
-                      loading="eager"
-                      unoptimized
-                      className="object-cover"
-                      sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 224px"
-                    />
-                  </div>
-                ))}
-              </motion.div>
+<div
+  className="flex w-max"
+  style={{
+    willChange: "transform",
+    animation: "marquee-right 60s linear infinite",
+  }}
+>
+  {marqueePhotos.map((src, index) => (
+    <div
+      key={index}
+      className="group relative mr-2 aspect-[16/9] w-40 shrink-0 overflow-hidden bg-gray-100 shadow-sm ring-1 ring-black/5 sm:mr-3 sm:w-48 md:mr-4 md:w-56"
+    >
+      <Image
+        src={src}
+        alt={`Event photo ${index + 1}`}
+        fill
+        loading="eager"
+        unoptimized
+        className="object-cover"
+        sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 224px"
+      />
+    </div>
+  ))}
+</div>
             </div>
           </div>
 
           {/* ============ ROW 2 — RIGHT ============ */}
           <div className="border-t border-gray-200/70 px-4 py-5 sm:px-6 md:px-10">
             <div className="overflow-hidden">
-              <motion.div
-                ref={row2Ref}
-                layout={false}
-                className="flex w-max"
-                style={{
-                  willChange: "transform",
-                  transform: "translateZ(0)",
-                  backfaceVisibility: "hidden",
-                }}
-            animate={{ x: [0, -row1Width] }}
-transition={{
-  x: {
-    duration: 40,
-    ease: "linear",
-    repeat: Infinity,
-    repeatType: "loop",
-  },
-}}
-              >
-                {marqueePhotos1.map((src, index) => (
-                  <div
-                    key={index}
-                    className="group relative mr-2 aspect-[16/9] w-40 shrink-0 overflow-hidden bg-gray-100 shadow-sm ring-1 ring-black/5 sm:mr-3 sm:w-48 md:mr-4 md:w-56"
-                  >
-                    <Image
-                      src={src}
-                      alt={`Event photo ${index + 1}`}
-                      fill
-                      loading="eager"
-                      unoptimized
-                      className="object-cover"
-                      sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 224px"
-                    />
-                  </div>
-                ))}
-              </motion.div>
+  <div
+  className="flex w-max"
+  style={{
+    willChange: "transform",
+    animation: "marquee-left 60s linear infinite",
+  }}
+>
+  {marqueePhotos1.map((src, index) => (
+    <div
+      key={index}
+      className="group relative mr-2 aspect-[16/9] w-40 shrink-0 overflow-hidden bg-gray-100 shadow-sm ring-1 ring-black/5 sm:mr-3 sm:w-48 md:mr-4 md:w-56"
+    >
+      <Image
+        src={src}
+        alt={`Event photo ${index + 1}`}
+        fill
+        loading="eager"
+        unoptimized
+        className="object-cover"
+        sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 224px"
+      />
+    </div>
+  ))}
+</div>
             </div>
           </div>
 

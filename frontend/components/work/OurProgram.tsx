@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
-import { FaChild, FaTrophy, FaArrowRight } from "react-icons/fa";
+import { FaChild, FaTrophy, FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
 
 const fadeUp: Variants = {
     hidden: {
@@ -33,64 +33,99 @@ const stagger: Variants = {
 };
 
 const programs = [
-    {
-        title: "SFLWF Child Empowerment School Program",
-        description:
-            "Using sport and play to help children from underserved communities build confidence, teamwork, leadership, and healthy habits.",
-        image: "/images/About3.jpeg",
-        icon: FaChild,
-        href: "/work/Program1",
-        tag: "Child Development",
-        stats: "240 Children  • Ages 8–14",
-        iconBg: "bg-emerald-100",
-        iconColor: "text-emerald-700",
-        accent: "from-emerald-600 to-lime-600",
-    },
-       {
-        title: "Tennis Development Program",
-        description:
-            "The primary objective of the Tennis Development Program is to increase awareness of tennis and encourage greater participation in the sport within the community.",
-        image: "/program/tennisp.jpeg",
-        icon: FaTrophy,
-        href: "/work/Program3",
-        tag: "Athlete Development",
-        stats: "25+ Players • 10+ Adults • Location",
-        iconBg: "bg-lime-100",
-        iconColor: "text-lime-700",
-        accent: "from-lime-600 to-emerald-600",
-    },
+  {
+    title: "SFLWF Child Empowerment School Program",
+    description:
+        "Using sport and play to help children from underserved communities build confidence, teamwork, leadership, and healthy habits.",
+    image: "/images/About3.jpeg",
+    icon: FaChild,
+    href: "/work/Program1",
+    tag: "Child Development",
+    stats: (
+        <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>240 Children</span>
+            <span className="text-slate-300">•</span>
+            <span>Ages 8–14</span>
+        </span>
+    ),
+    iconBg: "bg-emerald-100",
+    iconColor: "text-emerald-700",
+    accent: "from-emerald-600 to-lime-600",
+},
+  {
+    title: "Tennis Development Program",
+    description:
+        "The primary objective of the Tennis Development Program is to increase awareness of tennis and encourage greater participation in the sport within the community.",
+    image: "/program/tennisp.jpeg",
+    icon: FaTrophy,
+    href: "/work/Program3",
+    tag: "Athlete Development",
+    stats: (
+        <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>25+ Players</span>
+            <span className="text-slate-300">•</span>
+            <span>10+ Adults</span>
+            <span className="text-slate-300">•</span>
+            <a
+                href="https://maps.app.goo.gl/oo6BXLPNxbV4sF4X9?g_st=ac"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View location on map"
+                className="inline-flex items-center text-slate-500 transition-colors duration-300 hover:text-emerald-600"
+                onClick={(e) => e.stopPropagation()}
+            >
+                <FaMapMarkerAlt className="text-sm" />
+            </a>
+        </span>
+    ),
+    iconBg: "bg-lime-100",
+    iconColor: "text-lime-700",
+    accent: "from-lime-600 to-emerald-600",
+},
 
-    {
-        title: "SFLWF (SET) Athlete Sponsorship Program",
-        description:
-            "Supporting talented young tennis players from economically under-resourced backgrounds who have the game but not the means.",
-        image: "/images/program2.jpg",
-        icon: FaTrophy,
-        href: "/work/Program2",
-        tag: "Athlete Development",
-        stats: "Serve • Empower • Transform",
-        iconBg: "bg-lime-100",
-        iconColor: "text-lime-700",
-        accent: "from-lime-600 to-emerald-600",
-    },
+  {
+    title: "SFLWF (SET) Athlete Sponsorship Program",
+    description:
+        "Supporting talented young tennis players from economically under-resourced backgrounds who have the game but not the means.",
+    image: "/images/program2.jpg",
+    icon: FaTrophy,
+    href: "/work/Program2",
+    tag: "Athlete Development",
+    stats: (
+        <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>Serve</span>
+            <span className="text-slate-300">•</span>
+            <span>Empower</span>
+            <span className="text-slate-300">•</span>
+            <span>Transform</span>
+        </span>
+    ),
+    iconBg: "bg-lime-100",
+    iconColor: "text-lime-700",
+    accent: "from-lime-600 to-emerald-600",
+},
 
-          {
-        title: "Shoes For ALL",
-        description: (
-  <>
-    The{" "}
-    <strong><span className="text-black">Serve For Life “Shoes for ALL”</span></strong> campaign aims to ensure that every child has access to appropriate sports shoes so that lack of equipment does not become a barrier to participation in sport.
-  </>
-),
-        image: "/program/shoesfA.jpeg",
-        icon: FaTrophy,
-        href: "/work/Program4",
-        tag: "Athlete Development",
-        stats: "Support Shoes for ALL",
-        iconBg: "bg-lime-100",
-        iconColor: "text-lime-700",
-        accent: "from-lime-600 to-emerald-600",
-    },
+     {
+    title: "Shoes For ALL",
+    description: (
+        <>
+            The{" "}
+            <strong><span className="text-black">Serve For Life "Shoes for ALL"</span></strong> campaign aims to ensure that every child has access to appropriate sports shoes so that lack of equipment does not become a barrier to participation in sport.
+        </>
+    ),
+    image: "/program/shoesfA.jpeg",
+    icon: FaTrophy,
+    href: "/work/Program4",
+    tag: "Athlete Development",
+    stats: (
+        <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>Support Shoes for ALL</span>
+        </span>
+    ),
+    iconBg: "bg-lime-100",
+    iconColor: "text-lime-700",
+    accent: "from-lime-600 to-emerald-600",
+},
 ];
 
 export default function OurProgram() {

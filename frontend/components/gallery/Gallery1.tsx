@@ -270,9 +270,9 @@ export default function Gallery1() {
           </span>
         </h1>
 
-        <p className="mx-auto italic font-bold text-base max-w-2xl text-gray-600">
+        {/* <p className="mx-auto italic font-bold text-base max-w-2xl text-gray-600">
           Your Lens, Our Journey
-        </p>
+        </p> */}
       </div>
 
       {/* Gallery */}
