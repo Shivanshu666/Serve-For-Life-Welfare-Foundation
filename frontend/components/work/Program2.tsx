@@ -33,7 +33,7 @@ export default function Program2() {
       className="space-y-12"
     >
       {/* ===== HERO BANNER ===== */}
-      <motion.div variants={fadeUp} className="relative h-[300px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[400px]">
+      {/* <motion.div variants={fadeUp} className="relative h-[300px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[400px]">
         <Image
           src="/images/program22.jpg"
           alt="Athlete Sponsorship Program"
@@ -54,7 +54,58 @@ export default function Program2() {
           </p>
         </div>
       </motion.div>
+ */}
 
+ {/* ===== HERO BANNER (6-IMAGE COLLAGE) ===== */}
+<motion.div className="relative h-[300px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[400px]">
+  {/* Collage Grid — 3 cols × 2 rows */}
+  <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-0">
+    {[
+      // "/images/program22.jpg",
+      // "/images/program22.jpg",
+      // "/images/program22.jpg",
+      // "/images/program22.jpg",
+      // "/images/program22.jpg",
+      // "/images/program22.jpg",
+    "/gallery/fsnl2025/G20.jpeg",
+    "/gallery/fsnl2025/G23.jpeg",
+    "/gallery/fsnl2025/G27.jpeg",
+    "/gallery/fsnl2025/G17.avif",
+    "/gallery/fsnl2025/G6.avif",
+    "/gallery/fsnl2025/G24.jpeg",
+
+
+
+    ].map((src, i) => (
+      <div key={i} className="relative h-full w-full overflow-hidden">
+        <Image
+          src={src}
+          alt={`Athlete Sponsorship Program ${i + 1}`}
+          fill
+          priority={i === 0}
+          className="object-cover"
+          sizes="(max-width: 640px) 33vw, 33vw"
+        />
+      </div>
+    ))}
+  </div>
+
+  {/* Dark overlay (unchanged) */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+  {/* Text content (unchanged) */}
+  <div className="absolute bottom-6 left-6 right-6 text-white sm:bottom-10 sm:left-10">
+    <span className="inline-block rounded-full bg-lime-500/80 px-3 py-1 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
+      Athlete Development
+    </span>
+    <h1 className="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">
+      SFLWF (SET) Athlete Sponsorship Program
+    </h1>
+    <p className="mt-2 max-w-2xl text-sm text-white/90 sm:text-base">
+      Supporting talented young tennis players who have the game but not the means.
+    </p>
+  </div>
+</motion.div>
 
 {/* ===== OVERVIEW + STATS ===== */}
 <motion.div variants={fadeUp} className="grid gap-8 md:grid-cols-3">

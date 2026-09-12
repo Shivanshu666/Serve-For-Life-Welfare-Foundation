@@ -83,11 +83,18 @@ const programs = [
     accent: "from-lime-600 to-emerald-600",
 },
 
-  {
+{
     title: "SFLWF (SET) Athlete Sponsorship Program",
     description:
         "Supporting talented young tennis players from economically under-resourced backgrounds who have the game but not the means.",
-    image: "/images/program2.jpg",
+    image: "/images/program2.jpg",          // ← fallback (rakh lo, kuch tod nahi raha)
+    images: [                                // ← NEW: 5 images collage
+          "/gallery/fsnl2025/G25.jpeg",
+    "/gallery/fsnl2025/G28.jpeg",
+    "/gallery/fsnl2025/G27.jpeg",
+    "/gallery/fsnl2025/G21.jpeg",
+    "/gallery/fsnl2025/G3.avif",
+    ],
     icon: FaTrophy,
     href: "/work/Program2",
     tag: "Athlete Development",
@@ -177,19 +184,53 @@ export default function OurProgram() {
                                     className="group block h-full overflow-hidden border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
                                 >
                                     {/* Image — Full Image Visible */}
-                                    <div className="relative h-56 overflow-hidden bg-slate-100 sm:h-64">
-                                        <Image
-                                            src={program.image}
-                                            alt={program.title}
-                                            fill
-                                            sizes="(max-width: 640px) 100vw, 50vw"
-                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                        />
+                                  {/* Image — Full Image Visible (single OR 5-image collage) */}
+{/* Image — Full Image Visible (single OR 5-image collage) */}
+<div className="relative h-56 overflow-hidden bg-slate-100 sm:h-64">
+    {program.images && program.images.length > 0 ? (
+        /* --- 5-image collage: 2 top + 3 bottom --- */
+        <div className="absolute inset-0 flex flex-col gap-0.5">
+            {/* Top row — 2 images */}
+            <div className="grid grid-cols-2 gap-0.5 flex-1">
+                {program.images.slice(0, 2).map((src, i) => (
+                    <div key={i} className="relative overflow-hidden">
+                        <Image
+                            src={src}
+                            alt={`${program.title} ${i + 1}`}
+                            fill
+                            sizes="(max-width: 640px) 50vw, 25vw"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                    </div>
+                ))}
+            </div>
 
-                                        {/* Overlay */}
-                                        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" /> */}
-                                    </div>
-
+            {/* Bottom row — 3 images */}
+            <div className="grid grid-cols-3 gap-0.5 flex-1">
+                {program.images.slice(2, 5).map((src, i) => (
+                    <div key={i} className="relative overflow-hidden">
+                        <Image
+                            src={src}
+                            alt={`${program.title} ${i + 3}`}
+                            fill
+                            sizes="(max-width: 640px) 33vw, 16vw"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
+    ) : (
+        /* --- Fallback: single image (baaki 3 cards ke liye) --- */
+        <Image
+            src={program.image}
+            alt={program.title}
+            fill
+            sizes="(max-width: 640px) 100vw, 50vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+    )}
+</div>
                                     {/* Content — compact padding */}
                                     <div className="p-5 sm:p-6">
                                         <h2 className="text-xl font-bold leading-snug text-slate-800 transition-colors duration-300 group-hover:text-emerald-700 sm:text-2xl">
