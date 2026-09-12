@@ -242,6 +242,88 @@ export default function Stats() {
           })}
         </motion.div>
       </div>
+      
+{/* <section className="bg-white py-20">
+  <div className="mx-auto max-w-6xl px-6">
+
+ 
+    <div className="mb-10 text-center">
+      <p className="text-sm font-semibold uppercase tracking-widest text-emerald-600">
+        Find Us
+      </p>
+
+      <h2 className="mt-2 text-4xl font-bold text-gray-800 md:text-5xl">
+        Our Location
+      </h2>
+
+      <p className="mx-auto mt-3 max-w-2xl text-gray-500">
+        Visit Serve For Life Foundation and be a part of our journey.
+      </p>
+
+      <div className="mx-auto mt-4 h-0.5 w-[80px] bg-emerald-500" />
+    </div>
+
+    <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
+
+    
+      <iframe
+        src="https://www.google.com/maps?q=21.203934480489526,81.28172167504896&t=k&z=16&output=embed"
+        width="100%"
+        height="450"
+        style={{ border: 0 }}
+        loading="lazy"
+        title="Serve For Life Foundation Satellite Location"
+      />
+
+    </div>
+
+    
+    <div className="mt-6 flex flex-col items-center justify-between gap-4 rounded-xl border border-gray-200 bg-gray-50 px-6 py-5 sm:flex-row">
+
+      <div className="flex items-start gap-3">
+        <div className="mt-0.5 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-emerald-100">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 text-emerald-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 21s8-4.438 8-11a8 8 0 10-16 0c0 6.562 8 11 8 11z"
+            />
+            <circle cx="12" cy="10" r="2.5" />
+          </svg>
+        </div>
+
+        <div>
+          <p className="text-sm font-semibold text-gray-800">
+            Serve For Life Foundation
+          </p>
+
+          <p className="mt-1 text-sm text-gray-500">
+            Prem Nagar, Chhattisgarh
+          </p>
+        </div>
+      </div>
+
+     
+      <a
+        href="https://maps.app.goo.gl/Z6jomY2U65ZLXbvA7?g_st=ac"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-700 hover:shadow-lg"
+      >
+        View on Google Maps →
+      </a>
+
+    </div>
+
+  </div>
+</section> */}
     </section>
   );
 }

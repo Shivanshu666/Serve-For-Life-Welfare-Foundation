@@ -330,12 +330,15 @@ export default function Event1() {
                   transform: "translateZ(0)",
                   backfaceVisibility: "hidden",
                 }}
-                animate={row1Width ? { x: [0, -row1Width] } : {}}
-                transition={{
-                  duration: 40,
-                  ease: "linear",
-                  repeat: Infinity,
-                }}
+            animate={{ x: [0, -row1Width] }}
+transition={{
+  x: {
+    duration: 40,
+    ease: "linear",
+    repeat: Infinity,
+    repeatType: "loop",
+  },
+}}
               >
                 {marqueePhotos.map((src, index) => (
                   <div
@@ -369,12 +372,15 @@ export default function Event1() {
                   transform: "translateZ(0)",
                   backfaceVisibility: "hidden",
                 }}
-                animate={row2Width ? { x: [-row2Width, 0] } : {}}
-                transition={{
-                  duration: 40,
-                  ease: "linear",
-                  repeat: Infinity,
-                }}
+            animate={{ x: [0, -row1Width] }}
+transition={{
+  x: {
+    duration: 40,
+    ease: "linear",
+    repeat: Infinity,
+    repeatType: "loop",
+  },
+}}
               >
                 {marqueePhotos1.map((src, index) => (
                   <div
