@@ -284,7 +284,7 @@ export default function Program2() {
             At SFLWF, we believe that talent should never be limited by financial
             circumstances. <br />
             By investing in young athletes today, we are developing not only
-            future champions in tennis but also confident, disciplined, and
+            future champions in tennis <br /> but also confident, disciplined, and
             responsible individuals who will inspire the next generation.
           </p>
         </div>

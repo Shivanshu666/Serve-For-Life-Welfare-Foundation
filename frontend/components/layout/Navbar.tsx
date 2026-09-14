@@ -226,10 +226,10 @@ export default function Navbar() {
               <Image
                 src={NaviLogo}
                 alt="Serve For Life Foundation"
-                width={48}
-                height={48}
+                width={78}
+                height={78}
                 priority
-                className="h-12 w-auto"
+                className="h-14 w-auto"
               />
 
               {/* <div className="absolute inset-0 -z-10 rounded-xl bg-emerald-300/30 blur-xl" /> */}

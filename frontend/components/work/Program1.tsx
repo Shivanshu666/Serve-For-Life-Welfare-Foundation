@@ -1,10 +1,16 @@
-// components/Program1.tsx
+// components/Program1.tsx  ///
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaSearch,
+  FaHandsHelping,
+  FaSeedling,
+  FaArrowUp,
+} from "react-icons/fa";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -54,29 +60,99 @@ export default function Program1() {
         </div>
       </motion.div>
 
-      {/* ===== OVERVIEW – CENTERED WITH YOUR px-[25px] ===== */}
-      <motion.div 
-        variants={fadeUp} 
-        className="mx-auto w-full px-[25px] space-y-4"
+      {/* ===== OVERVIEW + AT A GLANCE (SIDE BY SIDE) ===== */}
+      <motion.div
+        variants={fadeUp}
+        className="mx-auto w-full"
       >
-        <h2 className="text-center text-2xl font-bold text-slate-800 sm:text-3xl">
-          Program Overview
-        </h2>
-        <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-          The Child Empowerment School Program by Serve For Life Welfare Foundation (SFLWF)
-          uses the power of sport and play to help children from underserved
-          communities build <span className="font-semibold text-emerald-700">confidence</span>,{" "}
-          <span className="font-semibold text-emerald-700">teamwork</span>,{" "}
-          <span className="font-semibold text-emerald-700">leadership</span> and
-          <span className="font-semibold text-emerald-700"> healthy habits.</span>
-        </p>
-        <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-          Launched in August 2026, the eight‑month program engages around{" "}
-          <span className="font-semibold text-slate-800">240 children, aged 8–14</span>{" "}
-          from Junwani, Durg. Through weekly sessions led by the SFLWF coaching team,
-          children participate in fun, structured activities that develop physical
-          skills, coordination, communication, and teamwork.
-        </p>
+        <div className="grid gap-8 md:grid-cols-3">
+          {/* LEFT — Program Overview */}
+          <div className="col-span-2 space-y-4">
+            <h2 className="text-center text-2xl font-bold text-slate-800 sm:text-3xl">
+              Program Overview
+            </h2>
+            <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+              The Child Empowerment School Program by Serve For Life Welfare Foundation (SFLWF)
+              uses the power of sport and play to help children from underserved
+              communities build <span className="font-semibold text-emerald-700">confidence</span>,{" "}
+              <span className="font-semibold text-emerald-700">teamwork</span>,{" "}
+              <span className="font-semibold text-emerald-700">leadership</span> and
+              <span className="font-semibold text-emerald-700"> healthy habits.</span>
+            </p>
+            <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+              Launched in August 2026, the eight‑month program engages around{" "}
+              <span className="font-semibold text-slate-800">240 children, aged 8–14</span>{" "}
+              from Junwani, Durg. Through weekly sessions led by the SFLWF coaching team,
+              children participate in fun, structured activities that develop physical
+              skills, coordination, communication, and teamwork.
+            </p>
+          </div>
+
+          {/* RIGHT — At a Glance */}
+          <div className="space-y-4 rounded-2xl bg-lime-50/80 p-6 shadow-sm">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-lime-700">
+              At a Glance
+            </h3>
+
+            <div className="space-y-4">
+              {/* FIND */}
+              <div className="flex items-start gap-3">
+                <FaSearch className="mt-1 text-lime-600" />
+
+                <div>
+                  <p className="font-bold text-slate-800">FIND</p>
+
+                  <p className="text-sm leading-relaxed text-slate-500">
+                    Identify children from underserved communities who show talent,
+                    potential, and a passion for sport.
+                  </p>
+                </div>
+              </div>
+
+              {/* FUND */}
+              <div className="flex items-start gap-3">
+                <FaHandsHelping className="mt-1 text-lime-600" />
+
+                <div>
+                  <p className="font-bold text-slate-800">FUND</p>
+
+                  <p className="text-sm leading-relaxed text-slate-500">
+                    Reduce financial barriers by supporting coaching, equipment,
+                    tournaments, and other essential sporting needs.
+                  </p>
+                </div>
+              </div>
+
+              {/* GROW */}
+              <div className="flex items-start gap-3">
+                <FaSeedling className="mt-1 text-lime-600" />
+
+                <div>
+                  <p className="font-bold text-slate-800">GROW</p>
+
+                  <p className="text-sm leading-relaxed text-slate-500">
+                    Develop children through structured training, mentorship,
+                    competitive exposure, and long-term development.
+                  </p>
+                </div>
+              </div>
+
+              {/* RISE */}
+              <div className="flex items-start gap-3">
+                <FaArrowUp className="mt-1 text-lime-600" />
+
+                <div>
+                  <p className="font-bold text-slate-800">RISE</p>
+
+                  <p className="text-sm leading-relaxed text-slate-500">
+                    Empower children to become confident, disciplined, and resilient
+                    individuals who inspire their communities.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </motion.div>
 
       {/* ===== KEY BENEFITS ===== */}

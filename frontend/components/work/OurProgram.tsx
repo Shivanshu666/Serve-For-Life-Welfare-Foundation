@@ -89,11 +89,13 @@ const programs = [
         "Supporting talented young tennis players from economically under-resourced backgrounds who have the game but not the means.",
     image: "/images/program2.jpg",          // ← fallback (rakh lo, kuch tod nahi raha)
     images: [                                // ← NEW: 5 images collage
-          "/gallery/fsnl2025/G25.jpeg",
-    "/gallery/fsnl2025/G28.jpeg",
-    "/gallery/fsnl2025/G27.jpeg",
-    "/gallery/fsnl2025/G21.jpeg",
-    "/gallery/fsnl2025/G3.avif",
+    "/gallery/fsnl2025/G25.jpeg",
+    // "/gallery/fsnl2025/G28.jpeg",
+    // "/gallery/fsnl2025/G27.jpeg",
+    // "/gallery/fsnl2025/G21.jpeg",
+    // "/gallery/fsnl2025/G3.avif",
+    "/gallery/fsnl2025/G38.jpeg",
+
     ],
     icon: FaTrophy,
     href: "/work/Program2",
@@ -206,7 +208,7 @@ export default function OurProgram() {
             </div>
 
             {/* Bottom row — 3 images */}
-            <div className="grid grid-cols-3 gap-0.5 flex-1">
+            {/* <div className="grid grid-cols-3 gap-0.5 flex-1">
                 {program.images.slice(2, 5).map((src, i) => (
                     <div key={i} className="relative overflow-hidden">
                         <Image
@@ -218,7 +220,7 @@ export default function OurProgram() {
                         />
                     </div>
                 ))}
-            </div>
+            </div> */}
         </div>
     ) : (
         /* --- Fallback: single image (baaki 3 cards ke liye) --- */

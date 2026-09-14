@@ -80,7 +80,7 @@ export default function Athletes() {
           </span>
 
           <h2 className="mt-5 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-            Meet Our Sponsored{" "}
+            Meet Our Sponsored{" "} <br />
             <span className="bg-gradient-to-r from-lime-500 to-emerald-500 bg-clip-text text-transparent">
               Junior Athletes
             </span>
@@ -88,7 +88,7 @@ export default function Athletes() {
 
           <p className="mt-6 text-lg leading-relaxed text-slate-600">
             We support these hardworking young players as they pursue
-            their tennis dreams. Your donation helps cover training,
+            their tennis dreams. <br /> Your donation helps cover training,
             coaching, equipment, and tournament expenses.
           </p>
         </motion.div>
