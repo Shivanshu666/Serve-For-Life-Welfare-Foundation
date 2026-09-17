@@ -43,7 +43,7 @@ His experience across sport, business and community engagement reflects his comm
 
   {
     name: "Rachna Sharma",
-    role: "Founder - Member",
+    role: "Founding Member",
     bio: `Rachna is a former tennis player who achieved success both in state and national tournaments.In 2022, she won the ITF Singles Women (35) title at ITF World Tennis Masters Tour MT 200, Bhilai in Singles event.From 2004-07, she also won State Championship tournaments in Singles event and had achieved highest National Ranking of # 28 in Women’s Category.
 
 She is an experienced sports development and management professional, coach and leader who comes with extensive national and international working experience of over 15 years in the field of sports administration, business development, grassroots coaching systems, event management and operations management who believes passionately in active and experiential learning.

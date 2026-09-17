@@ -115,7 +115,7 @@ export default function Involved2() {
                         Shape the Future
                         <br />
                         through{" "}
-                        <span className="bg-gradient-to-r from-[#5E7A56] to-[#7A9A72] bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-lime-500 to-emerald-500 bg-clip-text text-transparent">
                             SPORT
                         </span>
                     </h2>

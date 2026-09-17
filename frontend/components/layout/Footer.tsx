@@ -334,7 +334,7 @@ text-slate-600
 text-sm
 "
                 >
-                  support@serveforlife.in
+                  admin@serveforlife.org.in
                 </p>
               </div>
             </div>

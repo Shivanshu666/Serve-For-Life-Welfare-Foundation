@@ -34,7 +34,7 @@ const stagger: Variants = {
 
 const programs = [
   {
-    title: "SFLWF Child Empowerment School Program",
+    title: "SERVE FOR LIFE Child Empowerment School Program",
     description:
         "Using sport and play to help children from underserved communities build confidence, teamwork, leadership, and healthy habits.",
     image: "/images/About3.jpeg",
@@ -84,7 +84,7 @@ const programs = [
 },
 
 {
-    title: "SFLWF (SET) Athlete Sponsorship Program",
+    title: "SFL (SET) Athlete Sponsorship Program",
     description:
         "Supporting talented young tennis players from economically under-resourced backgrounds who have the game but not the means.",
     image: "/images/program2.jpg",          // ← fallback (rakh lo, kuch tod nahi raha)
