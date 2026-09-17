@@ -210,7 +210,7 @@ export default function Navbar() {
         <div
           className={`relative mx-auto flex max-w-7xl items-center justify-between ${
             scrolled
-              ? "px-5"
+              ? "px-12"
               : "px-6 sm:px-8 lg:px-12"
           }`}
         >
