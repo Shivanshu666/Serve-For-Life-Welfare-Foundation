@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "Healthcare",
     "Community",
   ],
+   icons: {
+    icon: "/Favicon.png",
+  },
 };
 
 export default function RootLayout({
