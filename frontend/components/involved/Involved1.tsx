@@ -40,7 +40,7 @@ export default function Involved1() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#F7F8F3] px-6 py-22 sm:px-8 lg:px-12 lg:py-33">
+    <section className="relative overflow-hidden bg-[#F7F8F3] px-6 pt-30 pb-15 sm:px-8 lg:px-5">
       {/* Decorative background */}
       <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#DDE9D8] opacity-50 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 bottom-10 h-80 w-80 rounded-full bg-[#E8DCCB] opacity-40 blur-3xl" />

@@ -74,7 +74,7 @@ export default function Involved2() {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     return (
-        <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-15">
 
             {/* =========================================================
                 PRELOAD ALL 4 IMAGES

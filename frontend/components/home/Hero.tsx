@@ -88,7 +88,7 @@ export default function Hero() {
 
               {/* Photo */}
               <Image
-                src="/images/hero1.jpg"
+                src="/home/HeroSection/hero1.avif"
                 alt="Young athlete playing tennis with Apex Tennis Foundation"
                 fill
                 priority

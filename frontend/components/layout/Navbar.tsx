@@ -229,7 +229,7 @@ export default function Navbar() {
                 width={78}
                 height={78}
                 priority
-                className="h-14 w-auto"
+                className="h-12 w-auto"
               />
 
               {/* <div className="absolute inset-0 -z-10 rounded-xl bg-emerald-300/30 blur-xl" /> */}
