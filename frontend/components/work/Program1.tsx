@@ -52,7 +52,7 @@ export default function Program1() {
             Child Development
           </span>
           <h1 className="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">
-            SFLWF Child Empowerment School Program
+            ServeForLife Child Empowerment School Program
           </h1>
           <p className="mt-2 max-w-2xl text-sm text-white/90 sm:text-base">
             Building confidence, teamwork, and leadership — and finding <span className="font-bold italic">JOY</span> through sport.
@@ -72,7 +72,7 @@ export default function Program1() {
               Program Overview
             </h2>
             <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-              The Child Empowerment School Program by Serve For Life Welfare Foundation (SFLWF)
+              The Child Empowerment School Program by ServeForLife (SFL)
               uses the power of sport and play to help children from underserved
               communities build <span className="font-semibold text-emerald-700">confidence</span>,{" "}
               <span className="font-semibold text-emerald-700">teamwork</span>,{" "}
@@ -82,7 +82,7 @@ export default function Program1() {
             <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
               Launched in August 2026, the eight‑month program engages around{" "}
               <span className="font-semibold text-slate-800">240 children, aged 8–14</span>{" "}
-              from Junwani, Durg. Through weekly sessions led by the SFLWF coaching team,
+              from Junwani, Durg. Through weekly sessions led by the ServeForLife coaching team,
               children participate in fun, structured activities that develop physical
               skills, coordination, communication, and teamwork.
             </p>
@@ -196,7 +196,7 @@ export default function Program1() {
         </p>
         <div className="mt-6 border-l-4 border-emerald-400/60 pl-4 italic text-slate-900">
           <p className="text-center font-bold">
-            As the program continues through the year, SFLWF hopes these children carry its lessons far beyond the playing area – <br /> into their Schools, Families and Communities at large.
+            As the program continues through the year, ServeForLife hopes these children carry its lessons far beyond the playing area – <br /> into their Schools, Families and Communities at large.
           </p>
         </div>
       </motion.div>

@@ -32,29 +32,6 @@ export default function Program2() {
       variants={stagger}
       className="space-y-12"
     >
-      {/* ===== HERO BANNER ===== */}
-      {/* <motion.div variants={fadeUp} className="relative h-[300px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[400px]">
-        <Image
-          src="/images/program22.jpg"
-          alt="Athlete Sponsorship Program"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-        <div className="absolute bottom-6 left-6 right-6 text-white sm:bottom-10 sm:left-10">
-          <span className="inline-block rounded-full bg-lime-500/80 px-3 py-1 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
-            Athlete Development
-          </span>
-          <h1 className="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">
-            SFLWF (SET) Athlete Sponsorship Program
-          </h1>
-          <p className="mt-2 max-w-2xl text-sm text-white/90 sm:text-base">
-            Supporting talented young tennis players who have the game but not the means.
-          </p>
-        </div>
-      </motion.div>
- */}
 
  {/* ===== HERO BANNER (6-IMAGE COLLAGE) ===== */}
 <motion.div className="relative h-[300px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[400px]">
@@ -99,7 +76,7 @@ export default function Program2() {
       Athlete Development
     </span>
     <h1 className="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">
-      SFLWF (SET) Athlete Sponsorship Program
+      ServeForLife (SET) Athlete Sponsorship Program
     </h1>
     <p className="mt-2 max-w-2xl text-sm text-white/90 sm:text-base">
       Supporting talented young tennis players who have the game but not the means.
@@ -117,7 +94,7 @@ export default function Program2() {
     <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
       The{" "}
       <span className="font-semibold text-lime-700">
-        SFLWF (SET) Athlete Sponsorship Program
+        ServeForLife (SET) Athlete Sponsorship Program
       </span>{" "}
       is a flagship initiative designed to identify, nurture, and support
       talented young tennis players who demonstrate strong potential but face
@@ -281,7 +258,7 @@ export default function Program2() {
         <div className="text-center font-bold italic text-slate-900">
           {/* === EXACT ORIGINAL TEXT (final quote) === */}
           <p>
-            At SFLWF, we believe that talent should never be limited by financial
+            At ServeForLife, we believe that talent should never be limited by financial
             circumstances. <br />
             By investing in young athletes today, we are developing not only
             future champions in tennis <br /> but also confident, disciplined, and

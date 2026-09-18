@@ -125,7 +125,7 @@ export default function OurStory() {
       </h1>
 
       <p className="mt-8 max-w-2xl text-base leading-8 text-[#182D22]/75 sm:text-lg">
-        Serve For Life is a purpose-driven
+        ServeForLife is a purpose-driven
         non-profit organization established with a simple yet
         powerful vision — to give back to sport and to society
         by creating opportunities for every child to experience
@@ -183,7 +183,7 @@ export default function OurStory() {
             <span className="font-bold text-black">'R</span>ight to{" "}
             <span className="font-bold text-black">P</span>lay'
           </span>
-          . At Serve For Life Welfare Foundation, we believe sport isn't just
+          . At ServeForLife , we believe sport isn't just
           recreation — it's a way to channel restless,
           negative energy into something purposeful and to
           help every child discover a sense of direction and

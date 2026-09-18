@@ -119,7 +119,7 @@ const programs = [
     description: (
         <>
             The{" "}
-            <strong><span className="text-black">Serve For Life "Shoes for ALL"</span></strong> campaign aims to ensure that every child has access to appropriate sports shoes so that lack of equipment does not become a barrier to participation in sport.
+            <strong><span className="text-black">ServeForLife "Shoes for ALL"</span></strong> campaign aims to ensure that every child has access to appropriate sports shoes so that lack of equipment does not become a barrier to participation in sport.
         </>
     ),
     image: "/program/shoesfA.jpeg",

@@ -103,7 +103,7 @@ export default function Program3() {
               Performance Program
             </span>{" "}
             and, upon meeting the selection criteria, become eligible for the
-            <span className="text-black font-bold"> SFLWF (SET) Athlete Sponsorship Program</span>.
+            <span className="text-black font-bold"> ServeForLife (SET) Athlete Sponsorship Program</span>.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ export default function Program3() {
                 <p className="font-bold text-slate-800">OPPORTUNITY</p>
                 <p className="text-sm leading-relaxed text-slate-500">
                   Support talented players who meet the selection criteria in
-                  progressing towards the SFLWF (SET) Athlete Sponsorship
+                  progressing towards the ServeForLife (SET) Athlete Sponsorship
                   Program.
                 </p>
               </div>

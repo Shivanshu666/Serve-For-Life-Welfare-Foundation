@@ -73,7 +73,7 @@ export default function Program3() {
           </h2>
 
           <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-            The Serve For Life{" "}
+            The ServeForLife{" "}
             <span className="font-semibold text-lime-700">
               “Shoes for ALL” campaign
             </span>{" "}

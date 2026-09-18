@@ -57,17 +57,22 @@ export default function Home() {
     }`} 
     style={{ transform: `translateX(-${currentIndex * 100}%)` }} 
   > 
-    {slides.map((src, index) => ( 
-      <Image 
-        key={index} 
-        src={src} 
-        alt="Tennis court at sunset" 
-        width={1920}
-        height={1080}
+    {slides.map((src, index) => (
+    <div
+      key={src}
+      className="relative h-full min-w-full flex-shrink-0"
+    >
+      <Image
+        src={src}
+        alt="Tennis court at sunset"
+        fill
         priority={index === 0}
-        className="h-full w-full flex-shrink-0 object-cover" 
-      /> 
-    ))} 
+        loading={index === 0 ? "eager" : "lazy"}
+        sizes="100vw"
+        className="object-cover"
+      />
+    </div>
+  ))}
   </div> 
  
   {/* Dark overlay – placed on top of slider */} 

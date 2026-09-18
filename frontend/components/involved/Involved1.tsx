@@ -68,7 +68,7 @@ Be a Part of the Change
           </h2>
 
           <p className="mt-6 text-base leading-7 text-[#657067] sm:text-lg">
-            At Serve For Life Welfare Foundation, we believe change starts
+            At Serve For Life, we believe change starts
             with people like you. <br /> Every act of kindness, every rupee, and
             every moment of your time brings us closer to our mission.
           </p>

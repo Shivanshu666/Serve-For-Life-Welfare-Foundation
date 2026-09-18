@@ -153,7 +153,7 @@ gap-10
             <Link href="/">
               <Image
                 src={Logo}
-                alt="Serve For Life Foundation"
+                alt="ServeForLife"
                 width={200}
                 height={200}
                 className="
@@ -374,7 +374,7 @@ font-semibold
 text-lime-600
 "
               >
-                Serve For Life
+                ServeForLife
               </span>{" "}
               <br />
               All Rights Reserved.
