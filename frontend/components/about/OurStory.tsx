@@ -125,7 +125,7 @@ export default function OurStory() {
       </h1>
 
       <p className="mt-8 max-w-2xl text-base leading-8 text-[#182D22]/75 sm:text-lg">
-        Serve For Life Welfare Foundation is a purpose-driven
+        Serve For Life is a purpose-driven
         non-profit organization established with a simple yet
         powerful vision — to give back to sport and to society
         by creating opportunities for every child to experience

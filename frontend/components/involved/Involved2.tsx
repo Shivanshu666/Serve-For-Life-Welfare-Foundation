@@ -105,7 +105,7 @@ export default function Involved2() {
                 <div className="mx-auto max-w-4xl text-center">
 
                     {/* Badge */}
-                    <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D0DCD0] bg-white/80 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#4F6A4D] shadow-sm backdrop-blur-sm transition-all hover:bg-white sm:text-lg">
+                    <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D0DCD0] bg-white/80 px-4 py-1.5 font-semibold uppercase tracking-[0.18em] text-[#4F6A4D] shadow-sm backdrop-blur-sm transition-all hover:bg-white text-lg">
                         <Heart className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                         Make an Impact
                     </div>
@@ -121,7 +121,7 @@ export default function Involved2() {
                     </h2>
 
                     {/* Description */}
-                    <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#657068] sm:mt-6 sm:text-base sm:leading-7 lg:text-lg">
+                    <p className="mx-auto mt-5 max-w-2xl text-xl leading-6 text-[#657068] sm:mt-6 sm:text-base sm:leading-7 lg:text-lg">
                         The future of any sport begins with an <span className="font-bold">OPPORTUNITY</span>. <br />
                         Your contribution helps create access to sport, strengthen
                         grassroots development, improve sporting infrastructure,

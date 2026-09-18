@@ -16,7 +16,7 @@ const Purpose = () => {
             Our Purpose
           </span>
 
-          <p className="mt-6 text-lg leading-relaxed text-slate-600 sm:text-xl lg:text-xl">
+          <p className="mt-6 leading-relaxed text-slate-600  text-xl">
             To transform lives through sport by making quality sports
             education accessible to every child <br /> — nurturing character,
             promoting inclusion, and creating opportunities that extend far

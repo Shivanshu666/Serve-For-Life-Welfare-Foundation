@@ -60,7 +60,7 @@ Be a Part of the Change
                     </div>
 
 
- <h2 className="mt-5 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
+ <h2 className="mt-5 text-3xl font-bold text-slate-900 ">
             Ready to{" "}
             <span className="bg-gradient-to-r from-lime-500 to-emerald-500 bg-clip-text text-transparent">
               Make a Difference?
@@ -138,7 +138,7 @@ Be a Part of the Change
           <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               
-            <div className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.16em] text-[#2F5D3A]">
+            <div className="flex items-center gap-3 font-mono text-lg uppercase tracking-[0.16em] text-[#2F5D3A]">
                 <span className="h-px w-6 bg-[#2F5D3A]" />
                 How you can help
               </div>

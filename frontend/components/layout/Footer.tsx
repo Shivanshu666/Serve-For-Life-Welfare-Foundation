@@ -374,7 +374,7 @@ font-semibold
 text-lime-600
 "
               >
-                Serve For Life Welfare Foundation
+                Serve For Life
               </span>{" "}
               <br />
               All Rights Reserved.
@@ -389,7 +389,7 @@ text-xs
 "
           >
             <Link
-              href="/privacy"
+              href="#"
               className="
 text-slate-500
 hover:text-lime-600
