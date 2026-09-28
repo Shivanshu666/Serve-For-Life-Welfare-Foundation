@@ -36,14 +36,14 @@ export default function Program2() {
  {/* ===== HERO BANNER (6-IMAGE COLLAGE) ===== */}
 <motion.div className="relative h-[300px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[400px]">
   {/* Collage Grid — 3 cols × 2 rows */}
-  <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-0">
+  <div className="absolute inset-0 grid grid-cols-3 grid-rows-1 gap-0">
     {[
-    "/gallery/fsnl2025/G20.jpeg",
-    "/gallery/fsnl2025/G23.jpeg",
-    "/gallery/fsnl2025/G27.jpeg",
-    "/gallery/fsnl2025/G17.avif",
-    "/gallery/fsnl2025/G6.avif",
-    "/gallery/fsnl2025/G24.jpeg",
+      // "/gallery/fsnl2025/G37.jpeg",
+      // "/gallery/fsnl2025/G33.jpeg",
+      "/gallery/fsnl2025/G17.avif",
+      "/gallery/fsnl2025/G6.avif",
+      "/gallery/fsnl2025/G24.jpeg",
+      // "/gallery/fsnl2025/G29.jpeg",
 
 
 

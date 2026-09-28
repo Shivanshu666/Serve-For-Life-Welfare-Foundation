@@ -400,7 +400,7 @@ transition
             </Link>
             <span className="text-slate-300">|</span>
             <Link
-              href="/terms"
+              href="#"
               className="
 text-slate-500
 hover:text-lime-600
@@ -411,7 +411,7 @@ transition
             </Link>
             <span className="text-slate-300">|</span>
             <Link
-              href="/faq"
+              href="#"
               className="
 text-slate-500
 hover:text-lime-600
