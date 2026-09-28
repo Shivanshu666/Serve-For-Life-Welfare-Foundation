@@ -116,7 +116,7 @@ export default function Home() {
 
                 {/* Supporting subtext */}
                 <p className="mx-auto mt-4 max-w-3xl text-sm font-light leading-relaxed text-white/80 drop-shadow-lg sm:text-base md:text-lg">
-                    Where Sport Builds Character, Inspires Confidence and Creates Stronger Coummunities.
+                    Where sport builds <span className="font-bold">Character</span>, inspires <span className="font-bold">Confidence</span> and creates <span className="font-bold">Stronger Coummunities</span>.
                 </p>
 
                 {/* Small decorative note */}

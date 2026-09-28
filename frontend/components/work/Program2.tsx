@@ -38,12 +38,6 @@ export default function Program2() {
   {/* Collage Grid — 3 cols × 2 rows */}
   <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-0">
     {[
-      // "/images/program22.jpg",
-      // "/images/program22.jpg",
-      // "/images/program22.jpg",
-      // "/images/program22.jpg",
-      // "/images/program22.jpg",
-      // "/images/program22.jpg",
     "/gallery/fsnl2025/G20.jpeg",
     "/gallery/fsnl2025/G23.jpeg",
     "/gallery/fsnl2025/G27.jpeg",

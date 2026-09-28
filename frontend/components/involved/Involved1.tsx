@@ -201,7 +201,7 @@ Be a Part of the Change
           </div>
 
           <div className="mt-15 text-center">
-            <p className="text-black text-bold">
+            <p className="text-black text-xl italic text-bold">
               Choose a way to support us and help create opportunities for every child to play, learn and thrive.
             </p>
           </div>

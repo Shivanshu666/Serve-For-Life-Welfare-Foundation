@@ -53,7 +53,7 @@ export default function Program3() {
           </span>
 
           <h1 className="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Tennis Development Program
+           ServeForLife Tennis Development Program
           </h1>
 
           <p className="mt-2 max-w-2xl text-sm text-white/90 sm:text-base">
