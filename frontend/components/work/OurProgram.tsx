@@ -45,7 +45,18 @@ const programs = [
         <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1">
             <span>240 Children</span>
             <span className="text-slate-300">•</span>
-            <span>Ages 8–14</span>
+            <span>Ages 8-14</span>
+            <span className="text-slate-300">•</span>
+            <a
+                href="https://share.google/h4TbLp0xjrLjN6mTV"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View location on map"
+                className="inline-flex items-center text-slate-500 transition-colors duration-300 hover:text-emerald-600"
+                onClick={(e) => e.stopPropagation()}
+            >
+                <FaMapMarkerAlt className="text-sm" />
+            </a>
         </span>
     ),
     iconBg: "bg-emerald-100",
@@ -53,7 +64,7 @@ const programs = [
     accent: "from-emerald-600 to-lime-600",
 },
   {
-    title: "Tennis Development Program",
+    title: "ServeForLife Tennis Development Program",
     description:
         "The primary objective of the Tennis Development Program is to increase awareness of tennis and encourage greater participation in the sport within the community.",
     image: "/program/tennisp.jpeg",
@@ -90,10 +101,6 @@ const programs = [
     image: "/images/program2.jpg",          // ← fallback (rakh lo, kuch tod nahi raha)
     images: [                                // ← NEW: 5 images collage
     "/gallery/fsnl2025/G25.jpeg",
-    // "/gallery/fsnl2025/G28.jpeg",
-    // "/gallery/fsnl2025/G27.jpeg",
-    // "/gallery/fsnl2025/G21.jpeg",
-    // "/gallery/fsnl2025/G3.avif",
     "/gallery/fsnl2025/G38.jpeg",
 
     ],

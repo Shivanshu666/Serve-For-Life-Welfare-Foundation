@@ -112,9 +112,9 @@ export default function Involved2() {
 
                     {/* Heading */}
                     <h2 className="text-4xl font-semibold leading-[1.08] tracking-[-0.035em] text-[#17271E] sm:text-5xl lg:text-6xl xl:text-7xl">
-                        Shape the Future
+                        Shape the 
                         <br />
-                        through{" "}
+                       Future through{" "}
                         <span className="bg-gradient-to-r from-lime-500 to-emerald-500 bg-clip-text text-transparent">
                             SPORT
                         </span>
