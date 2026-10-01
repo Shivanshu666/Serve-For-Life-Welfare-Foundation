@@ -68,7 +68,7 @@ Be a Part of the Change
           </h2>
 
           <p className="mt-6 text-base leading-7 text-[#657067] sm:text-lg">
-            At Serve For Life, we believe change starts
+            At ServeForLife, we believe change starts
             with people like you. <br /> Every act of kindness, every rupee, and
             every moment of your time brings us closer to our mission.
           </p>
@@ -99,7 +99,7 @@ Be a Part of the Change
                 </p>
 
           <Link
-  href="/donate"
+  href="/tdonate"
   className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 font-semibold text-[#182D22] transition-all duration-300 hover:-translate-y-1 hover:bg-[#EDF2E9]"
 >
   Donate Now

@@ -374,7 +374,7 @@ export default function Navbar() {
             {/* Desktop Donate */}
 
             <Link
-              href="/donate"
+              href="/tdonate"
               className="hidden rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:scale-105 md:block"
             >
               Donate Now

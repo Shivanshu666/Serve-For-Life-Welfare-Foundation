@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Serve For Life Foundation",
+  title: "Serve For Life Welfare Foundation",
   description:
     "Empowering communities through education, healthcare, sports, and social impact initiatives.",
   keywords: [
