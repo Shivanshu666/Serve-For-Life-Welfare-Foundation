@@ -273,7 +273,7 @@ export default function Involved2() {
                     {/* ================= DONATE BUTTON ================= */}
                     <div className="mt-4 flex justify-center border-t border-[#DCE3D8] pt-4 sm:mt-5 sm:pt-5">
 
-                        <Link href="/donate">
+                        <Link href="/tdonate">
                             <button className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 px-8 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#C14D38] hover:-translate-y-0.5 hover:shadow-lg active:scale-95 sm:px-10 sm:py-3.5 sm:text-base">
                                 Donate Now
                             </button>

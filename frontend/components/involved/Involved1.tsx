@@ -19,7 +19,7 @@ export default function Involved1() {
       description:
         "Every rupee counts. Contribute now to help us reach our goal.",
       button: "Donate Now",
-      link:"/donate"
+      link:"/tdonate"
     },
     {
       number: "02",

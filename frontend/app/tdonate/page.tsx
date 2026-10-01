@@ -3,11 +3,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Image from "next/image";
 import Head from 'next/head';
+import { label } from 'framer-motion/client';
 
 interface BankDetails {
   accountNumber: string;
+  accountHolderName: string;
   branchIFSC: string;
-  customerId: string;
   accountVariant: string;
   branch: string;
 }
@@ -97,45 +98,33 @@ const CopyButton = ({ text }: { text: string }) => {
 export default function DonatePage() {
   const [isScannerOpen, setIsScannerOpen] = useState(false);
   const [upiId, setUpiId] = useState('servelifewelfarefoun@idfcbank');
-  const [activeTab, setActiveTab] = useState<'qr' | 'bank'>('qr');
 
   const bankDetails: BankDetails = {
     accountNumber: '60406202614',
+    accountHolderName: 'Serve For Life Welfare Foundation',
     branchIFSC: 'IDFB0060562',
-    customerId: '6892452390',
     accountVariant: 'Dynamic TASC Current Account',
     branch: 'BHILAI BRANCH',
   };
 
-  const upiApps = [
-    { name: 'Paytm', color: 'bg-[#00B9F1]', text: 'Paytm' },
-    { name: 'Google Pay', color: 'bg-white', text: 'G Pay' },
-    { name: 'PhonePe', color: 'bg-[#5f259f]', text: 'PhonePe' },
-    { name: 'Amazon Pay', color: 'bg-white', text: 'amazon pay' },
-    { name: 'CRED', color: 'bg-black', text: 'CRED' },
-    { name: 'MobiKwik', color: 'bg-[#2a3b8f]', text: 'MobiKwik' },
-  ];
-
   return (
     <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-white font-sans flex flex-col">
-  
-
-      <main className="max-w-7xl  mt-[80px] w-full mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-6 flex-1 flex flex-col">
+      <main className="max-w-7xl mt-[80px] w-full mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-6 flex-1 flex flex-col">
         {/* Hero Section */}
         <div className="text-center mb-5 shrink-0">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-1.5 tracking-tight">
             Make a Difference Today
           </h2>
           <p className="text-sm text-gray-600 max-w-xl mx-auto">
-            Your generous contribution helps us continue our mission. Scan the QR code or use the bank details below.
+            Your generous contribution helps us continue our mission. <br />Scan the QR code or use the bank details below.
           </p>
         </div>
 
-        {/* Grid: items-stretch makes both columns equal height */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch w-full flex-1">
+        {/* Grid: equal width columns (50/50) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch w-full flex-1">
           
-          {/* ============ LEFT COLUMN ============ */}
-          <div className="lg:col-span-5 w-full flex flex-col">
+          {/* ============ LEFT COLUMN: QR ============ */}
+          <div className="w-full flex flex-col">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-emerald-100/50 flex flex-col flex-1">
               <div className="bg-gradient-to-r from-emerald-500 to-lime-500 px-4 py-2.5 shrink-0">
                 <h3 className="text-white font-semibold text-lg flex items-center gap-2">
@@ -175,141 +164,54 @@ export default function DonatePage() {
                   </div>
                   <CopyButton text={upiId} />
                 </div>
-
-                <div className="mt-4 w-full shrink-0">
-                  <p className="text-[10px] text-gray-400 text-center mb-2 uppercase tracking-widest font-semibold">Supported Apps</p>
-                  <div className="grid grid-cols-3 gap-2">
-                    {upiApps.map((app) => (
-                      <div key={app.name} className="flex flex-col items-center justify-center p-1.5 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all">
-                        <div className={`w-7 h-7 rounded-full ${app.color} flex items-center justify-center text-[9px] font-bold ${app.name === 'Paytm' || app.name === 'PhonePe' || app.name === 'MobiKwik' ? 'text-white' : 'text-gray-800'} mb-0.5`}>
-                          {app.text.substring(0, 2)}
-                        </div>
-                        <span className="text-[9px] text-gray-600 font-medium text-center">{app.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
 
-          {/* ============ RIGHT COLUMN ============ */}
-          <div className="lg:col-span-7 w-full flex flex-col gap-4">
-            <div className="flex gap-1.5 p-1 bg-white/60 backdrop-blur-sm border border-emerald-100 rounded-lg w-full sm:w-auto shadow-sm shrink-0">
-              <button
-                onClick={() => setActiveTab('qr')}
-                className={`flex-1 sm:flex-none px-4 py-2 rounded-md text-base font-semibold transition-all ${activeTab === 'qr' ? 'bg-gradient-to-r from-emerald-500 to-lime-500 text-white shadow-md' : 'text-gray-500 hover:text-emerald-600'}`}
-              >
-                UPI / QR
-              </button>
-              <button
-                onClick={() => setActiveTab('bank')}
-                className={`flex-1 sm:flex-none px-4 py-2 rounded-md text-xs font-semibold transition-all ${activeTab === 'bank' ? 'bg-gradient-to-r from-emerald-500 to-lime-500 text-white shadow-md' : 'text-gray-500 hover:text-emerald-600'}`}
-              >
-                Bank Transfer
-              </button>
-            </div>
-
+          {/* ============ RIGHT COLUMN: Bank Details only ============ */}
+          <div className="w-full flex flex-col gap-4">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-emerald-100/50 p-4 sm:p-5 flex-1 flex flex-col">
-              {activeTab === 'bank' ? (
-                <>
-                  <div className="flex items-center gap-2.5 mb-4 shrink-0">
-                    <div className="w-9 h-9 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900">Bank Account Details</h3>
-                      <p className="text-[11px] text-emerald-600 font-medium">IDFC First Bank</p>
-                    </div>
-                  </div>
+              <div className="flex items-center gap-2.5 mb-4 shrink-0">
+                <div className="w-9 h-9 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-gray-900">Bank Account Details</h3>
+                  <p className="text-[11px] text-emerald-600 font-medium">IDFC First Bank</p>
+                </div>
+              </div>
 
-                  <div className="space-y-2.5 flex-1">
-                    {[
-                      { label: 'Account Number', value: bankDetails.accountNumber },
-                      { label: 'Branch IFSC', value: bankDetails.branchIFSC },
-                      { label: 'Customer ID', value: bankDetails.customerId },
-                      { label: 'Account Variant', value: bankDetails.accountVariant },
-                      { label: 'Branch', value: bankDetails.branch },
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 bg-emerald-50/30 rounded-lg border border-emerald-100/50 gap-1">
-                        <span className="text-[11px] text-gray-500 font-medium">{item.label}</span>
-                        <div className="flex items-center gap-1 min-w-0">
-                          <span className="text-xs font-bold text-gray-900 truncate">{item.value}</span>
-                          <CopyButton text={item.value} />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-4 p-3 bg-gradient-to-r from-emerald-50 to-lime-50 rounded-lg border border-emerald-100 flex items-start gap-2 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-emerald-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <p className="text-[10px] text-emerald-800 leading-relaxed font-medium">
-                      Please use the Customer ID or Account Number as reference. For assistance, call <strong>1800 10 888</strong>.
-                    </p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="flex items-center gap-2.5 mb-4 shrink-0">
-                    <div className="w-9 h-9 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900">How to Donate via UPI</h3>
-                      <p className="text-[11px] text-emerald-600 font-medium">Follow these simple steps</p>
+              <div className="space-y-2.5 flex-1">
+                {[
+                  { label: 'Account Number', value: bankDetails.accountNumber },
+                  {label: 'Account Holder Name', value:bankDetails.accountHolderName},
+                  { label: 'Branch IFSC', value: bankDetails.branchIFSC },
+                  { label: 'Account Variant', value: bankDetails.accountVariant },
+                  { label: 'Branch', value: bankDetails.branch },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-2.5 bg-emerald-50/30 rounded-lg border border-emerald-100/50 gap-1">
+                    <span className="text-[11px] text-gray-500 font-medium">{item.label}</span>
+                    <div className="flex items-center gap-1 min-w-0">
+                      <span className="text-xs font-bold text-gray-900 truncate">{item.value}</span>
+                      <CopyButton text={item.value} />
                     </div>
                   </div>
+                ))}
+              </div>
 
-                  <div className="space-y-3.5 flex-1">
-                    {[
-                      { step: 1, title: 'Open any UPI App', desc: 'Open Paytm, Google Pay, PhonePe, or any UPI-enabled app.' },
-                      { step: 2, title: 'Scan the QR Code', desc: 'Use the scanner in your app to scan the QR code.' },
-                      { step: 3, title: 'Verify Details', desc: 'Ensure the recipient matches "Servelife Welfare Foundation".' },
-                      { step: 4, title: 'Enter Amount & Pay', desc: 'Enter your donation amount and complete the payment.' },
-                    ].map((item) => (
-                      <div key={item.step} className="flex gap-3 group">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-emerald-500 to-lime-500 text-white flex items-center justify-center font-bold text-[11px] shadow-sm group-hover:scale-110 transition-transform">
-                          {item.step}
-                        </div>
-                        <div className="min-w-0">
-                          <h4 className="font-semibold text-xs text-gray-900 group-hover:text-emerald-600 transition-colors">{item.title}</h4>
-                          <p className="text-[11px] text-gray-500 mt-0.5 leading-snug">{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-4 flex flex-col sm:flex-row gap-2 shrink-0">
-                    <button
-                      onClick={() => setIsScannerOpen(true)}
-                      className="flex-1 py-2 px-3 bg-gradient-to-r from-emerald-500 to-lime-500 text-white rounded-lg font-semibold hover:from-emerald-600 hover:to-lime-600 transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-1.5 text-xs"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      Scan QR Code
-                    </button>
-                    <button
-                      onClick={() => { navigator.clipboard.writeText(upiId); alert('UPI ID copied!'); }}
-                      className="flex-1 py-2 px-3 bg-white border-2 border-emerald-200 text-emerald-700 rounded-lg font-semibold hover:bg-emerald-50 transition-colors flex items-center justify-center gap-1.5 text-xs"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                      </svg>
-                      Copy UPI ID
-                    </button>
-                  </div>
-                </>
-              )}
+              <div className="mt-4 p-3 bg-gradient-to-r from-emerald-50 to-lime-50 rounded-lg border border-emerald-100 flex items-start gap-2 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-emerald-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p className="text-[10px] text-emerald-800 leading-relaxed font-medium">
+                  Please use the Customer ID or Account Number as reference. For assistance, call <strong>1800 10 888</strong>.
+                </p>
+              </div>
             </div>
 
+            {/* Trust & Security Badge */}
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[10px] text-gray-500 font-medium shrink-0">
               <div className="flex items-center gap-1 bg-white px-2.5 py-1 rounded-full border border-emerald-100 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
