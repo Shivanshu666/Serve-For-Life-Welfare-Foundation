@@ -604,7 +604,7 @@ export default function Navbar() {
                     className="pt-2"
                   >
                     <Link
-                      href="/donate"
+                      href="/tdonate"
                       onClick={() => {
                         setIsOpen(false);
                         setMobileDropdownOpen(null);
