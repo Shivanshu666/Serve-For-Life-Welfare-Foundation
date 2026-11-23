@@ -74,3 +74,18 @@ body {
   0%   { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
+
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+  will-change: transform;
+}

@@ -23,6 +23,20 @@ const stagger: Variants = {
   },
 };
 
+
+const photos1 = [
+  "/development/TennisDeveProgram/tennisdp6.jpeg",
+  "/development/TennisDeveProgram/tennisdp1.jpeg",
+  "/development/TennisDeveProgram/tennisdp2.jpeg",
+  "/development/TennisDeveProgram/tennisdp3.jpeg",
+  "/development/TennisDeveProgram/tennisdp5.jpeg",
+ 
+];
+
+
+const marqueePhotos1 = [...photos1, ...photos1, ...photos1, ...photos1];
+
+
 export default function Program3() {
   return (
     <motion.div
@@ -167,6 +181,36 @@ export default function Program3() {
       </motion.div>
 
 
+{/* ROW 1 - SMOOTH RIGHT MOVING */}
+<section className="w-full overflow-hidden py-8">
+  <div className="overflow-hidden">
+    <div className="flex w-max animate-marquee-right">
+
+      {[0, 1].map((group) => (
+        <div key={group} className="flex shrink-0">
+          {photos1.map((src, index) => (
+            <div
+              key={`${group}-${index}`}
+              className="group relative mr-4 h-[150px] w-[220px] shrink-0 overflow-hidden rounded-xl bg-gray-100 shadow-sm sm:h-[180px] sm:w-[280px] md:h-[220px] md:w-[350px] lg:h-[260px] lg:w-[400px]"
+            >
+              <Image
+                src={src}
+                alt={`Gallery photo ${index + 1}`}
+                fill
+                unoptimized
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 640px) 220px, (max-width: 1024px) 350px, 400px"
+              />
+            </div>
+          ))}
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
+
+
     </motion.div>
   );
 }
@@ -190,3 +234,4 @@ export default function Program3() {
 // * Removed unused `FaUsers`, `FaHeart`, and `FaArrowRight` imports
 
 // If you want the wording to be **100% formal NGO/professional style**, I can also polish just the text while keeping this exact UI.
+

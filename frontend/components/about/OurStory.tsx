@@ -410,9 +410,6 @@ export default function OurStory() {
           </div>
         </motion.div>
       </section>
-
- 
-
     </main>
   );
 }
